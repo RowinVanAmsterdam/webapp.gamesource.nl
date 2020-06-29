@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <p>© 2020 Flutcadeau. Alle rechten voorbehouden.</p>
+        <p>© 2020 Flutcadeau. Alle rechten voorbehouden. publish test</p>
     </div>
 </footer>
 <?php wp_footer(); ?>
