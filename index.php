@@ -13,10 +13,6 @@
 
 <body>
 
-<div class="nav-container">
-    <?php get_template_part('template-parts/navbar'); ?>
-</div>
-
 <div class="container">
     <div class="content">
         <?php
