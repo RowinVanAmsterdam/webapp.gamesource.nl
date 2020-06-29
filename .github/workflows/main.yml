@@ -12,7 +12,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        ftp-server: ssh.strato.com/WordPress_SecureMode_01/wp-content/themes
+        ftp-server: sftp://ssh.strato.com:22/WordPress_SecureMode_01/wp-content/themes
         ftp-username: flutcadeau.nl
         ftp-password: Flutcadeau!!652020
         git-ftp-args: --insecure 
