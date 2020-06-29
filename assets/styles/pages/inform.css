@@ -1,0 +1,67 @@
+.inform-content {
+  /* border: 1px solid red; */
+  padding-top: 84px;
+  font-family: Futura-book;
+}
+
+.inform-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 15px;
+}
+
+.inform-form {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px 50px;
+  max-width: 400px;
+  box-shadow: 5px 5px 34px -15px rgba(0, 0, 0, 0.75);
+}
+
+.inform-form h2 {
+  font-family: Futura;
+  color: #fc5b68;
+  text-align: center;
+}
+
+.inform-form p {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.inform-form input,
+.inform-form textarea {
+    border: 1px solid #bdbdbd;
+    margin-top: 2px;
+    min-height: 20px;
+    outline: none;
+}
+
+.inform-form input:focus,
+.inform-form textarea:focus {
+    border: 1px solid #fc5b68;
+    transition: all 0.4s ease;
+}
+
+.inform-form div {
+  margin: 0 auto;
+}
+
+.inform-form button {
+  font-family: Futura;
+  background-color: #fc5b68;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.inform-form button:hover {
+  background-color: #c94853;
+  transition: all 0.2s ease;
+}
