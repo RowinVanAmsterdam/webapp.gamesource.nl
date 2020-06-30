@@ -1,3 +1,77 @@
+.inform-content {
+  /* border: 1px solid red; */
+  padding-top: 84px;
+  font-family: Futura-book;
+}
+.inform-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 15px;
+}
+.inform-form {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px 50px;
+  max-width: 400px;
+  box-shadow: 5px 5px 34px -15px rgba(0, 0, 0, 0.75);
+}
+.inform-form h2 {
+  font-family: Futura;
+  color: #fc5b68;
+  text-align: center;
+}
+.inform-form p {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.inform-form input, .inform-form textarea {
+  border: 1px solid #bdbdbd;
+  margin-top: 2px;
+  min-height: 20px;
+  outline: none;
+}
+.inform-form input:focus, .inform-form textarea:focus {
+  border: 1px solid #fc5b68;
+  transition: all 0.4s ease;
+}
+.inform-form div {
+  margin: 0 auto;
+}
+.inform-form button {
+  font-family: Futura;
+  background-color: #fc5b68;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.inform-form button:hover {
+  background-color: #c94853;
+  transition: all 0.2s ease;
+}
+.highlight-card {
+  height: 80vh;
+  margin-top: -7em;
+  background-size: cover;
+}
+.highlight-card ul {
+  margin-top: 20em;
+  list-style-type: none;
+  text-decoration: none;
+}
+.highlight-card h2 {
+  text-decoration: none;
+  color: white;
+}
+.highlight-card p {
+  text-decoration: none;
+  color: white;
+}
 .footer {
   background-color: #fff;
   border-top: 1px solid #ededed;
@@ -93,59 +167,53 @@
     margin-right: 0;
   }
 }
-/* border: 1px solid red; */
-.inform-content {
-  padding-top: 84px;
-  font-family: Futura-book;
-}
-.inform-form-container {
+.header-container {
   display: flex;
-  justify-content: center;
-  padding: 50px 15px;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.inform-form {
-  /* border: 1px solid blue; */
+.header-container h1 {
+  font-family: "Futura";
+  text-decoration: none;
+  color: black;
+  text-underline: none;
+}
+.header-container nav {
   display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 20px 50px;
-  max-width: 400px;
-  box-shadow: 5px 5px 34px -15px rgba(0, 0, 0, 0.75);
+  align-items: center;
 }
-.inform-form h2 {
-  font-family: Futura;
-  color: #fc5b68;
-  text-align: center;
+.header-container nav a {
+  margin-right: 1em;
+  text-decoration: none;
+  font-family: "Futura";
+  color: black;
 }
-.inform-form p {
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0;
+/* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-.inform-form input, .inform-form textarea {
-  border: 1px solid #bdbdbd;
-  margin-top: 2px;
-  min-height: 20px;
-  outline: none;
+@font-face {
+  font-family: "Futura-Book";
+  src: url("../fonts/Futura Book font.ttf") format("ttf");
 }
-.inform-form input:focus, .inform-form textarea:focus {
-  border: 1px solid #fc5b68;
-  transition: all 0.4s ease;
+@font-face {
+  font-family: "Futur";
+  src: url("../fonts/Futur.ttf") format("ttf");
 }
-.inform-form div {
-  margin: 0 auto;
+@font-face {
+  font-family: "Futura-Bold";
+  src: url("../fonts/Futura Bold font.ttf") format("ttf");
 }
-.inform-form button {
-  font-family: Futura;
-  background-color: #fc5b68;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  padding: 5px 20px;
-  margin-top: 10px;
-  cursor: pointer;
+@font-face {
+  font-family: "Futura-Heavy";
+  src: url("../fonts/Futura Heavy font.ttf") format("ttf");
 }
-.inform-form button:hover {
-  background-color: #c94853;
-  transition: all 0.2s ease;
+@font-face {
+  font-family: "Futura-Light";
+  src: url("../fonts/Futura Light font.ttf") format("ttf");
 }

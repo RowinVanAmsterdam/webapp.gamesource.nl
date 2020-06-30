@@ -1,0 +1,52 @@
+.highlight-card {
+  height: 80vh;
+  margin-top: -7em;
+  background-size: cover;
+  ul {
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 63vh;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  h2 {
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 60vh;
+    text-decoration: none;
+    color: white;
+    font-family: "Futura";
+  }
+
+  p {
+    font-family: "Futura";
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 65vh;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.content {
+  margin-top: 5em;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: row;
+
+  .article-card-content {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      list-style-type: none;
+    }
+    img {
+      width: 3em;
+      height: 3em;
+      object-fit: cover;
+    }
+  }
+}
