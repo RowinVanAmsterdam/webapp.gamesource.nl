@@ -1,6 +1,4 @@
 <?php
-wp_enqueue_style( 'footer', get_template_directory_uri() . '/assets/styles/template-parts/footer.css',false,'1.1','all');
-wp_enqueue_style( 'inform', get_template_directory_uri() . '/assets/styles/pages/inform.css',false,'1.1','all');
 
 
 
