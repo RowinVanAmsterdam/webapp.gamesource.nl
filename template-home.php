@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Home
+*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +19,7 @@
 
 <body>
 
-<!--<div class="nav-container">-->
-<!--    --><?php //get_template_part('template-parts/navbar'); ?>
-<!--</div>-->
+<?php get_header(); ?>
 
 <div class="container">
     <div class="content">
