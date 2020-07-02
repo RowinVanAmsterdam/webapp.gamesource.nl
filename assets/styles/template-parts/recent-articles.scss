@@ -1,0 +1,55 @@
+.content {
+  margin-top: 5em;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+  margin-left: 1rem;
+  margin-top: 2em;
+    img {
+      width: 9em;
+      height: 9em;
+      margin-right: 2em;
+      object-fit: cover;
+    }
+    .article-card-text {
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: none;
+        h2 {
+          color: black;
+          margin-bottom: 0.5rem;
+        }
+        p {
+          color: #3c3c3c;
+          font-family: "Futura";
+          font-style: italic;
+        }
+        .metadata {
+          margin-top: 1rem;
+          color: gray;
+          font-size: 0.8em;
+        }
+      }
+      }
+    }
+
+.post-categories {
+  list-style-type: none;
+  margin-bottom: 1em;
+  margin-top: 0.2em;
+  display: flex;
+  flex-direction: row;
+  a {
+    margin-right: 1em;
+    height: 1.4em;
+    text-decoration: none;
+    background-color: #003791;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    color: white;
+
+  }
+}
