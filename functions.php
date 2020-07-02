@@ -14,8 +14,8 @@ add_filter( 'post_thumbnail_html', 'remove_img_attr' );
 add_action( 'wp_enqueue_scripts', 'my_script_holder' );
 
 function my_script_holder() {
-//    wp_register_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array(), 1.1, true );
-//    wp_enqueue_script( 'main' );
+    wp_register_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array(), 1.1, true );
+    wp_enqueue_script( 'main' );
 }
 
 

@@ -56,8 +56,30 @@
 }
 .highlight {
   width: 100vw;
-  overflow: hidden;
+  overflow: auto;
   z-index: 0;
+}
+.highlight .indicators {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 75vh;
+}
+.highlight .indicators div {
+  transition: all 0.2s ease;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 1em;
+  border-radius: 100%;
+  border: 2px solid dimgray;
+  cursor: pointer;
+}
+.highlight .indicators div:hover {
+  border: 2px solid white;
 }
 .highlight .slides {
   display: flex;
@@ -70,9 +92,13 @@
 .highlight .slides::-webkit-scrollbar {
   display: none;
 }
+.active-indicator {
+  border: 2px solid white !important;
+}
 .highlight-card {
   height: 80vh;
   background-size: cover;
+  background-position: center;
   scroll-snap-align: start;
   flex-shrink: 0;
   width: 100vw;
