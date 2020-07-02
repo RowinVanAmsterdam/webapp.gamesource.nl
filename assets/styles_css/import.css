@@ -1,0 +1,294 @@
+.inform-content {
+  /* border: 1px solid red; */
+  padding-top: 84px;
+  font-family: Futura-book;
+}
+.inform-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 15px;
+}
+.inform-form {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px 50px;
+  max-width: 400px;
+  box-shadow: 5px 5px 34px -15px rgba(0, 0, 0, 0.75);
+}
+.inform-form h2 {
+  font-family: Futura;
+  color: #fc5b68;
+  text-align: center;
+}
+.inform-form p {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.inform-form input, .inform-form textarea {
+  border: 1px solid #bdbdbd;
+  margin-top: 2px;
+  min-height: 20px;
+  outline: none;
+}
+.inform-form input:focus, .inform-form textarea:focus {
+  border: 1px solid #fc5b68;
+  transition: all 0.4s ease;
+}
+.inform-form div {
+  margin: 0 auto;
+}
+.inform-form button {
+  font-family: Futura;
+  background-color: #fc5b68;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.inform-form button:hover {
+  background-color: #c94853;
+  transition: all 0.2s ease;
+}
+.highlight {
+  width: 100vw;
+  overflow: hidden;
+  z-index: 0;
+}
+.highlight .slides {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.highlight .slides::-webkit-scrollbar {
+  display: none;
+}
+.highlight-card {
+  height: 80vh;
+  background-size: cover;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 100vw;
+}
+.highlight-card ul {
+  margin-top: -2em;
+  margin-left: 1rem;
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+}
+.highlight-card ul li {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1em;
+}
+.highlight-card ul li a {
+  align-items: flex-start;
+  height: 1.4em;
+  margin-top: -4em;
+  text-decoration: none;
+  background-color: #003791;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+}
+.highlight-card a {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60vh;
+  text-decoration: none;
+}
+.highlight-card a h2 {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+}
+.highlight-card a p {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: white;
+}
+.content {
+  margin-top: 5em;
+}
+.article-card {
+  display: flex;
+  flex-direction: row;
+}
+.article-card .article-card-content {
+  display: flex;
+  flex-direction: column;
+}
+.article-card .article-card-content ul {
+  list-style-type: none;
+}
+.article-card .article-card-content img {
+  width: 3em;
+  height: 3em;
+  object-fit: cover;
+}
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #ededed;
+}
+.footer-content-container {
+  max-width: 1170px;
+  padding: 25px 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-logo-container {
+  /* border: 1px solid rgb(142, 143, 142); */
+  max-width: 150px;
+}
+.footer-logo {
+  width: 100%;
+}
+.footer-information {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  flex-wrap: wrap;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  /* border: 1px solid purple; */
+}
+.column:not(:last-child) {
+  margin-right: 100px;
+}
+.column h3 {
+  margin-top: 0;
+  font-family: Futura-book;
+  color: #3c3c3c;
+}
+.column h4 {
+  margin: 0;
+  font-family: Futura-book;
+}
+.column p {
+  font-family: Futura-book;
+  margin: 0;
+  padding: 0;
+  color: #3c3c3c;
+}
+.column a {
+  text-decoration: none;
+  color: #3c3c3c;
+  font-family: Futura-book;
+  padding-bottom: 5px;
+}
+.footer-inform {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.social-icon {
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+.footer-copyright {
+  color: #fff;
+  background-color: #000;
+  width: 100%;
+  text-align: center;
+}
+.footer-copyright p {
+  margin: 0;
+  padding: 15px;
+  font-size: 12px;
+}
+@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
+  .footer-content-container {
+    flex-direction: column;
+  }
+  .footer-logo-container {
+    margin: 0 auto;
+  }
+  .footer-information {
+    margin-left: 0;
+  }
+  .column {
+    margin: 15px 10px;
+  }
+  .column:not(:last-child) {
+    margin-right: 0;
+  }
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: -3em;
+  position: relative;
+}
+.header-container a {
+  text-decoration: none;
+}
+.header-container h1 {
+  font-family: "Futura";
+  color: white;
+  margin-left: 1rem;
+}
+.header-container nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header-container nav a {
+  margin-right: 1em;
+  text-decoration: none;
+  font-family: "Futura";
+  color: white;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+h1 {
+  font-family: "Futura";
+}
+h2 {
+  font-family: "Futura";
+}
+p {
+  font-family: "Futura";
+}
+a {
+  font-family: "Futura";
+}
+@font-face {
+  font-family: "Futura-Book";
+  src: url("../fonts/Futura Book font.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Futur";
+  src: url("../fonts/Futur.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Futura-Bold";
+  src: url("../fonts/Futura Bold font.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Futura-Heavy";
+  src: url("../fonts/Futura Heavy font.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Futura-Light";
+  src: url("../fonts/Futura Light font.ttf") format("ttf");
+}
