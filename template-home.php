@@ -23,11 +23,16 @@ Template Name: Home
 
 <div class="container">
     <div class="highlight">
+        <div class="indicators">
+            <div id="circle1" class="active-indicator"></div>
+            <div id="circle2"></div>
+            <div id="circle3"></div>
+        </div>
         <div class="slides">
         <?php
         query_posts(array(
             'category_name' => 'highlight',
-            'posts_per_page' => 2,
+            'posts_per_page' => 3,
         ));
         if ( have_posts() ) :
             while ( have_posts() ) : the_post(); ?>
