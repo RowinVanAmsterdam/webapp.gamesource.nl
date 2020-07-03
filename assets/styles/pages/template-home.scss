@@ -27,7 +27,6 @@
   .slides {
     display: flex;
     flex-direction: row;
-    background-color: red;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -91,24 +90,72 @@
 }
 
 .content {
-  margin-top: 5em;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+  .content-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    h2 {
+      color: #3c3c3c;
+    }
+    form {
+      margin-right: 25%;
+      label {
+        font-family: Futura;
+        font-weight: lighter;
+        color: #3c3c3c;
+      }
+      select {
+        border: none;
+        font-family: Futura;
+        background-color: #3c3c3c;
+        color: white;
+        padding: 0.2em;
+        -webkit-appearance: none;
+        border-radius: 0;
+      }
+    }
+    #Laatste-nieuws {
+      margin-left: 1rem;
+    }
+  }
+  .content-grid {
+    display: flex;
+    flex-direction: row;
+    .content-left {
+      width: 70%;
+      margin-right: 10%;
+    }
+    .content-right {
+      width: 20%;
+      //background-color: red;
+    }
+  }
 }
 
-.article-card {
-  display: flex;
-  flex-direction: row;
-
-  .article-card-content {
-    display: flex;
-    flex-direction: column;
-
-    ul {
-      list-style-type: none;
+@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
+  .content {
+    .content-top-row {
+      width: 100%;
+      form {
+        margin-right: 1rem;
+        width: 7em;
+      }
     }
-    img {
-      width: 3em;
-      height: 3em;
-      object-fit: cover;
+    #Laatste-nieuws {
+      margin-left: 1rem;
+    }
+    .content-grid {
+      display: flex;
+      flex-direction: row;
+      .content-left {
+        width: 100%;
+      }
+      .content-right {
+        display: none;
+      }
     }
   }
 }

@@ -13,6 +13,7 @@ Template Name: Home
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>GameSource</title>
     <?php wp_head();?>
 </head>
@@ -50,25 +51,30 @@ Template Name: Home
         </div>
     </div>
     <div class="content">
-        <h2>Laatste nieuws</h2>
-        <?php
-        query_posts(array(
-            'category_name' => 'all',
-            'posts_per_page' => 1,
-        ));
-        if ( have_posts() ) :
-            while ( have_posts() ) : the_post(); ?>
-                <div class="article-card">
-                    <a href="<?php echo the_permalink(); ?>" class="article-card-content">
-                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
-                        <?php the_category();?>
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_date(); ?></p>
-                    </a>
-                </div>
-            <?php  endwhile;
-        endif;
-        ?>
+        <div class="content-top-row">
+        <h2 id="Laatste-nieuws">Laatste nieuws</h2>
+        <form action="<?php global $test ?>" method="get" id="form-submit">
+            <label>Sorteer op:</label>
+            <select name="cat-filter" id="cat-filter">
+<!--                <option id="geenSelectie" value="geenSelectie"></option>-->
+            <?php
+            $categories = get_categories();
+            foreach ($categories as $category) {
+                echo '<option id="'.$category->name.'" value="'.$category->name.'">'.$category->name.'</option>';
+            }
+            ?>
+            </select>
+        </form>
+        </div>
+        <div class="content-grid">
+            <div class="content-left">
+                <?php set_query_var('selectedCat', $test); ?>
+                <?php get_template_part( 'template-parts/recent-articles'); ?>
+            </div>
+            <div class="content-right">
+
+            </div>
+        </div>
     </div>
     </div>
 </div>
