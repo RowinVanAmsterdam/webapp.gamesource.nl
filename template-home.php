@@ -13,6 +13,7 @@ Template Name: Home
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>GameSource</title>
     <?php wp_head();?>
 </head>
@@ -50,8 +51,30 @@ Template Name: Home
         </div>
     </div>
     <div class="content">
-        <h2>Laatste nieuws</h2>
-        <?php get_template_part( 'template-parts/recent-articles'); ?>
+        <div class="content-top-row">
+        <h2 id="Laatste-nieuws">Laatste nieuws</h2>
+        <form action="<?php global $test ?>" method="get" id="form-submit">
+            <label>Sorteer op:</label>
+            <select name="cat-filter" id="cat-filter">
+<!--                <option id="geenSelectie" value="geenSelectie"></option>-->
+            <?php
+            $categories = get_categories();
+            foreach ($categories as $category) {
+                echo '<option id="'.$category->name.'" value="'.$category->name.'">'.$category->name.'</option>';
+            }
+            ?>
+            </select>
+        </form>
+        </div>
+        <div class="content-grid">
+            <div class="content-left">
+                <?php set_query_var('selectedCat', $test); ?>
+                <?php get_template_part( 'template-parts/recent-articles'); ?>
+            </div>
+            <div class="content-right">
+
+            </div>
+        </div>
     </div>
     </div>
 </div>
