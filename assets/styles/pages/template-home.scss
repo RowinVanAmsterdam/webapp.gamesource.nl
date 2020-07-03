@@ -49,7 +49,6 @@
   width: 100vw;
   ul {
     margin-top: -2em;
-    margin-left: 1rem;
     list-style-type: none;
     text-decoration: none;
     display: flex;
@@ -57,15 +56,13 @@
     li {
       display: flex;
       flex-direction: row;
-      margin-right: 1em;
+      margin-right: 1rem;
        a {
          align-items: flex-start;
          height: 1.4em;
          margin-top: -4em;
+         margin-right: -0.5rem;
          text-decoration: none;
-         background-color: #003791;
-         padding: 0.2em 0.5em 0.2em 0.5em;
-         color: white;
        }
     }
   }
@@ -73,7 +70,6 @@
   a {
     display: flex;
     flex-direction: column;
-    //position: absolute;
     margin-top: 60vh;
     text-decoration: none;
     h2 {
@@ -130,7 +126,6 @@
     }
     .content-right {
       width: 20%;
-      //background-color: red;
     }
   }
 }

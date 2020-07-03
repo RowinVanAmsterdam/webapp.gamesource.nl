@@ -15,3 +15,59 @@ p {
 a {
   font-family: "Futura";
 }
+.playstation {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #003791;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #003791;
+}
+.playstation:hover {
+  background-color: transparent;
+  color: #003791;
+}
+.xbox {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #107c10;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #107c10;
+}
+.xbox:hover {
+  background-color: transparent;
+  color: #107c10;
+}
+.switch {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #e60012;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #e60012;
+}
+.switch:hover {
+  background-color: transparent;
+  color: #e60012;
+}
+.pc {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #ff5733;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #ff5733;
+}
+.pc:hover {
+  background-color: transparent;
+  color: #ff5733;
+}

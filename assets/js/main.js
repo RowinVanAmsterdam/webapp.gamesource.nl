@@ -2,6 +2,7 @@ window.onload = function() {
     sliderScroll();
     indicatorActivation();
     currentSelection();
+    colorCodeCategories();
 
     //eventlisteners for indicator bullets
     document.querySelector("#circle1").addEventListener("click", indicatorNav1);
@@ -84,5 +85,30 @@ function currentSelection() {
     }
     if (urlPar === "?cat-filter=Pc") {
         document.querySelector("#Pc").setAttribute('selected', true);
+    }
+}
+
+function colorCodeCategories() {
+    let allCategories = document.querySelectorAll(".post-categories li a");
+    let i;
+    for (i = 0; i < allCategories.length; i++) {
+        if (allCategories[i].innerHTML === "Highlight") {
+            allCategories[i].style.display = "none";
+        }
+        else if (allCategories[i].innerHTML === "Playstation") {
+            allCategories[i].classList.add("playstation");
+        }
+        else if (allCategories[i].innerHTML === "Xbox") {
+            allCategories[i].classList.add("xbox");
+        }
+        else if (allCategories[i].innerHTML === "Switch") {
+            allCategories[i].classList.add("switch");
+        }
+        else if (allCategories[i].innerHTML === "Pc") {
+            allCategories[i].classList.add("pc");
+        }
+        else if (allCategories[i].innerHTML === "Alle") {
+            allCategories[i].style.display = "none";
+        }
     }
 }

@@ -104,7 +104,6 @@
 }
 .highlight-card ul {
   margin-top: -2em;
-  margin-left: 1rem;
   list-style-type: none;
   text-decoration: none;
   display: flex;
@@ -113,16 +112,14 @@
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 .highlight-card ul li a {
   align-items: flex-start;
   height: 1.4em;
   margin-top: -4em;
+  margin-right: -0.5rem;
   text-decoration: none;
-  background-color: #003791;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
 }
 .highlight-card a {
   display: flex;
@@ -392,20 +389,6 @@
   display: flex;
   flex-direction: row;
 }
-.post-categories a {
-  transition: all 0.2s ease;
-  margin-right: 1em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #003791;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #003791;
-}
-.post-categories a:hover {
-  background-color: transparent;
-  color: #003791;
-}
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
   .article-card {
     max-width: 100vw;
@@ -448,6 +431,62 @@ p {
 }
 a {
   font-family: "Futura";
+}
+.playstation {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #003791;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #003791;
+}
+.playstation:hover {
+  background-color: transparent;
+  color: #003791;
+}
+.xbox {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #107c10;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #107c10;
+}
+.xbox:hover {
+  background-color: transparent;
+  color: #107c10;
+}
+.switch {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #e60012;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #e60012;
+}
+.switch:hover {
+  background-color: transparent;
+  color: #e60012;
+}
+.pc {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #ff5733;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #ff5733;
+}
+.pc:hover {
+  background-color: transparent;
+  color: #ff5733;
 }
 @font-face {
   font-family: "Futura-Book";

@@ -64,20 +64,6 @@
   margin-top: 0.2em;
   display: flex;
   flex-direction: row;
-  a {
-    transition: all 0.2s ease;
-    margin-right: 1em;
-    height: 1.4em;
-    text-decoration: none;
-    background-color: #003791;
-    padding: 0.2em 0.5em 0.2em 0.5em;
-    color: white;
-    border: 2px solid #003791;
-  }
-  a:hover {
-    background-color: transparent;
-    color: #003791;
-  }
 }
 
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
