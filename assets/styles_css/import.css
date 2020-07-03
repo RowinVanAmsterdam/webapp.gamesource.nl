@@ -167,6 +167,8 @@
   background-color: #3c3c3c;
   color: white;
   padding: 0.2em;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .content .content-top-row #Laatste-nieuws {
   margin-left: 1rem;
