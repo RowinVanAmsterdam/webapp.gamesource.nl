@@ -69,7 +69,7 @@ function currentSelection() {
     const url = window.location.href;
     console.log(url);
     document.querySelector("#Highlight").style.display = "none";
-    document.querySelector("#Uncategorized").style.display = "none";
+    // document.querySelector("#Uncategorized").style.display = "none";
 
     if (urlPar === "?cat-filter=Alle") {
         document.querySelector("#Alle").setAttribute('selected', true);
