@@ -96,16 +96,16 @@ function colorCodeCategories() {
             allCategories[i].style.display = "none";
         }
         else if (allCategories[i].innerHTML === "Playstation") {
-            allCategories[i].classList.add("playstation");
+            allCategories[i].classList.add("playstation-button");
         }
         else if (allCategories[i].innerHTML === "Xbox") {
-            allCategories[i].classList.add("xbox");
+            allCategories[i].classList.add("xbox-button");
         }
         else if (allCategories[i].innerHTML === "Switch") {
-            allCategories[i].classList.add("switch");
+            allCategories[i].classList.add("switch-button");
         }
         else if (allCategories[i].innerHTML === "Pc") {
-            allCategories[i].classList.add("pc");
+            allCategories[i].classList.add("pc-button");
         }
         else if (allCategories[i].innerHTML === "Alle") {
             allCategories[i].style.display = "none";
