@@ -18,6 +18,16 @@ function my_script_holder() {
     wp_enqueue_script( 'main' );
 }
 
+global $test;
+
+foreach ($_GET as $key => $post_data) {
+    if (is_array($post_data)) {
+        $test = $post_data;
+    } else {
+        $test = $post_data;
+    }
+}
+
 
 if (isset($_POST['inform_submit'])) {
     $inform_name = $_POST['inform_name'];

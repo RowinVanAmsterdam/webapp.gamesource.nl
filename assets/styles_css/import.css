@@ -84,7 +84,6 @@
 .highlight .slides {
   display: flex;
   flex-direction: row;
-  background-color: red;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -105,7 +104,6 @@
 }
 .highlight-card ul {
   margin-top: -2em;
-  margin-left: 1rem;
   list-style-type: none;
   text-decoration: none;
   display: flex;
@@ -114,16 +112,14 @@
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 .highlight-card ul li a {
   align-items: flex-start;
   height: 1.4em;
   margin-top: -4em;
+  margin-right: -0.5rem;
   text-decoration: none;
-  background-color: #003791;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
 }
 .highlight-card a {
   display: flex;
@@ -142,23 +138,70 @@
   color: white;
 }
 .content {
-  margin-top: 5em;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.article-card {
+.content .content-top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.content .content-top-row h2 {
+  color: #3c3c3c;
+}
+.content .content-top-row form {
+  margin-right: 25%;
+}
+.content .content-top-row form label {
+  font-family: Futura;
+  font-weight: lighter;
+  color: #3c3c3c;
+}
+.content .content-top-row form select {
+  border: none;
+  font-family: Futura;
+  background-color: #3c3c3c;
+  color: white;
+  padding: 0.2em;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.content .content-top-row #Laatste-nieuws {
+  margin-left: 1rem;
+}
+.content .content-grid {
   display: flex;
   flex-direction: row;
 }
-.article-card .article-card-content {
-  display: flex;
-  flex-direction: column;
+.content .content-grid .content-left {
+  width: 70%;
+  margin-right: 10%;
 }
-.article-card .article-card-content ul {
-  list-style-type: none;
+.content .content-grid .content-right {
+  width: 20%;
 }
-.article-card .article-card-content img {
-  width: 3em;
-  height: 3em;
-  object-fit: cover;
+@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
+  .content .content-top-row {
+    width: 100%;
+  }
+  .content .content-top-row form {
+    margin-right: 1rem;
+    width: 7em;
+  }
+  .content #Laatste-nieuws {
+    margin-left: 1rem;
+  }
+  .content .content-grid {
+    display: flex;
+    flex-direction: row;
+  }
+  .content .content-grid .content-left {
+    width: 100%;
+  }
+  .content .content-grid .content-right {
+    display: none;
+  }
 }
 .footer {
   background-color: #fff;
@@ -281,6 +324,97 @@
   font-family: "Futura";
   color: white;
 }
+@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
+  .header-container nav {
+    display: none;
+  }
+}
+.content {
+  margin-top: 5em;
+}
+.article-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2em;
+  margin-left: 1rem;
+  margin-top: 2em;
+}
+.article-card a img {
+  transition: all 0.2s ease;
+  width: 9em;
+  height: 9em;
+  margin-right: 2em;
+  object-fit: cover;
+}
+.article-card a img:hover {
+  transform: scale(1.1);
+}
+.article-card .article-card-text {
+  display: flex;
+  flex-direction: column;
+}
+.article-card .article-card-text a {
+  text-decoration: none;
+}
+.article-card .article-card-text a h2 {
+  transition: all 0.2s ease;
+  color: #3c3c3c;
+  margin-bottom: 0.5rem;
+  min-height: 2.7em;
+}
+.article-card .article-card-text a h2:hover {
+  color: #003791;
+}
+.article-card .article-card-text a span p {
+  color: #3c3c3c;
+  font-family: "Futura";
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+.article-card .article-card-text a .metadata {
+  color: gray;
+  font-size: 0.8em;
+  justify-content: left;
+}
+.article-card .article-card-text a .metadata i {
+  margin-right: 0.5em;
+}
+.article-card .article-card-text a .excerpt {
+  margin-bottom: 1em;
+}
+.post-categories {
+  list-style-type: none;
+  margin-bottom: 1em;
+  margin-top: 0.2em;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
+  .article-card {
+    max-width: 100vw;
+  }
+  .article-card a img {
+    width: 6em;
+    height: 100%;
+    margin-right: 1rem;
+  }
+  .article-card .article-card-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .article-card .article-card-text ul {
+    display: none;
+  }
+  .article-card .article-card-text a {
+    text-decoration: none;
+  }
+  .article-card .article-card-text a h2 {
+    font-size: 1em;
+  }
+  .article-card .article-card-text a .metadata {
+    font-size: 0.9em;
+  }
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -297,6 +431,62 @@ p {
 }
 a {
   font-family: "Futura";
+}
+.playstation {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #003791;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #003791;
+}
+.playstation:hover {
+  background-color: transparent;
+  color: #003791;
+}
+.xbox {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #107c10;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #107c10;
+}
+.xbox:hover {
+  background-color: transparent;
+  color: #107c10;
+}
+.switch {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #e60012;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #e60012;
+}
+.switch:hover {
+  background-color: transparent;
+  color: #e60012;
+}
+.pc {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  text-decoration: none;
+  background-color: #ff5733;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  border: 2px solid #ff5733;
+}
+.pc:hover {
+  background-color: transparent;
+  color: #ff5733;
 }
 @font-face {
   font-family: "Futura-Book";
