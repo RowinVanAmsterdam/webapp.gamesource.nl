@@ -53,10 +53,13 @@
     text-decoration: none;
     display: flex;
     flex-direction: row;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right:auto;
     li {
       display: flex;
       flex-direction: row;
-      margin-right: 1rem;
+      margin-left: 1rem;
        a {
          align-items: flex-start;
          height: 1.4em;
@@ -72,6 +75,9 @@
     flex-direction: column;
     margin-top: 60vh;
     text-decoration: none;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
     h2 {
       margin-left: 1rem;
       text-decoration: none;
@@ -86,7 +92,7 @@
 }
 
 .content {
-  max-width: 1070px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   .content-top-row {

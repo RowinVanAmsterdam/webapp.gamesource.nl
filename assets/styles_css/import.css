@@ -108,11 +108,14 @@
   text-decoration: none;
   display: flex;
   flex-direction: row;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 .highlight-card ul li a {
   align-items: flex-start;
@@ -126,6 +129,9 @@
   flex-direction: column;
   margin-top: 60vh;
   text-decoration: none;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .highlight-card a h2 {
   margin-left: 1rem;
@@ -138,7 +144,7 @@
   color: white;
 }
 .content {
-  max-width: 1070px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -304,24 +310,33 @@
   justify-content: space-between;
   margin-bottom: -3em;
   position: relative;
+  width: 100vw;
 }
-.header-container a {
+.header-container__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-container__content a {
   text-decoration: none;
 }
-.header-container h1 {
-  font-family: "Futura";
+.header-container__content h1 {
   color: white;
   margin-left: 1rem;
 }
-.header-container nav {
+.header-container__content nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.header-container nav a {
+.header-container__content nav a {
   margin-right: 1em;
   text-decoration: none;
-  font-family: "Futura";
+  font-family: "Futura-Heavy";
   color: white;
 }
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -421,18 +436,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
 }
 h1 {
-  font-family: "Futura";
+  font-family: "Futura-Heavy";
 }
 h2 {
-  font-family: "Futura";
+  font-family: "Futura-Heavy";
 }
 p {
-  font-family: "Futura";
+  font-family: "Futura-Bold";
 }
 a {
-  font-family: "Futura";
+  font-family: "Futura-Bold";
 }
-.playstation {
+.playstation-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -442,11 +457,11 @@ a {
   color: white;
   border: 2px solid #003791;
 }
-.playstation:hover {
+.playstation-button:hover {
   background-color: transparent;
   color: #003791;
 }
-.xbox {
+.xbox-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -456,11 +471,11 @@ a {
   color: white;
   border: 2px solid #107c10;
 }
-.xbox:hover {
+.xbox-button:hover {
   background-color: transparent;
   color: #107c10;
 }
-.switch {
+.switch-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -470,11 +485,11 @@ a {
   color: white;
   border: 2px solid #e60012;
 }
-.switch:hover {
+.switch-button:hover {
   background-color: transparent;
   color: #e60012;
 }
-.pc {
+.pc-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -484,27 +499,27 @@ a {
   color: white;
   border: 2px solid #ff5733;
 }
-.pc:hover {
+.pc-button:hover {
   background-color: transparent;
   color: #ff5733;
 }
 @font-face {
   font-family: "Futura-Book";
-  src: url("../fonts/Futura Book font.ttf") format("ttf");
-}
-@font-face {
-  font-family: "Futur";
-  src: url("../fonts/Futur.ttf") format("ttf");
+  src: url("../fonts/Futura-Book-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Book-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Bold";
-  src: url("../fonts/Futura Bold font.ttf") format("ttf");
+  src: url("../fonts/Futura-Bold-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Bold-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Heavy";
-  src: url("../fonts/Futura Heavy font.ttf") format("ttf");
+  src: url("../fonts/Futura-Heavy-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Heavy-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Light";
-  src: url("../fonts/Futura Light font.ttf") format("ttf");
+  src: url("../fonts/Futura-Light-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Light-font-webfont.woff2") format("woff2");
 }
