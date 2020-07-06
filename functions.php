@@ -48,4 +48,7 @@ if (isset($_POST['inform_submit'])) {
 
 define('WP_SCSS_ALWAYS_RECOMPILE', true);
 
+//homepage url
+$home = home_url();
+
 
