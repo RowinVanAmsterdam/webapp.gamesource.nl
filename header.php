@@ -4,9 +4,9 @@
         <h1>GameSource</h1>
         </a>
         <nav>
-            <a href="#">Nieuws</a>
-            <a href="#">Reviews</a>
-            <a href="#">Previews</a>
+            <a id="Nieuws" href="#">Nieuws</a>
+            <a id="Reviews" href="#">Reviews</a>
+            <a id="Previews" href="#">Previews</a>
         </nav>
     </div>
 </div>

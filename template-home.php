@@ -13,6 +13,9 @@ Template Name: Home
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script type="text/javascript">
+        let homeUrl = '<?php echo home_url(); ?>';
+    </script>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>GameSource</title>
     <?php wp_head();?>
