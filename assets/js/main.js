@@ -93,6 +93,7 @@ function colorCodeCategories() {
     let i;
     for (i = 0; i < allCategories.length; i++) {
         if (allCategories[i].innerHTML === "Highlight") {
+            allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
         }
         else if (allCategories[i].innerHTML === "Playstation") {
@@ -108,9 +109,11 @@ function colorCodeCategories() {
             allCategories[i].classList.add("pc-button");
         }
         else if (allCategories[i].innerHTML === "Alle") {
+            allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
         }
         else if (allCategories[i].innerHTML === "Uncategorized") {
+            allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
         }
     }
