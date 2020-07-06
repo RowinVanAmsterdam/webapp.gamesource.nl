@@ -12,9 +12,7 @@
 
 <div>
 
-    <div class="nav-container">
-        <?php get_template_part('template-parts/navbar'); ?>
-    </div>
+    <?php get_header(); ?>
 
     <div class="postContainer">
         <?php
