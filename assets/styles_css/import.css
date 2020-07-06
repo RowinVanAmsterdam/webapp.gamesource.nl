@@ -108,11 +108,17 @@
   text-decoration: none;
   display: flex;
   flex-direction: row;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
   margin-right: 1rem;
+}
+.highlight-card ul li:first-child {
+  margin-right: 0;
 }
 .highlight-card ul li a {
   align-items: flex-start;
@@ -126,6 +132,9 @@
   flex-direction: column;
   margin-top: 60vh;
   text-decoration: none;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .highlight-card a h2 {
   margin-left: 1rem;
@@ -138,7 +147,7 @@
   color: white;
 }
 .content {
-  max-width: 1070px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -304,21 +313,31 @@
   justify-content: space-between;
   margin-bottom: -3em;
   position: relative;
+  width: 100vw;
 }
-.header-container a {
+.header-container__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-container__content a {
   text-decoration: none;
 }
-.header-container h1 {
+.header-container__content h1 {
   font-family: "Futura";
   color: white;
   margin-left: 1rem;
 }
-.header-container nav {
+.header-container__content nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.header-container nav a {
+.header-container__content nav a {
   margin-right: 1em;
   text-decoration: none;
   font-family: "Futura";
