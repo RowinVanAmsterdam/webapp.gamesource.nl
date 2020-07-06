@@ -115,10 +115,7 @@
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
-  margin-right: 1rem;
-}
-.highlight-card ul li:first-child {
-  margin-right: 0;
+  margin-left: 1rem;
 }
 .highlight-card ul li a {
   align-items: flex-start;
@@ -328,7 +325,6 @@
   text-decoration: none;
 }
 .header-container__content h1 {
-  font-family: "Futura";
   color: white;
   margin-left: 1rem;
 }
@@ -340,7 +336,7 @@
 .header-container__content nav a {
   margin-right: 1em;
   text-decoration: none;
-  font-family: "Futura";
+  font-family: "Futura-Heavy";
   color: white;
 }
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -440,16 +436,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
 }
 h1 {
-  font-family: "Futura";
+  font-family: "Futura-Heavy";
 }
 h2 {
-  font-family: "Futura";
+  font-family: "Futura-Heavy";
 }
 p {
-  font-family: "Futura";
+  font-family: "Futura-Bold";
 }
 a {
-  font-family: "Futura";
+  font-family: "Futura-Bold";
 }
 .playstation-button {
   transition: all 0.2s ease;
@@ -509,21 +505,21 @@ a {
 }
 @font-face {
   font-family: "Futura-Book";
-  src: url("../fonts/Futura Book font.ttf") format("ttf");
-}
-@font-face {
-  font-family: "Futur";
-  src: url("../fonts/Futur.ttf") format("ttf");
+  src: url("../fonts/Futura-Book-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Book-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Bold";
-  src: url("../fonts/Futura Bold font.ttf") format("ttf");
+  src: url("../fonts/Futura-Bold-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Bold-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Heavy";
-  src: url("../fonts/Futura Heavy font.ttf") format("ttf");
+  src: url("../fonts/Futura-Heavy-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Heavy-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Light";
-  src: url("../fonts/Futura Light font.ttf") format("ttf");
+  src: url("../fonts/Futura-Light-font-webfont.woff") format("woff");
+  src: url("../fonts/Futura-Light-font-webfont.woff2") format("woff2");
 }
