@@ -59,10 +59,7 @@
     li {
       display: flex;
       flex-direction: row;
-      margin-right: 1rem;
-      &:first-child {
-        margin-right: 0;
-      }
+      margin-left: 1rem;
        a {
          align-items: flex-start;
          height: 1.4em;
