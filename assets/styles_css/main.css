@@ -15,7 +15,7 @@ p {
 a {
   font-family: "Futura";
 }
-.playstation {
+.playstation-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -25,11 +25,11 @@ a {
   color: white;
   border: 2px solid #003791;
 }
-.playstation:hover {
+.playstation-button:hover {
   background-color: transparent;
   color: #003791;
 }
-.xbox {
+.xbox-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -39,11 +39,11 @@ a {
   color: white;
   border: 2px solid #107c10;
 }
-.xbox:hover {
+.xbox-button:hover {
   background-color: transparent;
   color: #107c10;
 }
-.switch {
+.switch-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -53,11 +53,11 @@ a {
   color: white;
   border: 2px solid #e60012;
 }
-.switch:hover {
+.switch-button:hover {
   background-color: transparent;
   color: #e60012;
 }
-.pc {
+.pc-button {
   transition: all 0.2s ease;
   margin-right: 0.5em;
   height: 1.4em;
@@ -67,7 +67,7 @@ a {
   color: white;
   border: 2px solid #ff5733;
 }
-.pc:hover {
+.pc-button:hover {
   background-color: transparent;
   color: #ff5733;
 }
