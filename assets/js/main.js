@@ -110,5 +110,8 @@ function colorCodeCategories() {
         else if (allCategories[i].innerHTML === "Alle") {
             allCategories[i].style.display = "none";
         }
+        else if (allCategories[i].innerHTML === "Uncategorized") {
+            allCategories[i].style.display = "none";
+        }
     }
 }
