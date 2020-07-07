@@ -4,9 +4,9 @@
         <h1>GameSource</h1>
         </a>
         <nav>
-            <a id="Nieuws" href="#">Nieuws</a>
-            <a id="Reviews" href="#">Reviews</a>
-            <a id="Previews" href="#">Previews</a>
+            <a id="Nieuws" href="<?php echo home_url(); ?>/nieuws">Nieuws</a>
+            <a id="Reviews" href="<?php echo home_url(); ?>/reviews">Reviews</a>
+            <a id="Previews" href="<?php echo home_url(); ?>/previews">Previews</a>
         </nav>
     </div>
 </div>
