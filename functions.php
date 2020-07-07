@@ -28,6 +28,11 @@ foreach ($_GET as $key => $post_data) {
     }
 }
 
+global $path;
+
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$path = explode("/", $actual_link);
+
 
 if (isset($_POST['inform_submit'])) {
     $inform_name = $_POST['inform_name'];
