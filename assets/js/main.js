@@ -3,11 +3,13 @@ window.onload = function() {
     indicatorActivation();
     currentSelection();
     colorCodeCategories();
+    homeCheck();
 
     //eventlisteners for indicator bullets
     document.querySelector("#circle1").addEventListener("click", indicatorNav1);
     document.querySelector("#circle2").addEventListener("click", indicatorNav2);
     document.querySelector("#circle3").addEventListener("click", indicatorNav3);
+    window.addEventListener('scroll', headerScroll);
     //eventlistener for form submit
     document.querySelector("#form-submit").addEventListener("change", clickToSubmit);
 };
@@ -67,7 +69,6 @@ function clickToSubmit() {
 function currentSelection() {
     const urlPar = window.location.search;
     const url = window.location.href;
-    console.log(url);
     document.querySelector("#Highlight").style.display = "none";
     // document.querySelector("#Uncategorized").style.display = "none";
 
@@ -116,5 +117,35 @@ function colorCodeCategories() {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
         }
+    }
+}
+
+function homeCheck() {
+    let currentLocation = window.location.href;
+    homeUrl += "/";
+    if (currentLocation === homeUrl) {
+        document.querySelector(".header-container__content h1").style.color = "white";
+        document.querySelector(".header-container").style.backgroundColor = "transparent";
+        document.querySelector(".header-container").style.borderBottom = "none";
+        document.querySelector("#Nieuws").style.color = "white";
+        document.querySelector("#Reviews").style.color = "white";
+        document.querySelector("#Previews").style.color = "white";
+    }
+}
+
+function headerScroll() {
+    if (window.scrollY >= 20) {
+        document.querySelector(".header-container__content h1").removeAttribute("style");
+        document.querySelector(".header-container").removeAttribute("style");
+        document.querySelector("#Nieuws").removeAttribute("style");
+        document.querySelector("#Reviews").removeAttribute("style");
+        document.querySelector("#Previews").removeAttribute("style");
+    }
+    else {
+        document.querySelector(".header-container__content h1").style.color = "white";
+        document.querySelector(".header-container").style.backgroundColor = "transparent";
+        document.querySelector("#Nieuws").style.color = "white";
+        document.querySelector("#Reviews").style.color = "white";
+        document.querySelector("#Previews").style.color = "white";
     }
 }

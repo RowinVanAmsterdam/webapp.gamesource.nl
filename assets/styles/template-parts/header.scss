@@ -3,22 +3,31 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: -3em;
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100vw;
+  transition: all 0.4s ease;
+  background-color: white;
+  height: 4rem;
+  z-index: 100;
+  border-bottom: 2px solid rgba(60,60,60,0.1);
   &__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1500px;
+    max-width: 1920px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
     a {
       text-decoration: none;
     }
     h1 {
-      color: white;
+      text-align: center;
+      color: #3c3c3c;
       margin-left: 1rem;
+      transition: all 1s ease;
     }
     nav {
       display: flex;
@@ -28,7 +37,8 @@
         margin-right: 1em;
         text-decoration: none;
         font-family: "Futura-Heavy";
-        color: white;
+        color: #3c3c3c;
+        transition: all 1s ease;
       }
     }
   }

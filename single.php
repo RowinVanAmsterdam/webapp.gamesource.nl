@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: flutPost template
+* Template Name: Gamesource single post
 * Template Post Type: post
 */
 ?>
@@ -10,53 +10,37 @@
     <?php wp_head(); ?>
 </head>
 
-<div>
-
     <?php get_header(); ?>
 
-    <div class="postContainer">
-        <?php
-        if (have_posts()) :
-            while (have_posts()) : the_post(); ?>
-        <div class="featuredBackground">
-            <?php the_post_thumbnail('full'); ?>
+    <?php
+    if (have_posts()) :
+        while (have_posts()) : the_post(); ?>
+            <div class="featured-image">
+                <?php the_post_thumbnail('full'); ?>
+            </div>
+    <div class="grid-container">
+        <div class="postContainer">
+            <div class="postContainer__metadata">
+                    <h2 class="metadata__title"><?php the_title(); ?></h2>
+                    <div class="metadata__author-time">
+                        <h3 class="metadata__detail"><?php the_author(); ?>&nbsp</h3>
+                        <h3 class="metadata__detail">| <?php the_date(); ?></h3>
+                    </div>
+                <div class="postContainer__content">
+                    <?php the_content(); ?>
+                </div>
+            </div>
+            <?php endwhile;
+            endif;
+            ?>
+
+            <?php comments_template(); ?>
+
         </div>
-        <div class="postContent">
-            <div class="postTitle">
-                <h2><?php the_title(); ?></h2>
-            </div>
-            <div class="authorTime">
-                <h3><?php the_author(); ?> </h3>
-                <h3> - </h3>
-                <h3> <?php the_date(); ?></h3>
-            </div>
-            <div class="post">
-                <?php the_content(); ?>
-            </div>
+
+        <div class="sideContainer">
+
         </div>
-        <?php endwhile;
-        endif;
-        ?>
-
-
-
-        <?php comments_template(); ?>
-
-
-        <!-- https://www.taniarascia.com/wordpress-from-scratch-part-two/ -->
-<?php
-//if ( have_posts() ) : while ( have_posts() ) : the_post();
-//get_template_part( 'content-single', get_post_format() );
-
-//if ( comments_open() || get_comments_number() ) :
-//    comments_template();
-//endif;
-
-//endwhile; endif; ?>
-        
     </div>
-</div>
-
-</div>
 
 <?php get_footer(); ?>

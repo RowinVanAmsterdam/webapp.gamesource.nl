@@ -209,6 +209,79 @@
     display: none;
   }
 }
+.featured-image {
+  display: flex;
+  justify-content: center;
+}
+.featured-image img {
+  margin-top: 7vh;
+  margin-bottom: 4vh;
+  height: 50vh;
+  width: 1070px;
+  object-fit: cover;
+}
+.grid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid-container .postContainer {
+  flex-direction: column;
+  width: 65%;
+}
+.grid-container .postContainer__metadata {
+  display: flex;
+  flex-direction: column;
+}
+.grid-container .postContainer__metadata .metadata__title {
+  font-size: 2em;
+  color: #3c3c3c;
+}
+.grid-container .postContainer__metadata .metadata__author-time {
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+.grid-container .postContainer__content {
+  margin-bottom: 4vh;
+}
+.grid-container .postContainer__content h3 {
+  color: #3c3c3c;
+  margin: 2vh 0 1vh 0;
+}
+.grid-container .sideContainer {
+  width: 30%;
+  margin-left: 5%;
+}
+@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
+  .featured-image {
+    width: 100vw;
+  }
+  .featured-image img {
+    width: 100vw;
+    height: 50vw;
+  }
+  .grid-container .postContainer {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .grid-container .postContainer__content {
+    margin-bottom: 4vh;
+  }
+  .grid-container .postContainer__content h3 {
+    color: #3c3c3c;
+    margin: 2vh 0 1vh 0;
+  }
+  .grid-container .sideContainer {
+    display: none;
+  }
+}
 .footer {
   background-color: #fff;
   border-top: 1px solid #ededed;
@@ -309,8 +382,14 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: -3em;
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100vw;
+  transition: all 0.4s ease;
+  background-color: white;
+  height: 4rem;
+  z-index: 100;
+  border-bottom: 2px solid rgba(60, 60, 60, 0.1);
 }
 .header-container__content {
   display: flex;
@@ -320,13 +399,16 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  align-items: center;
 }
 .header-container__content a {
   text-decoration: none;
 }
 .header-container__content h1 {
-  color: white;
+  text-align: center;
+  color: #3c3c3c;
   margin-left: 1rem;
+  transition: all 1s ease;
 }
 .header-container__content nav {
   display: flex;
@@ -337,7 +419,8 @@
   margin-right: 1em;
   text-decoration: none;
   font-family: "Futura-Heavy";
-  color: white;
+  color: #3c3c3c;
+  transition: all 1s ease;
 }
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
   .header-container nav {
@@ -441,8 +524,11 @@ h1 {
 h2 {
   font-family: "Futura-Heavy";
 }
+h3 {
+  font-family: "Futura-Heavy";
+}
 p {
-  font-family: "Futura-Bold";
+  font-family: "Futura-Book";
 }
 a {
   font-family: "Futura-Bold";
@@ -505,21 +591,21 @@ a {
 }
 @font-face {
   font-family: "Futura-Book";
-  src: url("../fonts/Futura-Book-font-webfont.woff") format("woff");
-  src: url("../fonts/Futura-Book-font-webfont.woff2") format("woff2");
+  src: url("../fonts/futura-book-font-webfont.woff") format("woff");
+  src: url("../fonts/futura-book-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Bold";
-  src: url("../fonts/Futura-Bold-font-webfont.woff") format("woff");
-  src: url("../fonts/Futura-Bold-font-webfont.woff2") format("woff2");
+  src: url("../fonts/futura-bold-font-webfont.woff") format("woff");
+  src: url("../fonts/futura-bold-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Heavy";
-  src: url("../fonts/Futura-Heavy-font-webfont.woff") format("woff");
-  src: url("../fonts/Futura-Heavy-font-webfont.woff2") format("woff2");
+  src: url("../fonts/futura-heavy-font-webfont.woff") format("woff");
+  src: url("../fonts/futura-heavy-font-webfont.woff2") format("woff2");
 }
 @font-face {
   font-family: "Futura-Light";
-  src: url("../fonts/Futura-Light-font-webfont.woff") format("woff");
-  src: url("../fonts/Futura-Light-font-webfont.woff2") format("woff2");
+  src: url("../fonts/futura-light-font-webfont.woff") format("woff");
+  src: url("../fonts/futura-light-font-webfont.woff2") format("woff2");
 }
