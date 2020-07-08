@@ -28,11 +28,11 @@ Template Name: Sub-Page
 <div class="container">
     <div class="content">
         <div class="content-top-row">
-            <h2 id="Laatste-nieuws"><?php echo $path[4] ?></h2>
+            <h2 id="Laatste-nieuws"><?php echo $item ?></h2>
         </div>
         <div class="content-grid">
             <div class="content-left">
-                <?php set_query_var('urlCategory', $path[4]); ?>
+                <?php set_query_var('urlCategory', $item); ?>
                 <?php get_template_part( 'template-parts/specific-articles'); ?>
             </div>
             <div class="content-right">

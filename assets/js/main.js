@@ -166,10 +166,6 @@ function headerScroll() {
         document.querySelector("#Previews").removeAttribute("style");
     }
     else {
-        document.querySelector(".header-container__content h1").style.color = "white";
-        document.querySelector(".header-container").style.backgroundColor = "transparent";
-        document.querySelector("#Nieuws").style.color = "white";
-        document.querySelector("#Reviews").style.color = "white";
-        document.querySelector("#Previews").style.color = "white";
+        homeCheck();
     }
 }

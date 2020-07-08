@@ -29,9 +29,24 @@ foreach ($_GET as $key => $post_data) {
 }
 
 global $path;
+global $item;
 
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $path = explode("/", $actual_link);
+//$item = array_search("reviews",$path,true);
+//$item = array_keys($path[0], "previews");
+if(in_array("previews", $path))
+{
+    $item = "Previews";
+}
+
+if(in_array("reviews", $path))
+{
+    $item = "Reviews";
+}
+
+
+//var_dump($item);
 
 
 if (isset($_POST['inform_submit'])) {
