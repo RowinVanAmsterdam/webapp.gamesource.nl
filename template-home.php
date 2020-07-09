@@ -81,6 +81,5 @@ Template Name: Home
     </div>
     </div>
 </div>
-
-</body>
 <?php get_footer();?>
+</body>

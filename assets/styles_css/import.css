@@ -282,9 +282,36 @@
     display: none;
   }
 }
+.container__content {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container__content--top h2 {
+  font-size: 5em;
+  font-family: Futura-Heavy;
+  text-transform: uppercase;
+}
+.container__content--top h3 {
+  font-size: 3em;
+  font-family: Futura-Book;
+  margin-bottom: 1em;
+}
+.container__content--top .home-link {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+.container__content--top div {
+  margin-bottom: 1em;
+}
 .footer {
   background-color: #fff;
   border-top: 1px solid #ededed;
+  margin-top: 5rem;
 }
 .footer-content-container {
   max-width: 1170px;
@@ -534,7 +561,6 @@ body {
   margin: 0;
   padding: 0;
   /* make it look decent enough */
-  color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 #menuToggle {
@@ -711,20 +737,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
 }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
 h1 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 h2 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 h3 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 p {
   font-family: "Futura-Book";
+  color: #3c3c3c;
 }
 a {
   font-family: "Futura-Bold";
+  color: #3c3c3c;
 }
 .playstation-button {
   transition: all 0.2s ease;
