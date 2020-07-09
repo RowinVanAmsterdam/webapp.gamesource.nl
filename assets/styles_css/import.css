@@ -311,6 +311,7 @@
 .footer {
   background-color: #fff;
   border-top: 1px solid #ededed;
+  padding: 0 15px;
 }
 .footer .mainfooter {
   max-width: 1920px;
@@ -318,9 +319,14 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer .mainfooter__image-container {
   max-width: 150px;
+  padding: 0 15px;
+  border: 1px solid pink;
+  display: flex;
+  align-items: center;
 }
 .footer .mainfooter__image {
   width: 100%;
@@ -328,11 +334,15 @@
 .footer .mainfooter__column-container {
   border: 1px solid green;
   display: flex;
+  flex-wrap: wrap;
 }
 .footer .mainfooter__column {
   display: flex;
   flex-direction: column;
-  margin: 0 15px;
+  margin: 20px 15px;
+}
+.footer .mainfooter__title {
+  margin-bottom: 15px;
 }
 .footer .copyright-bar {
   text-align: center;

@@ -1,27 +1,26 @@
 <footer class="footer">
     <div class="mainfooter">
         <div class="mainfooter__image-container">
-            <img class="mainfooter__image"
-                src="https://flutcadeau.nl/wp-content/themes/FlutcadeauThema/assets/img/logo.svg" alt="GameSource logo">
+            <img class="mainfooter__image" src="https://flutcadeau.nl/wp-content/themes/FlutcadeauThema/assets/img/logo.svg" alt="GameSource logo">
         </div>
 
         <div class="mainfooter__column-container">
             <div class="mainfooter__column">
-                <h3>Menu</h3>
+                <h3 class="mainfooter__title">Menu</h3>
                 <a class="" href="<?php echo get_bloginfo("url")?>/test1">Nieuws</a>
                 <a class="" href="<?php echo get_bloginfo("url")?>/test2">Reviews</a>
                 <a class="" href="<?php echo get_bloginfo("url")?>/test3">Previews</a>
             </div>
 
             <div class="mainfooter__column">
-                <h3>Terms</h3>
+                <h3 class="mainfooter__title">Terms</h3>
                 <a class="" href="<?php echo get_bloginfo("url")?>/test1">Algemene voorwaarden</a>
                 <a class="" href="<?php echo get_bloginfo("url")?>/test2">Privacyverklaring</a>
                 <a class="" href="<?php echo get_bloginfo("url")?>/test3">Cookies</a>
             </div>
 
             <div class="mainfooter__column">
-                <h3>Contact</h3>
+                <h3 class="mainfooter__title">Contact</h3>
                 <h4>E-mail:</h4>
                 <a href="mailto:info@gamesource.nl">info@gamesource.nl</a>
                 <h4>Deel nieuws met ons:</h4>
@@ -29,7 +28,7 @@
             </div>
 
             <div class="mainfooter__column">
-                <h3>Social Media</h3>
+                <h3 class="mainfooter__title">Social Media</h3>
                 <div>
                     <a href="https://www.facebook.com/flutcadeau" target="_blank"><i class="social-icon fab fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://www.instagram.com/flutcadeau" target="_blank"><i class="social-icon fab fa-instagram" aria-hidden="true"></i></a>
