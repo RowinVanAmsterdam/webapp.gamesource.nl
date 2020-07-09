@@ -1,0 +1,30 @@
+.container {
+  &__content {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    &--top {
+      h2 {
+        font-size: 5em;
+        font-family: Futura-Heavy;
+        text-transform: uppercase;
+      }
+      h3 {
+        font-size: 3em;
+        font-family: Futura-Book;
+        margin-bottom: 1em;
+      }
+      .home-link {
+        margin-bottom: 1em;
+        font-size: 1.5em;
+      }
+      div {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
