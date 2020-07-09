@@ -1,24 +1,35 @@
 <footer class="footer">
-    <div class="footer-content-container">
-        <div class="footer-logo-container">
-            <img class="footer-logo" src="https://flutcadeau.nl/wp-content/themes/FlutcadeauThema/assets/img/logo.svg"
-                alt="Flutcadeau logo">
+    <div class="mainfooter">
+        <div class="mainfooter__image-container">
+            <img class="mainfooter__image"
+                src="https://flutcadeau.nl/wp-content/themes/FlutcadeauThema/assets/img/logo.svg" alt="GameSource logo">
         </div>
-        <div class="footer-information">
-            <div class="column">
+
+        <div class="mainfooter__column-container">
+            <div class="mainfooter__column">
                 <h3>Menu</h3>
-                <a class="blog-nav-item active" href="<?php echo get_bloginfo("url")?>/test1">Cadeautips</a>
-                <a class="blog-nav-item" href="<?php echo get_bloginfo("url")?>/test2">5 tot 10 euro</a>
-                <a class="blog-nav-item" href="<?php echo get_bloginfo("url")?>/test3">10 tot 15 euro</a>
+                <a class="" href="<?php echo get_bloginfo("url")?>/test1">Nieuws</a>
+                <a class="" href="<?php echo get_bloginfo("url")?>/test2">Reviews</a>
+                <a class="" href="<?php echo get_bloginfo("url")?>/test3">Previews</a>
             </div>
-            <div class="column">
+
+            <div class="mainfooter__column">
+                <h3>Terms</h3>
+                <a class="" href="<?php echo get_bloginfo("url")?>/test1">Algemene voorwaarden</a>
+                <a class="" href="<?php echo get_bloginfo("url")?>/test2">Privacyverklaring</a>
+                <a class="" href="<?php echo get_bloginfo("url")?>/test3">Cookies</a>
+            </div>
+
+            <div class="mainfooter__column">
                 <h3>Contact</h3>
                 <h4>E-mail:</h4>
-                <p>info@flutcadeau.nl</p>
-                <a href="/inform" class="footer-inform">Cadeau doorgeven?</a>
+                <a href="mailto:info@gamesource.nl">info@gamesource.nl</a>
+                <h4>Deel nieuws met ons:</h4>
+                <a href="/inform" class="">Nieuws doorgeven</a>
             </div>
-            <div class="column">
-                <h3>Socials</h3>
+
+            <div class="mainfooter__column">
+                <h3>Social Media</h3>
                 <div>
                     <a href="https://www.facebook.com/flutcadeau" target="_blank"><i class="social-icon fab fa-facebook" aria-hidden="true"></i></a>
                     <a href="https://www.instagram.com/flutcadeau" target="_blank"><i class="social-icon fab fa-instagram" aria-hidden="true"></i></a>
@@ -28,8 +39,9 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
-        <p>© 2020 Flutcadeau. Alle rechten voorbehouden. publish test 22222222</p>
+
+    <div class="copyright-bar">
+        <p class="copyright-bar__text">© 2020 GameSource. Alle rechten voorbehouden.</p>
     </div>
 </footer>
 <?php wp_footer(); ?>

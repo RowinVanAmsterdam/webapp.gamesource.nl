@@ -1,5 +1,5 @@
+/* border: 1px solid red; */
 .inform-content {
-  /* border: 1px solid red; */
   padding-top: 84px;
   font-family: Futura-book;
 }
@@ -311,98 +311,35 @@
 .footer {
   background-color: #fff;
   border-top: 1px solid #ededed;
-  margin-top: 5rem;
 }
-.footer-content-container {
-  max-width: 1170px;
-  padding: 25px 15px;
+.footer .mainfooter {
+  max-width: 1920px;
+  border: 1px solid red;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
-.footer-logo-container {
-  /* border: 1px solid rgb(142, 143, 142); */
+.footer .mainfooter__image-container {
   max-width: 150px;
 }
-.footer-logo {
+.footer .mainfooter__image {
   width: 100%;
 }
-.footer-information {
-  /* border: 1px solid red; */
+.footer .mainfooter__column-container {
+  border: 1px solid green;
   display: flex;
-  justify-content: space-between;
-  margin-left: 25px;
-  flex-wrap: wrap;
 }
-.column {
+.footer .mainfooter__column {
   display: flex;
   flex-direction: column;
-  min-width: 100px;
-  /* border: 1px solid purple; */
+  margin: 0 15px;
 }
-.column:not(:last-child) {
-  margin-right: 100px;
-}
-.column h3 {
-  margin-top: 0;
-  font-family: Futura-book;
-  color: #3c3c3c;
-}
-.column h4 {
-  margin: 0;
-  font-family: Futura-book;
-}
-.column p {
-  font-family: Futura-book;
-  margin: 0;
-  padding: 0;
-  color: #3c3c3c;
-}
-.column a {
-  text-decoration: none;
-  color: #3c3c3c;
-  font-family: Futura-book;
-  padding-bottom: 5px;
-}
-.footer-inform {
-  margin-top: 10px;
-  font-weight: bold;
-}
-.social-icon {
-  font-size: 16px;
-  width: 20px;
-  height: 20px;
-  margin-right: 3px;
-}
-.footer-copyright {
-  color: #fff;
-  background-color: #000;
-  width: 100%;
+.footer .copyright-bar {
   text-align: center;
 }
-.footer-copyright p {
-  margin: 0;
+.footer .copyright-bar__text {
   padding: 15px;
   font-size: 12px;
-}
-@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
-  .footer-content-container {
-    flex-direction: column;
-  }
-  .footer-logo-container {
-    margin: 0 auto;
-  }
-  .footer-information {
-    margin-left: 0;
-  }
-  .column {
-    margin: 15px 10px;
-  }
-  .column:not(:last-child) {
-    margin-right: 0;
-  }
 }
 .header-container {
   display: flex;
@@ -764,6 +701,7 @@ p {
 a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
+  text-decoration: none;
 }
 .playstation-button {
   transition: all 0.2s ease;
