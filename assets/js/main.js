@@ -8,6 +8,7 @@ window.onload = function() {
     //eventlistener for form submit
     document.querySelector("#form-submit").addEventListener("change", clickToSubmit);
 };
+
 function homeFunctionCall() {
     let currentLocation = window.location.href;
     homeUrl += "/";
