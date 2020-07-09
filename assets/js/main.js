@@ -19,6 +19,8 @@ function homeFunctionCall() {
         document.querySelector("#circle1").addEventListener("click", indicatorNav1);
         document.querySelector("#circle2").addEventListener("click", indicatorNav2);
         document.querySelector("#circle3").addEventListener("click", indicatorNav3);
+        //eventlistener for hamburger menu
+        document.querySelector("#checkbox").addEventListener("click", hamburgerColorChange);
     }
 }
 
@@ -154,6 +156,9 @@ function homeCheck() {
         document.querySelector("#Nieuws").style.color = "white";
         document.querySelector("#Reviews").style.color = "white";
         document.querySelector("#Previews").style.color = "white";
+        document.querySelector("#span1").style.background = "white";
+        document.querySelector("#span2").style.background = "white";
+        document.querySelector("#span3").style.background = "white";
     }
 }
 
@@ -164,8 +169,18 @@ function headerScroll() {
         document.querySelector("#Nieuws").removeAttribute("style");
         document.querySelector("#Reviews").removeAttribute("style");
         document.querySelector("#Previews").removeAttribute("style");
+        document.querySelector("#span1").removeAttribute("style");
+        document.querySelector("#span2").removeAttribute("style");
+        document.querySelector("#span3").removeAttribute("style");
     }
     else {
         homeCheck();
     }
+}
+
+function hamburgerColorChange() {
+        document.querySelector(".header-container__content h1").classList.toggle("h1-dark");
+        document.querySelector("#span1").classList.toggle("span-dark");
+        document.querySelector("#span2").classList.toggle("span-dark");
+        document.querySelector("#span3").classList.toggle("span-dark");
 }
