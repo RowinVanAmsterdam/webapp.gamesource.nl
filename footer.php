@@ -1,8 +1,9 @@
 <footer class="footer">
     <div class="footer-content-container">
         <div class="footer-logo-container">
-            <img class="footer-logo" src="https://flutcadeau.nl/wp-content/themes/FlutcadeauThema/assets/img/logo.svg"
-                alt="Flutcadeau logo">
+<!--            <img class="footer-logo" src="https://flutcadeau.nl/wp-content/themes/FlutcadeauThema/assets/img/logo.svg"-->
+<!--                alt="Flutcadeau logo">-->
+            <h1>GameSource</h1>
         </div>
         <div class="footer-information">
             <div class="column">

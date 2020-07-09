@@ -41,8 +41,8 @@ if ( $the_query->have_posts() ) :
             'current' => max( 1, get_query_var('paged') ),
             'total' => $the_query->max_num_pages,
             'mid_size' => 2,
-            'prev_text' => __( 'Newer', 'textdomain' ),
-            'next_text' => __( 'Older', 'textdomain' ),
+            'prev_text' => __( '', 'textdomain' ),
+            'next_text' => __( '', 'textdomain' ),
         ) );
         ?>
     </div>
