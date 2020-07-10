@@ -55,7 +55,6 @@
   transition: all 0.2s ease;
 }
 .highlight {
-  width: 100vw;
   overflow: auto;
   z-index: 0;
 }
