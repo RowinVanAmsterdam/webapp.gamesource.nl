@@ -1,24 +1,34 @@
 window.onload = function() {
-    sliderScroll();
-    indicatorActivation();
+    homeFunctionCall();
     currentSelection();
     colorCodeCategories();
-    homeCheck();
+    hideSelectOptions();
 
-    //eventlisteners for indicator bullets
-    document.querySelector("#circle1").addEventListener("click", indicatorNav1);
-    document.querySelector("#circle2").addEventListener("click", indicatorNav2);
-    document.querySelector("#circle3").addEventListener("click", indicatorNav3);
     window.addEventListener('scroll', headerScroll);
     //eventlistener for form submit
     document.querySelector("#form-submit").addEventListener("change", clickToSubmit);
 };
 
+function homeFunctionCall() {
+    let currentLocation = window.location.href;
+    homeUrl += "/";
+    if (currentLocation === homeUrl) {
+        sliderScroll();
+        indicatorActivation();
+        homeCheck();
+        //eventlisteners for indicator bullets
+        document.querySelector("#circle1").addEventListener("click", indicatorNav1);
+        document.querySelector("#circle2").addEventListener("click", indicatorNav2);
+        document.querySelector("#circle3").addEventListener("click", indicatorNav3);
+        //eventlistener for hamburger menu
+        document.querySelector("#checkbox").addEventListener("click", hamburgerColorChange);
+    }
+}
+
 let slides = document.querySelector(".slides");
 let width = window.innerWidth;
 
 function sliderScroll() {
-    // let width = window.innerWidth;
         setTimeout(function() {
             document.querySelector(".slides").scrollTo(width, 0);}, 5000);
         setTimeout(function() {
@@ -66,11 +76,17 @@ function clickToSubmit() {
     document.querySelector('#form-submit').submit();
 }
 
+function hideSelectOptions() {
+    let select = document.querySelector("#cat-filter") !== null;
+    if (select) {
+        document.querySelector("#Highlight").style.display = "none";
+        document.querySelector("#Uncategorized").style.display = "none";
+    }
+}
+
 function currentSelection() {
     const urlPar = window.location.search;
     const url = window.location.href;
-    document.querySelector("#Highlight").style.display = "none";
-    // document.querySelector("#Uncategorized").style.display = "none";
 
     if (urlPar === "?cat-filter=Alle") {
         document.querySelector("#Alle").setAttribute('selected', true);
@@ -117,12 +133,23 @@ function colorCodeCategories() {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
         }
+        else if (allCategories[i].innerHTML === "Nieuws") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        }
+        else if (allCategories[i].innerHTML === "Reviews") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        }
+        else if (allCategories[i].innerHTML === "Previews") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        }
     }
 }
 
 function homeCheck() {
     let currentLocation = window.location.href;
-    homeUrl += "/";
     if (currentLocation === homeUrl) {
         document.querySelector(".header-container__content h1").style.color = "white";
         document.querySelector(".header-container").style.backgroundColor = "transparent";
@@ -130,6 +157,9 @@ function homeCheck() {
         document.querySelector("#Nieuws").style.color = "white";
         document.querySelector("#Reviews").style.color = "white";
         document.querySelector("#Previews").style.color = "white";
+        document.querySelector("#span1").style.background = "white";
+        document.querySelector("#span2").style.background = "white";
+        document.querySelector("#span3").style.background = "white";
     }
 }
 
@@ -140,12 +170,18 @@ function headerScroll() {
         document.querySelector("#Nieuws").removeAttribute("style");
         document.querySelector("#Reviews").removeAttribute("style");
         document.querySelector("#Previews").removeAttribute("style");
+        document.querySelector("#span1").removeAttribute("style");
+        document.querySelector("#span2").removeAttribute("style");
+        document.querySelector("#span3").removeAttribute("style");
     }
     else {
-        document.querySelector(".header-container__content h1").style.color = "white";
-        document.querySelector(".header-container").style.backgroundColor = "transparent";
-        document.querySelector("#Nieuws").style.color = "white";
-        document.querySelector("#Reviews").style.color = "white";
-        document.querySelector("#Previews").style.color = "white";
+        homeCheck();
     }
+}
+
+function hamburgerColorChange() {
+        document.querySelector(".header-container__content h1").classList.toggle("h1-dark");
+        document.querySelector("#span1").classList.toggle("span-dark");
+        document.querySelector("#span2").classList.toggle("span-dark");
+        document.querySelector("#span3").classList.toggle("span-dark");
 }

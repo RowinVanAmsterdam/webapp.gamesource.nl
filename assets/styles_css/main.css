@@ -3,20 +3,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
 }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
 h1 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 h2 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 h3 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 p {
   font-family: "Futura-Book";
+  color: #3c3c3c;
 }
 a {
   font-family: "Futura-Bold";
+  color: #3c3c3c;
 }
 .playstation-button {
   transition: all 0.2s ease;

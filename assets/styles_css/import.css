@@ -108,7 +108,7 @@
   text-decoration: none;
   display: flex;
   flex-direction: row;
-  max-width: 1500px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -129,7 +129,7 @@
   flex-direction: column;
   margin-top: 60vh;
   text-decoration: none;
-  max-width: 1500px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -282,9 +282,36 @@
     display: none;
   }
 }
+.container__content {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container__content--top h2 {
+  font-size: 5em;
+  font-family: Futura-Heavy;
+  text-transform: uppercase;
+}
+.container__content--top h3 {
+  font-size: 3em;
+  font-family: Futura-Book;
+  margin-bottom: 1em;
+}
+.container__content--top .home-link {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+.container__content--top div {
+  margin-bottom: 1em;
+}
 .footer {
   background-color: #fff;
   border-top: 1px solid #ededed;
+  margin-top: 5rem;
 }
 .footer-content-container {
   max-width: 1170px;
@@ -395,7 +422,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 1500px;
+  max-width: 1920px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -403,6 +430,7 @@
 }
 .header-container__content a {
   text-decoration: none;
+  z-index: 200;
 }
 .header-container__content h1 {
   text-align: center;
@@ -410,21 +438,27 @@
   margin-left: 1rem;
   transition: all 1s ease;
 }
-.header-container__content nav {
+.header-container__content #main-nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.header-container__content nav a {
+.header-container__content #main-nav a {
   margin-right: 1em;
   text-decoration: none;
   font-family: "Futura-Heavy";
   color: #3c3c3c;
   transition: all 1s ease;
 }
+.header-container__content .hamburger {
+  display: none;
+}
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
-  .header-container nav {
+  .header-container #main-nav {
     display: none;
+  }
+  .header-container .hamburger {
+    display: flex;
   }
 }
 .content {
@@ -487,6 +521,49 @@
   display: flex;
   flex-direction: row;
 }
+.pagination {
+  margin-left: 0.5rem;
+}
+.pagination a {
+  margin: 0.5em;
+  color: gray;
+  text-decoration: none;
+  font-family: "Futura-Book";
+  padding: 0.3em 0.6em 0.3em 0.6em;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.pagination a:hover {
+  border: 2px solid #3c3c3c;
+}
+.pagination .next {
+  border: none;
+  border: 2px solid transparent;
+}
+.pagination .next:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  display: inline-block;
+  font-weight: 900;
+  color: #3c3c3c;
+}
+.pagination .prev {
+  border: none;
+  border: 2px solid transparent;
+}
+.pagination .prev:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f053";
+  display: inline-block;
+  font-weight: 900;
+  color: #3c3c3c;
+}
+.pagination .current {
+  padding: 0.3em 0.6em 0.3em 0.6em;
+  background: #3c3c3c;
+  color: white;
+  margin: 0.5em;
+}
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
   .article-card {
     max-width: 100vw;
@@ -513,25 +590,223 @@
     font-size: 0.9em;
   }
 }
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+body {
+  margin: 0;
+  padding: 0;
+  /* make it look decent enough */
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+#menuToggle {
+  display: block;
+  position: relative;
+  margin-right: 1rem;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a {
+  text-decoration: none;
+  color: #3c3c3c;
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover {
+  color: tomato;
+}
+#menuToggle input[type=checkbox] {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #3c3c3c;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #3c3c3c;
+}
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 105vw;
+  height: 120vh;
+  margin: -100px 0 0 -90vw;
+  overflow: auto;
+  background: white;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(115vw, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.menu-wrapper {
+  padding: 8rem 7.5vw 0rem 7.5vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+#menu li {
+  display: flex;
+  justify-content: center;
+  padding: 5% 0 5% 0;
+  font-size: 22px;
+  font-family: Futura-Bold;
+  text-align: center;
+  color: #3c3c3c;
+  margin-top: 1em;
+}
+#s {
+  margin-top: 2vh;
+  margin-bottom: 2rem;
+  width: 97%;
+}
+#menu form div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+.span-dark {
+  background: #3c3c3c !important;
+}
+.h1-dark {
+  color: #3c3c3c !important;
+}
+.hamburger__links {
+  display: flex;
+  flex-direction: column;
+}
+.hamburger__socials {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 20vh;
+}
+.hamburger__socials i {
+  font-size: 1.5em;
+}
+.searchform__fields label {
+  display: none;
+}
+.searchform__fields input[type="text"] {
+  font-size: 1.2em;
+  font-family: Futura-Bold;
+  padding: 0.4em 0em 0.4em 0.4em;
+  border-radius: 0;
+  border: 0;
+  border: 1px solid #f0f0f0;
+  border-style: solid;
+  background: none;
+  -webkit-appearance: none;
+}
+.searchform__fields input[type="text"]::placeholder {
+  color: gray;
+}
+.searchform__fields input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(219, 219, 219, 1);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(219, 219, 219, 1);
+}
+.searchform__fields #filtersubmit {
+  padding: 1.75em 0;
+  margin-left: -2em;
+  color: gray;
+  position: relative;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
 }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+}
 h1 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 h2 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 h3 {
   font-family: "Futura-Heavy";
+  color: #3c3c3c;
 }
 p {
   font-family: "Futura-Book";
+  color: #3c3c3c;
 }
 a {
   font-family: "Futura-Bold";
+  color: #3c3c3c;
 }
 .playstation-button {
   transition: all 0.2s ease;

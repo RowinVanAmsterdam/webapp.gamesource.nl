@@ -34,12 +34,13 @@ Template Name: Home
         </div>
         <div class="slides">
         <?php
-        query_posts(array(
+        $args = array(
             'category_name' => 'highlight',
             'posts_per_page' => 3,
-        ));
-        if ( have_posts() ) :
-            while ( have_posts() ) : the_post(); ?>
+        );
+        $the_highlight_query = new WP_Query( $args );
+        if ( $the_highlight_query->have_posts() ) :
+            while ( $the_highlight_query->have_posts() ) : $the_highlight_query->the_post();?>
                 <div class="highlight-card"
                      style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);">
                     <a href="<?php echo the_permalink(); ?>" class="highlight-card-content">
@@ -81,6 +82,5 @@ Template Name: Home
     </div>
     </div>
 </div>
-
-</body>
 <?php get_footer();?>
+</body>
