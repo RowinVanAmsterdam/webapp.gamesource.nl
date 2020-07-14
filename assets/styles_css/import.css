@@ -1,3 +1,4 @@
+/* Utils */
 /* border: 1px solid red; */
 .inform-content {
   padding-top: 84px;
@@ -350,6 +351,11 @@
 .footer .copyright-bar__text {
   padding: 15px;
   font-size: 12px;
+}
+@media only screen and (min-width: 700px) {
+  .footer .copyright-bar__text {
+    color: red;
+  }
 }
 .header-container {
   display: flex;

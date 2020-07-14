@@ -2,7 +2,7 @@
   background-color: #fff;
   border-top: 1px solid #ededed;
   padding: 0 15px;
-  
+
   .mainfooter {
     max-width: 1920px;
     border: 1px solid red;
@@ -46,6 +46,10 @@
     &__text {
       padding: 15px;
       font-size: 12px;
+
+      @include respond-to($tablet) {
+        color: red;
+      }
     }
   }
 }
