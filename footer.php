@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="mainfooter">
         <div class="mainfooter__image-container">
-            <img class="mainfooter__image" src="https://flutcadeau.nl/wp-content/themes/FlutcadeauThema/assets/img/logo.svg" alt="GameSource logo">
+            <img class="mainfooter__image" src="/assets/img/gamesource--black.svg" alt="GameSource logo">
         </div>
 
         <div class="mainfooter__column-container">
