@@ -1,11 +1,14 @@
 .loginform {
   display: flex;
   flex-direction: column;
-  margin-top: 20vh;
+  margin-top: 10vh;
   &__form {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
+    @include respond-to($mobile, $desktop) {
+      width: 90%;
+    }
     p {
       margin-top: 0.5rem;
       label {
@@ -14,6 +17,7 @@
         font-family: Futura-Heavy;
       }
       input[type="text"] {
+        -webkit-appearance: none;
         border: 1px solid #aaaaaa;
         border-radius: 4px;
         padding: 0.25em;
@@ -22,6 +26,7 @@
         font-size: 1em;
       }
       input[type="password"] {
+        -webkit-appearance: none;
         border: 1px solid #aaaaaa;
         border-radius: 4px;
         padding: 0.25em;
@@ -30,6 +35,7 @@
         font-size: 1em;
       }
       textarea {
+        -webkit-appearance: none;
         border: 1px solid #aaaaaa;
         border-radius: 4px;
         padding: 0.25em;
@@ -41,6 +47,7 @@
     &--submit {
       input[type=submit] {
         text-decoration: none;
+        -webkit-appearance: none;
         transition: all 0.2s ease;
         border: 1px solid #3c3c3c;
         background-color: #3c3c3c;
@@ -84,6 +91,9 @@
   width: 30%;
   margin-left: auto;
   margin-right: auto;
+  @include respond-to($mobile, $desktop) {
+    width: 90%;
+  }
   a {
     background: #3c3c3c;
     border: 1px solid #3c3c3c;
