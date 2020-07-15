@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="mainfooter">
         <div class="mainfooter__image-container">
-            <img class="mainfooter__image" src="/assets/img/gamesource--black.svg" alt="GameSource logo">
+            <img class="mainfooter__image" src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--black.svg" alt="GameSource logo">
         </div>
 
         <div class="mainfooter__column-container">
