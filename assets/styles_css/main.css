@@ -11,6 +11,9 @@ body {
 .container {
   flex: 1;
 }
+.hidden {
+  display: none;
+}
 h1 {
   font-family: "Futura-Heavy";
   color: #3c3c3c;
@@ -30,6 +33,7 @@ p {
 a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
+  text-decoration: none;
 }
 .playstation-button {
   transition: all 0.2s ease;

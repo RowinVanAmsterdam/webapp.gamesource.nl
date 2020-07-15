@@ -1,10 +1,17 @@
 // stylesheet imports
 
+/* utilities */
+@import '/variables';
+@import '/mixins';
+
 // pages
 @import "/pages/inform";
 @import "/pages/template-home";
 @import "/pages/single";
 @import "/pages/404";
+@import "/pages/userprofile";
+@import "/pages/login";
+
 
 //template parts
 @import "/template-parts/footer";
@@ -13,8 +20,11 @@
 @import "/template-parts/hamburger-menu";
 @import "/template-parts/searchform";
 
+
 //main
 @import "/main";
+
+
 
 //fonts
 

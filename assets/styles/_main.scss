@@ -14,6 +14,10 @@ body {
   flex: 1;
 }
 
+.hidden {
+  display: none;
+}
+
 h1 {
   font-family: "Futura-Heavy";
   color: #3c3c3c;
@@ -29,6 +33,11 @@ h3 {
   color: #3c3c3c;
 }
 
+h4 {
+  font-family: "Futura-Heavy";
+  color: #3c3c3c;
+}
+
 p {
   font-family: "Futura-Book";
   color: #3c3c3c;
@@ -37,6 +46,7 @@ p {
 a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
+  text-decoration: none;
 }
 
 //category buttons

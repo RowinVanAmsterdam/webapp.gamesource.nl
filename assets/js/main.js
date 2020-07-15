@@ -9,6 +9,8 @@ window.onload = function() {
     document.querySelector("#form-submit").addEventListener("change", clickToSubmit);
 };
 
+userStatus();
+
 function homeFunctionCall() {
     let currentLocation = window.location.href;
     homeUrl += "/";
@@ -151,12 +153,16 @@ function colorCodeCategories() {
 function homeCheck() {
     let currentLocation = window.location.href;
     if (currentLocation === homeUrl) {
-        document.querySelector(".header-container__content h1").style.color = "white";
+        // document.querySelector(".header-container__content h1").style.color = "white";
+        document.querySelector("#logo-default").classList.add("hidden");
+        document.querySelector("#logo-white").classList.remove("hidden");
         document.querySelector(".header-container").style.backgroundColor = "transparent";
         document.querySelector(".header-container").style.borderBottom = "none";
         document.querySelector("#Nieuws").style.color = "white";
         document.querySelector("#Reviews").style.color = "white";
         document.querySelector("#Previews").style.color = "white";
+        document.querySelector("#Inloggen").style.color = "white";
+        document.querySelector("#Profiel").style.color = "white";
         document.querySelector("#span1").style.background = "white";
         document.querySelector("#span2").style.background = "white";
         document.querySelector("#span3").style.background = "white";
@@ -165,11 +171,15 @@ function homeCheck() {
 
 function headerScroll() {
     if (window.scrollY >= 20) {
-        document.querySelector(".header-container__content h1").removeAttribute("style");
+        // document.querySelector(".header-container__content h1").removeAttribute("style");
+        document.querySelector("#logo-white").classList.add("hidden");
+        document.querySelector("#logo-default").classList.remove("hidden");
         document.querySelector(".header-container").removeAttribute("style");
         document.querySelector("#Nieuws").removeAttribute("style");
         document.querySelector("#Reviews").removeAttribute("style");
         document.querySelector("#Previews").removeAttribute("style");
+        document.querySelector("#Inloggen").removeAttribute("style");
+        document.querySelector("#Profiel").removeAttribute("style");
         document.querySelector("#span1").removeAttribute("style");
         document.querySelector("#span2").removeAttribute("style");
         document.querySelector("#span3").removeAttribute("style");
@@ -180,8 +190,20 @@ function headerScroll() {
 }
 
 function hamburgerColorChange() {
-        document.querySelector(".header-container__content h1").classList.toggle("h1-dark");
+        // document.querySelector(".header-container__content h1").classList.toggle("h1-dark");
         document.querySelector("#span1").classList.toggle("span-dark");
         document.querySelector("#span2").classList.toggle("span-dark");
         document.querySelector("#span3").classList.toggle("span-dark");
+}
+
+function userStatus() {
+    console.log(userLoginStatus);
+    if (userLoginStatus == 1) {
+        document.querySelector("#Inloggen").classList.add("hidden");
+        document.querySelector("#Profiel").classList.remove("hidden");
+    }
+    else {
+        document.querySelector("#Inloggen").classList.remove("hidden");
+        document.querySelector("#Profiel").classList.add("hidden");
+    }
 }

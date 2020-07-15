@@ -1,0 +1,12 @@
+@mixin respond-to($breakpoint, $max-breakpoint: null) {
+    @if ($max-breakpoint) {
+        @media only screen and (min-width: $breakpoint) and (max-width: $max-breakpoint) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+

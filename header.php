@@ -1,12 +1,17 @@
 <div class="header-container">
     <div class="header-container__content">
-        <a href="<?php echo home_url(); ?>">
-        <h1>GameSource</h1>
+        <a href="<?php echo home_url(); ?>" id="logo-white" class="hidden">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--white.svg">
+        </a>
+        <a href="<?php echo home_url(); ?>" id="logo-default">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--default.svg">
         </a>
         <nav id="main-nav">
             <a id="Nieuws" href="<?php echo home_url(); ?>/nieuws">Nieuws</a>
             <a id="Reviews" href="<?php echo home_url(); ?>/reviews">Reviews</a>
             <a id="Previews" href="<?php echo home_url(); ?>/previews">Previews</a>
+            <a id="Inloggen" href="<?php echo wp_login_url(); ?>">Inloggen</a>
+            <a id="Profiel" class="hidden" href="<?php echo home_url(); ?>/user-profile">Mijn Profiel</a>
         </nav>
         <div class="hamburger">
         <!--    Made by Erik Terwan    -->

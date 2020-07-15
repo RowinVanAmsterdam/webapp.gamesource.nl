@@ -1,0 +1,114 @@
+.loginform {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  &__form {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    @include respond-to($mobile, $desktop) {
+      width: 90%;
+    }
+    p {
+      margin-top: 0.5rem;
+      label {
+        display: inline-block;
+        width: 40%;
+        font-family: Futura-Heavy;
+      }
+      input[type="text"] {
+        -webkit-appearance: none;
+        border: 1px solid #aaaaaa;
+        border-radius: 4px;
+        padding: 0.25em;
+        width: 55%;
+        font-family: Futura-Book;
+        font-size: 1em;
+      }
+      input[type="password"] {
+        -webkit-appearance: none;
+        border: 1px solid #aaaaaa;
+        border-radius: 4px;
+        padding: 0.25em;
+        width: 55%;
+        font-family: Futura-Book;
+        font-size: 1em;
+      }
+      textarea {
+        -webkit-appearance: none;
+        border: 1px solid #aaaaaa;
+        border-radius: 4px;
+        padding: 0.25em;
+        width: 96%;
+        font-family: Futura-Book;
+        font-size: 1em;
+      }
+    }
+    &--submit {
+      input[type=submit] {
+        text-decoration: none;
+        -webkit-appearance: none;
+        transition: all 0.2s ease;
+        border: 1px solid #3c3c3c;
+        background-color: #3c3c3c;
+        color: white;
+        font-size: 1em;
+        padding: 0.5em;
+        cursor: pointer;
+        font-family: Futura-Heavy;
+        &:hover {
+          border: 1px solid #5EBFBB;
+          background-color: #5EBFBB;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.profile-head-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+  }
+  h2 {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.logout {
+  display: flex;
+  margin-top: 2rem;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  @include respond-to($mobile, $desktop) {
+    width: 90%;
+  }
+  a {
+    background: #3c3c3c;
+    border: 1px solid #3c3c3c;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-family: Futura-Book;
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+    &:hover {
+      border: 1px solid #5EBFBB;
+      background: #5EBFBB;
+      color: white;
+    }
+  }
+}

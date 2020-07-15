@@ -1,3 +1,4 @@
+/* utilities */
 .inform-content {
   /* border: 1px solid red; */
   padding-top: 84px;
@@ -307,101 +308,225 @@
 .container__content--top div {
   margin-bottom: 1em;
 }
-.footer {
-  background-color: #fff;
-  border-top: 1px solid #ededed;
-  margin-top: 5rem;
-}
-.footer-content-container {
-  max-width: 1170px;
-  padding: 25px 15px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.footer-logo-container {
-  /* border: 1px solid rgb(142, 143, 142); */
-  max-width: 150px;
-}
-.footer-logo {
-  width: 100%;
-}
-.footer-information {
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: space-between;
-  margin-left: 25px;
-  flex-wrap: wrap;
-}
-.column {
+.loginform {
   display: flex;
   flex-direction: column;
-  min-width: 100px;
-  /* border: 1px solid purple; */
+  margin-top: 10vh;
 }
-.column:not(:last-child) {
-  margin-right: 100px;
+.loginform__form {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.column h3 {
-  margin-top: 0;
-  font-family: Futura-book;
-  color: #3c3c3c;
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .loginform__form {
+    width: 90%;
+  }
 }
-.column h4 {
-  margin: 0;
-  font-family: Futura-book;
+.loginform__form p {
+  margin-top: 0.5rem;
 }
-.column p {
-  font-family: Futura-book;
-  margin: 0;
-  padding: 0;
-  color: #3c3c3c;
+.loginform__form p label {
+  display: inline-block;
+  width: 40%;
+  font-family: Futura-Heavy;
 }
-.column a {
+.loginform__form p input[type="text"] {
+  -webkit-appearance: none;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.25em;
+  width: 55%;
+  font-family: Futura-Book;
+  font-size: 1em;
+}
+.loginform__form p input[type="password"] {
+  -webkit-appearance: none;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.25em;
+  width: 55%;
+  font-family: Futura-Book;
+  font-size: 1em;
+}
+.loginform__form p textarea {
+  -webkit-appearance: none;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.25em;
+  width: 96%;
+  font-family: Futura-Book;
+  font-size: 1em;
+}
+.loginform__form--submit input[type=submit] {
   text-decoration: none;
-  color: #3c3c3c;
-  font-family: Futura-book;
-  padding-bottom: 5px;
+  -webkit-appearance: none;
+  transition: all 0.2s ease;
+  border: 1px solid #3c3c3c;
+  background-color: #3c3c3c;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+  cursor: pointer;
+  font-family: Futura-Heavy;
 }
-.footer-inform {
-  margin-top: 10px;
-  font-weight: bold;
+.loginform__form--submit input[type=submit]:hover {
+  border: 1px solid #5ebfbb;
+  background-color: #5ebfbb;
+  color: white;
 }
-.social-icon {
-  font-size: 16px;
-  width: 20px;
-  height: 20px;
-  margin-right: 3px;
+.profile-head-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
 }
-.footer-copyright {
-  color: #fff;
-  background-color: #000;
+.profile-head-section img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+}
+.profile-head-section h2 {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logout {
+  display: flex;
+  margin-top: 2rem;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .logout {
+    width: 90%;
+  }
+}
+.logout a {
+  background: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-family: Futura-Book;
+  padding: 0.5em;
   width: 100%;
   text-align: center;
 }
-.footer-copyright p {
-  margin: 0;
+.logout a:hover {
+  border: 1px solid #5ebfbb;
+  background: #5ebfbb;
+  color: white;
+}
+.login-form h1 {
+  color: #3c3c3c;
+}
+.login-form form {
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.wp-core-ui .button-primary {
+  background-color: #3c3c3c;
+  border: 2px solid #3c3c3c;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+.wp-core-ui .button-primary:hover {
+  background-color: transparent;
+  border: 2px solid #3c3c3c;
+  color: #3c3c3c;
+}
+.footer {
+  background-color: #000;
+  color: #fff;
+  border-top: 1px solid #ededed;
+  padding: 0 15px;
+  font-size: 14px;
+  margin-top: 5rem;
+}
+.footer h1, .footer h2, .footer h3, .footer h4 {
+  color: #fff;
+}
+.footer p, .footer a {
+  font-family: "Futura-Book";
+  color: #9b9b9b;
+}
+.footer .mainfooter {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter {
+    justify-content: center;
+  }
+}
+.footer .mainfooter__image-container {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+.footer .mainfooter__image {
+  height: 2.5rem;
+}
+.footer .mainfooter__column-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter__column-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.footer .mainfooter__column {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  line-height: 20px;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter__column--center {
+    width: 100%;
+    align-items: center;
+  }
+}
+.footer .mainfooter__title {
+  margin-bottom: 15px;
+}
+.footer .mainfooter__subtitle--margin-top {
+  margin-top: 15px;
+}
+.footer .mainfooter__link:hover {
+  transition: color 0.75s ease;
+  color: #fff;
+}
+.footer .mainfooter__social-icon {
+  margin-right: 5px;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter__social-icon {
+    margin: 0 2.5px;
+  }
+}
+.footer .copyright-bar {
+  display: flex;
+  justify-content: center;
+}
+.footer .copyright-bar__text {
+  border-top: 1px solid #272727;
+  max-width: 1920px;
+  width: 100%;
+  text-align: center;
   padding: 15px;
   font-size: 12px;
-}
-@media screen and (min-device-width: 300px) and (max-device-width: 812px) {
-  .footer-content-container {
-    flex-direction: column;
-  }
-  .footer-logo-container {
-    margin: 0 auto;
-  }
-  .footer-information {
-    margin-left: 0;
-  }
-  .column {
-    margin: 15px 10px;
-  }
-  .column:not(:last-child) {
-    margin-right: 0;
-  }
 }
 .header-container {
   display: flex;
@@ -436,6 +561,10 @@
   color: #3c3c3c;
   margin-left: 1rem;
   transition: all 1s ease;
+}
+.header-container__content img {
+  height: 2.5rem;
+  margin-left: 1rem;
 }
 .header-container__content #main-nav {
   display: flex;
@@ -787,6 +916,9 @@ body {
 .container {
   flex: 1;
 }
+.hidden {
+  display: none;
+}
 h1 {
   font-family: "Futura-Heavy";
   color: #3c3c3c;
@@ -799,6 +931,10 @@ h3 {
   font-family: "Futura-Heavy";
   color: #3c3c3c;
 }
+h4 {
+  font-family: "Futura-Heavy";
+  color: #3c3c3c;
+}
 p {
   font-family: "Futura-Book";
   color: #3c3c3c;
@@ -806,6 +942,7 @@ p {
 a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
+  text-decoration: none;
 }
 .playstation-button {
   transition: all 0.2s ease;
