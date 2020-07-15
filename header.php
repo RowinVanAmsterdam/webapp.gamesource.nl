@@ -1,9 +1,9 @@
 <div class="header-container">
     <div class="header-container__content">
-        <a href="<?php echo home_url(); ?>" id="logo-white">
+        <a href="<?php echo home_url(); ?>" id="logo-white" class="hidden">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--white.svg">
         </a>
-        <a href="<?php echo home_url(); ?>" class="hidden" id="logo-default">
+        <a href="<?php echo home_url(); ?>" id="logo-default">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--default.svg">
         </a>
         <nav id="main-nav">
