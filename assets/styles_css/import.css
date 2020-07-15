@@ -1,4 +1,4 @@
-/* Utils */
+/* utilities */
 /* border: 1px solid red; */
 .inform-content {
   padding-top: 84px;
@@ -310,22 +310,34 @@
   margin-bottom: 1em;
 }
 .footer {
-  background-color: #fff;
+  background-color: #000;
+  color: #fff;
   border-top: 1px solid #ededed;
   padding: 0 15px;
+  font-size: 14px;
+}
+.footer h1, .footer h2, .footer h3, .footer h4 {
+  color: #fff;
+}
+.footer p, .footer a {
+  font-family: "Futura-Book";
+  color: #9b9b9b;
 }
 .footer .mainfooter {
   max-width: 1920px;
-  border: 1px solid red;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter {
+    justify-content: center;
+  }
+}
 .footer .mainfooter__image-container {
   max-width: 150px;
   padding: 0 15px;
-  border: 1px solid pink;
   display: flex;
   align-items: center;
 }
@@ -333,29 +345,56 @@
   width: 100%;
 }
 .footer .mainfooter__column-container {
-  border: 1px solid green;
   display: flex;
   flex-wrap: wrap;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter__column-container {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .footer .mainfooter__column {
   display: flex;
   flex-direction: column;
-  margin: 20px 15px;
+  padding: 20px 15px;
+  line-height: 20px;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter__column--center {
+    width: 100%;
+    align-items: center;
+  }
 }
 .footer .mainfooter__title {
   margin-bottom: 15px;
 }
+.footer .mainfooter__subtitle--margin-top {
+  margin-top: 15px;
+}
+.footer .mainfooter__link:hover {
+  transition: color 0.75s ease;
+  color: #fff;
+}
+.footer .mainfooter__social-icon {
+  margin-right: 5px;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .footer .mainfooter__social-icon {
+    margin: 0 2.5px;
+  }
+}
 .footer .copyright-bar {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .footer .copyright-bar__text {
+  border-top: 1px solid #272727;
+  max-width: 1920px;
+  width: 100%;
+  text-align: center;
   padding: 15px;
   font-size: 12px;
-}
-@media only screen and (min-width: 700px) {
-  .footer .copyright-bar__text {
-    color: red;
-  }
 }
 .header-container {
   display: flex;
@@ -707,6 +746,10 @@ h2 {
   color: #3c3c3c;
 }
 h3 {
+  font-family: "Futura-Heavy";
+  color: #3c3c3c;
+}
+h4 {
   font-family: "Futura-Heavy";
   color: #3c3c3c;
 }
