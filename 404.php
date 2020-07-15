@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Sub-Page
-*/
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
