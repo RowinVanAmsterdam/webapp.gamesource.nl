@@ -15,6 +15,7 @@ Template Name: Home
     <meta name="author" content="">
     <script type="text/javascript">
         let homeUrl = '<?php echo home_url(); ?>';
+        let userLoginStatus = "<?php echo $userLoginStatus ?>";
     </script>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>GameSource</title>

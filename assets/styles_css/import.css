@@ -307,6 +307,124 @@
 .container__content--top div {
   margin-bottom: 1em;
 }
+.loginform {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20vh;
+}
+.loginform__form {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.loginform__form p {
+  margin-top: 0.5rem;
+}
+.loginform__form p label {
+  display: inline-block;
+  width: 40%;
+  font-family: Futura-Heavy;
+}
+.loginform__form p input[type="text"] {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.25em;
+  width: 55%;
+  font-family: Futura-Book;
+  font-size: 1em;
+}
+.loginform__form p input[type="password"] {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.25em;
+  width: 55%;
+  font-family: Futura-Book;
+  font-size: 1em;
+}
+.loginform__form p textarea {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.25em;
+  width: 96%;
+  font-family: Futura-Book;
+  font-size: 1em;
+}
+.loginform__form--submit input[type=submit] {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #3c3c3c;
+  background-color: #3c3c3c;
+  color: white;
+  font-size: 1em;
+  padding: 0.5em;
+  cursor: pointer;
+  font-family: Futura-Heavy;
+}
+.loginform__form--submit input[type=submit]:hover {
+  border: 1px solid #5ebfbb;
+  background-color: #5ebfbb;
+  color: white;
+}
+.profile-head-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.profile-head-section img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+}
+.profile-head-section h2 {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logout {
+  display: flex;
+  margin-top: 2rem;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logout a {
+  background: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-family: Futura-Book;
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+.logout a:hover {
+  border: 1px solid #5ebfbb;
+  background: #5ebfbb;
+  color: white;
+}
+.login-form h1 {
+  color: #3c3c3c;
+}
+.login-form form {
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.wp-core-ui .button-primary {
+  background-color: #3c3c3c;
+  border: 2px solid #3c3c3c;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+.wp-core-ui .button-primary:hover {
+  background-color: transparent;
+  border: 2px solid #3c3c3c;
+  color: #3c3c3c;
+}
 .footer {
   background-color: #fff;
   border-top: 1px solid #ededed;
@@ -436,6 +554,10 @@
   color: #3c3c3c;
   margin-left: 1rem;
   transition: all 1s ease;
+}
+.header-container__content img {
+  height: 2.5rem;
+  margin-left: 1rem;
 }
 .header-container__content #main-nav {
   display: flex;
@@ -786,6 +908,9 @@ body {
 }
 .container {
   flex: 1;
+}
+.hidden {
+  display: none;
 }
 h1 {
   font-family: "Futura-Heavy";

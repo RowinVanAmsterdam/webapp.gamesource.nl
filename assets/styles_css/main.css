@@ -11,6 +11,9 @@ body {
 .container {
   flex: 1;
 }
+.hidden {
+  display: none;
+}
 h1 {
   font-family: "Futura-Heavy";
   color: #3c3c3c;
