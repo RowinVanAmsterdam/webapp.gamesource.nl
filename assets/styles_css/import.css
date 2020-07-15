@@ -115,7 +115,7 @@
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .highlight-card ul li a {
   align-items: flex-start;
@@ -134,12 +134,12 @@
   margin-right: auto;
 }
 .highlight-card a h2 {
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-decoration: none;
   color: white;
 }
 .highlight-card a p {
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-decoration: none;
   color: white;
 }
@@ -422,12 +422,41 @@
   background: #5ebfbb;
   color: white;
 }
+body {
+  background-color: white;
+}
+#login {
+  padding: 12% 0 0;
+}
 .login-form h1 {
   color: #3c3c3c;
 }
 .login-form form {
   border: none;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .login-form #logo img {
+    display: none;
+  }
+}
+.login-form p input[type=text] {
+  outline: none;
+  transition: all 0.2s ease;
+}
+.login-form p input[type=text]:focus {
+  border-color: #5ebfbb;
+  box-shadow: none;
+  outline: none;
+}
+.login-form .wp-pwd input[type=password] {
+  outline: none;
+  transition: all 0.2s ease;
+}
+.login-form .wp-pwd input[type=password]:focus {
+  border-color: #5ebfbb;
+  box-shadow: none;
+  outline: none;
 }
 .wp-core-ui .button-primary {
   background-color: #3c3c3c;
@@ -437,8 +466,11 @@
 }
 .wp-core-ui .button-primary:hover {
   background-color: transparent;
-  border: 2px solid #3c3c3c;
-  color: #3c3c3c;
+  border: 2px solid #5ebfbb;
+  color: #5ebfbb;
+}
+.dashicons::before {
+  color: #5ebfbb;
 }
 .footer {
   background-color: #000;
@@ -564,19 +596,23 @@
 }
 .header-container__content img {
   height: 2.5rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .header-container__content #main-nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-right: 1rem;
+}
+.header-container__content #main-nav .nav-item:hover {
+  color: #5ebfbb !important;
 }
 .header-container__content #main-nav a {
   margin-right: 1em;
   text-decoration: none;
   font-family: "Futura-Heavy";
   color: #3c3c3c;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 .header-container__content .hamburger {
   display: none;
@@ -662,7 +698,7 @@
   transition: all 0.2s ease;
 }
 .pagination a:hover {
-  border: 2px solid #3c3c3c;
+  border: 2px solid #5ebfbb;
 }
 .pagination .next {
   border: none;
@@ -688,7 +724,7 @@
 }
 .pagination .current {
   padding: 0.3em 0.6em 0.3em 0.6em;
-  background: #3c3c3c;
+  background: #5ebfbb;
   color: white;
   margin: 0.5em;
 }
