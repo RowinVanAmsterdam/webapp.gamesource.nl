@@ -77,7 +77,7 @@
     border: 2px solid transparent;
     transition: all 0.2s ease;
     &:hover {
-      border: 2px solid #3c3c3c;
+      border: 2px solid #5EBFBB;
     }
   }
   .next {
@@ -104,7 +104,7 @@
   }
   .current {
     padding: 0.3em 0.6em 0.3em 0.6em;
-    background: #3c3c3c;
+    background: #5EBFBB;
     color: white;
     margin: 0.5em;
   }

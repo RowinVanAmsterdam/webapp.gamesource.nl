@@ -1,10 +1,47 @@
+body {
+  background-color: white;
+}
+
+#login {
+  padding: 12% 0 0;
+}
+
 .login-form {
   h1 {
     color: #3c3c3c;
   }
   form {
     border: none;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: none;
+  }
+  #logo {
+    img {
+      @include respond-to($mobile, $desktop) {
+        display: none;
+      }
+    }
+  }
+  p {
+    input[type=text] {
+      outline: none;
+      transition: all 0.2s ease;
+      &:focus {
+        border-color: #5EBFBB;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+  .wp-pwd {
+    input[type=password] {
+      outline: none;
+      transition: all 0.2s ease;
+      &:focus {
+        border-color: #5EBFBB;
+        box-shadow: none;
+        outline: none;
+      }
+    }
   }
 }
 
@@ -17,6 +54,10 @@
 
 .wp-core-ui .button-primary:hover {
   background-color: transparent;
-  border: 2px solid #3c3c3c;
-  color: #3c3c3c;
+  border: 2px solid #5EBFBB;
+  color: #5EBFBB;
+}
+
+.dashicons::before {
+  color: #5EBFBB;
 }

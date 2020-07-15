@@ -7,11 +7,11 @@
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--default.svg">
         </a>
         <nav id="main-nav">
-            <a id="Nieuws" href="<?php echo home_url(); ?>/nieuws">Nieuws</a>
-            <a id="Reviews" href="<?php echo home_url(); ?>/reviews">Reviews</a>
-            <a id="Previews" href="<?php echo home_url(); ?>/previews">Previews</a>
-            <a id="Inloggen" href="<?php echo wp_login_url(); ?>">Inloggen</a>
-            <a id="Profiel" class="hidden" href="<?php echo home_url(); ?>/user-profile">Mijn Profiel</a>
+            <a id="Nieuws" class="nav-item" href="<?php echo home_url(); ?>/nieuws">Nieuws</a>
+            <a id="Reviews" class="nav-item" href="<?php echo home_url(); ?>/reviews">Reviews</a>
+            <a id="Previews" class="nav-item" href="<?php echo home_url(); ?>/previews">Previews</a>
+            <a id="Inloggen" class="nav-item" href="<?php echo wp_login_url(); ?>">Inloggen</a>
+            <a id="Profiel" class="nav-item" class="hidden" href="<?php echo home_url(); ?>/user-profile">Mijn Profiel</a>
         </nav>
         <div class="hamburger">
         <!--    Made by Erik Terwan    -->
