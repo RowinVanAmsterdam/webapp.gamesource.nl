@@ -111,17 +111,17 @@
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  margin-left: 2rem;
 }
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
-  margin-left: 2rem;
 }
 .highlight-card ul li a {
   align-items: flex-start;
   height: 1.4em;
   margin-top: -4em;
-  margin-right: -0.5rem;
+  margin-right: 0.5rem;
   text-decoration: none;
 }
 .highlight-card a {
@@ -167,11 +167,32 @@
 .content .content-top-row form select {
   border: none;
   font-family: Futura;
-  background-color: #3c3c3c;
-  color: white;
-  padding: 0.2em;
+  transition: all 0.2s ease;
+  border: 2px solid #5ebfbb;
+  color: #3c3c3c;
+  padding: 0.2em 0.2em 0.2em 0.5em;
+  border-radius: 2px;
   -webkit-appearance: none;
-  border-radius: 0;
+  background: url("../../assets/img/sort-down-solid-green.svg") no-repeat;
+  background-size: 15px 15px;
+  background-position: 95% 50%;
+  cursor: pointer;
+}
+.content .content-top-row form select:focus {
+  outline: none;
+}
+.content .content-top-row form select:hover {
+  color: white;
+  background: url("../../assets/img/sort-down-solid-white.svg") no-repeat #5ebfbb;
+  background-size: 15px 15px;
+  background-position: 95% 50%;
+}
+.content .content-top-row form select:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  display: inline-block;
+  font-weight: 900;
+  color: #3c3c3c;
 }
 .content .content-top-row #Laatste-nieuws {
   margin-left: 1rem;
@@ -659,7 +680,7 @@ body {
   min-height: 2.7em;
 }
 .article-card .article-card-text a h2:hover {
-  color: #003791;
+  color: #5ebfbb;
 }
 .article-card .article-card-text a span p {
   color: #3c3c3c;
@@ -989,6 +1010,9 @@ a {
   padding: 0.2em 0.5em 0.2em 0.5em;
   color: white;
   border: 2px solid #003791;
+  font-family: Futura-Book;
+  font-size: 0.75em;
+  border-radius: 2px;
 }
 .playstation-button:hover {
   background-color: transparent;
@@ -1003,6 +1027,9 @@ a {
   padding: 0.2em 0.5em 0.2em 0.5em;
   color: white;
   border: 2px solid #107c10;
+  font-family: Futura-Book;
+  font-size: 0.75em;
+  border-radius: 2px;
 }
 .xbox-button:hover {
   background-color: transparent;
@@ -1017,6 +1044,9 @@ a {
   padding: 0.2em 0.5em 0.2em 0.5em;
   color: white;
   border: 2px solid #e60012;
+  font-family: Futura-Book;
+  font-size: 0.75em;
+  border-radius: 2px;
 }
 .switch-button:hover {
   background-color: transparent;
@@ -1027,14 +1057,17 @@ a {
   margin-right: 0.5em;
   height: 1.4em;
   text-decoration: none;
-  background-color: #ff5733;
+  background-color: #3c3c3c;
   padding: 0.2em 0.5em 0.2em 0.5em;
   color: white;
-  border: 2px solid #ff5733;
+  border: 2px solid #3c3c3c;
+  font-family: Futura-Book;
+  font-size: 0.75em;
+  border-radius: 2px;
 }
 .pc-button:hover {
   background-color: transparent;
-  color: #ff5733;
+  color: #3c3c3c;
 }
 @font-face {
   font-family: "Futura-Book";
