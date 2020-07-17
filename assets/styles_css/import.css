@@ -682,7 +682,8 @@ body {
   transition: all 0.2s ease;
   color: #3c3c3c;
   margin-bottom: 0.5rem;
-  min-height: 2.7em;
+  min-height: 3.7em;
+  font-size: 1.3em;
 }
 .article-card .article-card-text a h2:hover {
   color: #5ebfbb;
@@ -706,8 +707,7 @@ body {
 }
 .post-categories {
   list-style-type: none;
-  margin-bottom: 1em;
-  margin-top: 0.2em;
+  margin-bottom: 0.5em;
   display: flex;
   flex-direction: row;
 }
