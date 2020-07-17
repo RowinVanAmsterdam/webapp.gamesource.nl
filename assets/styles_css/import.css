@@ -1,6 +1,6 @@
 /* utilities */
+/* border: 1px solid red; */
 .inform-content {
-  /* border: 1px solid red; */
   padding-top: 84px;
   font-family: Futura-book;
 }
@@ -939,6 +939,44 @@ body {
   color: gray;
   position: relative;
 }
+.category-tag {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+}
+.category-tag:hover {
+  background-color: transparent;
+}
+.category-tag--blue {
+  background-color: #003791;
+  border: 2px solid #003791;
+}
+.category-tag--blue:hover {
+  color: #003791;
+}
+.category-tag--green {
+  background-color: #107c10;
+  border: 2px solid #107c10;
+}
+.category-tag--green:hover {
+  color: #107c10;
+}
+.category-tag--red {
+  background-color: #e60012;
+  border: 2px solid #e60012;
+}
+.category-tag--red:hover {
+  color: #e60012;
+}
+.category-tag--black {
+  background-color: #000;
+  border: 2px solid #000;
+}
+.category-tag--black:hover {
+  color: #000;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -979,62 +1017,6 @@ a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
   text-decoration: none;
-}
-.playstation-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #003791;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #003791;
-}
-.playstation-button:hover {
-  background-color: transparent;
-  color: #003791;
-}
-.xbox-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #107c10;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #107c10;
-}
-.xbox-button:hover {
-  background-color: transparent;
-  color: #107c10;
-}
-.switch-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #e60012;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #e60012;
-}
-.switch-button:hover {
-  background-color: transparent;
-  color: #e60012;
-}
-.pc-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #ff5733;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #ff5733;
-}
-.pc-button:hover {
-  background-color: transparent;
-  color: #ff5733;
 }
 @font-face {
   font-family: "Futura-Book";
