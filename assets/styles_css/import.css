@@ -1,6 +1,6 @@
 /* utilities */
-/* border: 1px solid red; */
 .inform-content {
+  /* border: 1px solid red; */
   padding-top: 84px;
   font-family: Futura-book;
 }
@@ -111,7 +111,12 @@
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  margin-left: 2rem;
+  padding-left: 2rem;
+}
+@media only screen and (min-width: 1920px) {
+  .highlight-card ul {
+    padding-left: 4rem;
+  }
 }
 .highlight-card ul li {
   display: flex;
@@ -170,7 +175,7 @@
   transition: all 0.2s ease;
   border: 2px solid #5ebfbb;
   color: #3c3c3c;
-  padding: 0.2em 0.2em 0.2em 0.5em;
+  padding: 0.2em 2em 0.2em 0.5em;
   border-radius: 2px;
   -webkit-appearance: none;
   background: url("../../assets/img/sort-down-solid-green.svg") no-repeat;
@@ -677,7 +682,8 @@ body {
   transition: all 0.2s ease;
   color: #3c3c3c;
   margin-bottom: 0.5rem;
-  min-height: 2.7em;
+  min-height: 3.7em;
+  font-size: 1.3em;
 }
 .article-card .article-card-text a h2:hover {
   color: #5ebfbb;
@@ -701,8 +707,7 @@ body {
 }
 .post-categories {
   list-style-type: none;
-  margin-bottom: 1em;
-  margin-top: 0.2em;
+  margin-bottom: 0.5em;
   display: flex;
   flex-direction: row;
 }
@@ -1002,6 +1007,13 @@ body {
 .category-tag--black:hover {
   color: #000;
 }
+.category-tag--lime {
+  background-color: #5ebfbb;
+  border: 2px solid #5ebfbb;
+}
+.category-tag--lime:hover {
+  color: #5ebfbb;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -1043,7 +1055,6 @@ a {
   color: #3c3c3c;
   text-decoration: none;
 }
-
 @font-face {
   font-family: "Futura-Book";
   src: url("../fonts/futura-book-font-webfont.woff") format("woff");

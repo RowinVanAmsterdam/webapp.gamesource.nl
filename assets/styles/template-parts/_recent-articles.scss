@@ -30,7 +30,8 @@
           transition: all 0.2s ease;
           color: #3c3c3c;
           margin-bottom: 0.5rem;
-          min-height: 2.7em;
+          min-height: 3.7em;
+          font-size: 1.3em;
         }
         h2:hover{
           color: #5EBFBB;
@@ -60,8 +61,8 @@
 
 .post-categories {
   list-style-type: none;
-  margin-bottom: 1em;
-  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  //margin-top: 0.2em;
   display: flex;
   flex-direction: row;
 }
