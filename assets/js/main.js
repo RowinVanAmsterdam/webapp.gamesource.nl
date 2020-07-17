@@ -82,7 +82,7 @@ function hideSelectOptions() {
     let select = document.querySelector("#cat-filter") !== null;
     if (select) {
         document.querySelector("#Highlight").style.display = "none";
-        document.querySelector("#Uncategorized").style.display = "none";
+        // document.querySelector("#Uncategorized").style.display = "none";
     }
 }
 
@@ -108,42 +108,93 @@ function currentSelection() {
 }
 
 function colorCodeCategories() {
+    let currentLocation = window.location.href;
+    const urlPar = window.location.search;
+    if (currentLocation === homeUrl) {
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Alle"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Xbox"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Playstation"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Switch"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Pc"){
+        limeCategories();
+    }
+    else {
+        colorCategories();
+    }
+}
+
+function limeCategories() {
     let allCategories = document.querySelectorAll(".post-categories li a");
     let i;
     for (i = 0; i < allCategories.length; i++) {
         if (allCategories[i].innerHTML === "Highlight") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Playstation") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Xbox") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Switch") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Pc") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Alle") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Uncategorized") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Nieuws") {
+            allCategories[i].classList.add("category-tag", "category-tag--lime");
+        } else if (allCategories[i].innerHTML === "Reviews") {
+            allCategories[i].classList.add("category-tag", "category-tag--lime");
+        } else if (allCategories[i].innerHTML === "Previews") {
+            allCategories[i].classList.add("category-tag", "category-tag--lime");
         }
-        else if (allCategories[i].innerHTML === "Playstation") {
+    }
+}
+function colorCategories() {
+    let allCategories = document.querySelectorAll(".post-categories li a");
+    let i;
+    for (i = 0; i < allCategories.length; i++) {
+        if (allCategories[i].innerHTML === "Highlight") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Playstation") {
             allCategories[i].classList.add("category-tag", "category-tag--blue");
-        }
-        else if (allCategories[i].innerHTML === "Xbox") {
+        } else if (allCategories[i].innerHTML === "Xbox") {
             allCategories[i].classList.add("category-tag", "category-tag--green");
-        }
-        else if (allCategories[i].innerHTML === "Switch") {
+        } else if (allCategories[i].innerHTML === "Switch") {
             allCategories[i].classList.add("category-tag", "category-tag--red");
-        }
-        else if (allCategories[i].innerHTML === "Pc") {
+        } else if (allCategories[i].innerHTML === "Pc") {
             allCategories[i].classList.add("category-tag", "category-tag--black");
-        }
-        else if (allCategories[i].innerHTML === "Alle") {
+        } else if (allCategories[i].innerHTML === "Alle") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Uncategorized") {
+        } else if (allCategories[i].innerHTML === "Uncategorized") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Nieuws") {
+        } else if (allCategories[i].innerHTML === "Nieuws") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Reviews") {
+        } else if (allCategories[i].innerHTML === "Reviews") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Previews") {
+        } else if (allCategories[i].innerHTML === "Previews") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
         }
