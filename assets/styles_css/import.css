@@ -948,7 +948,7 @@ body {
   font-size: 10px;
   text-transform: uppercase;
   font-family: "futura-book";
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .category-tag:hover {
   background-color: transparent;
