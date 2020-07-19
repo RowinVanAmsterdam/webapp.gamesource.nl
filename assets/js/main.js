@@ -23,7 +23,7 @@ function homeFunctionCall() {
         document.querySelector("#circle2").addEventListener("click", indicatorNav2);
         document.querySelector("#circle3").addEventListener("click", indicatorNav3);
         //eventlistener for hamburger menu
-        document.querySelector("#checkbox").addEventListener("click", hamburgerColorChange);
+        // document.querySelector("#checkbox").addEventListener("click", hamburgerColorChange);
     }
 }
 
@@ -245,6 +245,7 @@ function hamburgerColorChange() {
         document.querySelector("#span1").classList.toggle("span-dark");
         document.querySelector("#span2").classList.toggle("span-dark");
         document.querySelector("#span3").classList.toggle("span-dark");
+
 }
 
 function userStatus() {
@@ -252,9 +253,11 @@ function userStatus() {
     if (userLoginStatus == 1) {
         document.querySelector("#Inloggen").classList.add("hidden");
         document.querySelector("#Profiel").classList.remove("hidden");
+        document.querySelector("#Inloggen-mobile").classList.add("hidden");
+        document.querySelector("#Profiel-mobile").classList.remove("hidden");
     }
     else {
-        document.querySelector("#Inloggen").classList.remove("hidden");
-        document.querySelector("#Profiel").classList.add("hidden");
+        document.querySelector("#Inloggen-mobile").classList.remove("hidden");
+        document.querySelector("#Profiel-mobile").classList.add("hidden");
     }
 }

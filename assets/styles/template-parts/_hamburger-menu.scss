@@ -134,21 +134,26 @@ body
 #menu
 {
   position: absolute;
-  width: 105vw;
-  height: 120vh;
-  margin: -100px 0 0 -90vw;
+  //width: 105vw;
+  width: 100vw;
+  height: 100vh;
+  margin: -5em 0 0 -100vw;
+  padding-left: 3em;
+  padding-right: 3em;
+  -webkit-backdrop-filter: brightness(0.5);
+  //margin: -100px 0 0 -90vw;
   //padding: 8rem 5vw 0rem 5vw;
   //padding-top: 8rem;
   overflow: auto;
 
-  background: white;
+  background: #3c3c3c;
   //background: #f0f0f0;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
-  transform: translate(115vw, 0);
+  transform: translate(0, -200vh);
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
@@ -168,7 +173,8 @@ body
   font-family: Futura-Bold;
   text-align: center;
   //background: white;
-  color: #3c3c3c;
+  //color: #3c3c3c;
+  color: white;
   margin-top: 1em;
   //width: 88%;
 }
@@ -191,6 +197,19 @@ body
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+.animation {
+  animation: opacityanim 1s ease;
+}
+
+@keyframes opacityanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .span-dark {
@@ -216,8 +235,9 @@ body
   //padding-right: 3em;
   //margin-left: 5em;
   //margin-right: 5em;
-  margin-top: 20vh;
+  margin-top: 10vh;
   i {
     font-size: 1.5em;
+    color: white;
   }
 }
