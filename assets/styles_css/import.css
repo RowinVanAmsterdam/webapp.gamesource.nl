@@ -875,16 +875,19 @@ body {
  */
 #menu {
   position: absolute;
-  width: 105vw;
-  height: 120vh;
-  margin: -100px 0 0 -90vw;
+  width: 100vw;
+  height: 100vh;
+  margin: -5em 0 0 -100vw;
+  padding-left: 3em;
+  padding-right: 3em;
+  -webkit-backdrop-filter: brightness(0.5);
   overflow: auto;
-  background: white;
+  background: #3c3c3c;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
   transform-origin: 0% 0%;
-  transform: translate(115vw, 0);
+  transform: translate(0, -200vh);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 .menu-wrapper {
@@ -899,7 +902,7 @@ body {
   font-size: 22px;
   font-family: Futura-Bold;
   text-align: center;
-  color: #3c3c3c;
+  color: white;
   margin-top: 1em;
 }
 #s {
@@ -918,6 +921,17 @@ body {
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+.animation {
+  animation: opacityanim 1s ease;
+}
+@keyframes opacityanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .span-dark {
   background: #3c3c3c !important;
 }
@@ -932,10 +946,11 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 .hamburger__socials i {
   font-size: 1.5em;
+  color: white;
 }
 .searchform__fields label {
   display: none;
