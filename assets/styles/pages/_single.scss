@@ -1,6 +1,7 @@
 .featured-image {
   display: flex;
   justify-content: center;
+
   img {
     margin-top: 7vh;
     margin-bottom: 4vh;
@@ -17,33 +18,49 @@
   max-width: 1070px;
   margin-left: auto;
   margin-right: auto;
+
   .postContainer {
     flex-direction: column;
     width: 65%;
-    &__metadata {
+
+    .post {
       display: flex;
       flex-direction: column;
 
-      .metadata {
+      &__title {
+        font-size: 1.3em;
+        color: #3c3c3c;
+      }
 
-        &__title {
-          font-size: 2em;
-          color: #3c3c3c;
-        }
-        &__author-time {
+      &__metadata {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        font-size: 0.7em;
+        
+        
+        h3 {
           color: gray;
-          display: flex;
-          flex-direction: row;
-          margin-bottom: 1rem;
+          font-family: "Futura-Book";
+
+          i {
+            font-family: "Font Awesome 5 Free";
+          }
         }
       }
-    }
-    &__content {
-      margin-bottom: 4vh;
 
-      h3 {
-        color: #3c3c3c;
-        margin: 2vh 0 1vh 0;
+      &__content {
+        margin-bottom: 4vh;
+
+        a {
+          color: $gamesource;
+          font-family: "Futura-Book";
+        }
+  
+        h3 {
+          color: #3c3c3c;
+          margin: 2vh 0 1vh 0;
+        }
       }
     }
   }
@@ -63,7 +80,6 @@
     }
   }
   .grid-container {
-
     .postContainer {
       flex-direction: column;
       width: 100%;
