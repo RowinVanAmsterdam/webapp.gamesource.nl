@@ -257,6 +257,8 @@ function userStatus() {
         document.querySelector("#Profiel-mobile").classList.remove("hidden");
     }
     else {
+        document.querySelector("#Inloggen").classList.remove("hidden");
+        document.querySelector("#Profiel").classList.add("hidden");
         document.querySelector("#Inloggen-mobile").classList.remove("hidden");
         document.querySelector("#Profiel-mobile").classList.add("hidden");
     }
