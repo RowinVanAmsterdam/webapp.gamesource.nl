@@ -8,14 +8,14 @@
   padding: 1em 20vw 1em 20vw;
   justify-content: space-between;
   border-top: 2px solid $green;
-  @include respond-to($mobile) {
+  @include respond-to($mobile, $tablet) {
     padding: 1em 5vw 1em 5vw;
     flex-direction: column;
     text-align: center;
   }
   &--text {
     padding: 0.25em;
-    @include respond-to($mobile) {
+    @include respond-to($mobile, $tablet) {
       margin-bottom: 1rem;
     }
   }
