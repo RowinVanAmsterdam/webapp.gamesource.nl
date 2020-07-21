@@ -1,4 +1,5 @@
 window.onload = function() {
+    cookieStatus();
     homeFunctionCall();
     currentSelection();
     colorCodeCategories();
@@ -7,6 +8,8 @@ window.onload = function() {
     window.addEventListener('scroll', headerScroll);
     //eventlistener for form submit
     document.querySelector("#form-submit").addEventListener("change", clickToSubmit);
+    //eventlistener for cookie submit
+    document.querySelector("#cookie-accept").addEventListener("click", setCookie);
 };
 
 userStatus();
@@ -261,5 +264,18 @@ function userStatus() {
         document.querySelector("#Profiel").classList.add("hidden");
         document.querySelector("#Inloggen-mobile").classList.remove("hidden");
         document.querySelector("#Profiel-mobile").classList.add("hidden");
+    }
+}
+
+function setCookie() {
+    document.cookie = "GameSource_Cookie"+ "=" +"Accepted"+ ";" + "expires="+ new Date(new Date().getTime()+60*60*1000*24*30).toGMTString()+";path=/";
+}
+
+function cookieStatus() {
+    let cookie = document.cookie;
+    // let cookieSplit = cookie.split(";");
+    let cookieSearch = document.cookie.indexOf('GameSource_Cookie=');
+    if (cookieSearch !== -1) {
+        document.querySelector(".cookie__message").classList.toggle("hidden");
     }
 }
