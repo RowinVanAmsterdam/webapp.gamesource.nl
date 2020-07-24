@@ -27,6 +27,7 @@
 <div class="grid-container">
     <div class="postContainer">
         <div class="post">
+            <?php set_query_var('urlCategory', $item); ?>
             <h2 class="post__title"><?php the_title(); ?></h2>
             <div class="post__metadata">
                 <h3 class="post__author"><i class="fas fa-clock"></i><?php the_author(); ?></h3>
