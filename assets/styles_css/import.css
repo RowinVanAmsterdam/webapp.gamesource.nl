@@ -265,19 +265,21 @@
 .grid-container .postContainer .post__title {
   font-size: 1.3em;
   color: #3c3c3c;
+  margin-bottom: 5px;
 }
 .grid-container .postContainer .post__metadata {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  font-size: 0.7em;
-}
-.grid-container .postContainer .post__metadata h3 {
+  margin-bottom: 2rem;
+  font-size: 0.8em;
   color: gray;
   font-family: "Futura-Book";
 }
-.grid-container .postContainer .post__metadata h3 i {
-  font-family: "Font Awesome 5 Free";
+.grid-container .postContainer .post__author, .grid-container .postContainer .post__date {
+  color: gray;
+  font-family: "Futura-Book";
+}
+.grid-container .postContainer .post__date {
+  margin-left: 5px;
 }
 .grid-container .postContainer .post__content {
   margin-bottom: 4vh;

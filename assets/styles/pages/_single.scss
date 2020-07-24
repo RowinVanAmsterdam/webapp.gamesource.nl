@@ -30,30 +30,32 @@
       &__title {
         font-size: 1.3em;
         color: #3c3c3c;
+        margin-bottom: 5px;
       }
 
       &__metadata {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 1rem;
-        font-size: 0.7em;
-        
-        
-        h3 {
-          color: gray;
+        margin-bottom: 2rem;
+        font-size: .8em;
+        color: gray;
           font-family: "Futura-Book";
+      }
 
-          i {
-            font-family: "Font Awesome 5 Free";
-          }
-        }
+      &__author,
+      &__date {
+        color: gray;
+        font-family: "Futura-Book";
+      }
+
+      &__date {
+        margin-left: 5px;
       }
 
       &__content {
         margin-bottom: 4vh;
 
         a {
-          color: $gamesource;
+          color: $green;
           font-family: "Futura-Book";
         }
   

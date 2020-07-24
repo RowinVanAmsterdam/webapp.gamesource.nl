@@ -27,11 +27,11 @@
 <div class="grid-container">
     <div class="postContainer">
         <div class="post">
-            <?php set_query_var('urlCategory', $item); ?>
+            <?php the_category();?>
             <h2 class="post__title"><?php the_title(); ?></h2>
             <div class="post__metadata">
-                <h3 class="post__author"><i class="fas fa-clock"></i><?php the_author(); ?></h3>
-                <h3 class="post__date"><i class="fas fa-comments"></i><?php the_date(); ?></h3>
+                <p class="post__author"><i class="fas fa-clock"></i><?php the_author(); ?></p>
+                <p class="post__date"><i class="fas fa-comments"></i><?php the_date(); ?></p>
             </div>
             <div class="post__content">
                 <?php the_content(); ?>
