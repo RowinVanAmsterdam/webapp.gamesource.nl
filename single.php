@@ -12,6 +12,8 @@
     let userLoginStatus = "<?php echo $userLoginStatus ?>";
     </script>
     <?php wp_head(); ?>
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
 </head>
 
 <?php get_header(); ?>
@@ -32,6 +34,7 @@
             <div class="post__metadata">
                 <p class="post__author"><i class="fas fa-clock"></i><?php the_author(); ?></p>
                 <p class="post__date"><i class="fas fa-comments"></i><?php the_date(); ?></p>
+                <p class="post__time">, <?php the_time(); ?> uur</p>
             </div>
             <div class="post__content">
                 <?php the_content(); ?>
