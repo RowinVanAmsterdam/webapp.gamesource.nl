@@ -165,13 +165,13 @@
   margin-right: 25%;
 }
 .content .content-top-row form label {
-  font-family: Futura;
+  font-family: Futura-Book;
   font-weight: lighter;
   color: #3c3c3c;
 }
 .content .content-top-row form select {
   border: none;
-  font-family: Futura;
+  font-family: Futura-Book;
   transition: all 0.2s ease;
   border: 2px solid #5ebfbb;
   color: #3c3c3c;
