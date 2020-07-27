@@ -32,18 +32,24 @@
     }
     img {
       height: 2.5rem;
-      margin-left: 1rem;
+      margin-left: 2rem;
     }
     #main-nav {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      margin-right: 1rem;
+      .nav-item {
+        &:hover {
+          color: #5EBFBB !important;
+        }
+      }
       a {
         margin-right: 1em;
         text-decoration: none;
         font-family: "Futura-Heavy";
         color: #3c3c3c;
-        transition: all 1s ease;
+        transition: all 0.2s ease;
       }
     }
     .hamburger {

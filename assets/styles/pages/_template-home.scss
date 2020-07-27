@@ -56,15 +56,20 @@
     max-width: 1920px;
     margin-left: auto;
     margin-right:auto;
+    padding-left: 2rem;
+    @include respond-to($ultrawide) {
+      padding-left: 4rem;
+    }
     li {
       display: flex;
       flex-direction: row;
-      margin-left: 1rem;
+      //margin-left: 2rem;
        a {
          align-items: flex-start;
          height: 1.4em;
          margin-top: -4em;
-         margin-right: -0.5rem;
+         //margin-right: -0.5rem;
+         margin-right: 0.5rem;
          text-decoration: none;
        }
     }
@@ -79,12 +84,12 @@
     margin-left: auto;
     margin-right: auto;
     h2 {
-      margin-left: 1rem;
+      margin-left: 2rem;
       text-decoration: none;
       color: white;
     }
     p {
-      margin-left: 1rem;
+      margin-left: 2rem;
       text-decoration: none;
       color: white;
     }
@@ -105,18 +110,39 @@
     form {
       margin-right: 25%;
       label {
-        font-family: Futura;
+        font-family: Futura-Book;
         font-weight: lighter;
         color: #3c3c3c;
       }
       select {
         border: none;
-        font-family: Futura;
-        background-color: #3c3c3c;
-        color: white;
-        padding: 0.2em;
+        font-family: Futura-Book;
+        transition: all 0.2s ease;
+        border: 2px solid #5EBFBB;
+        color: #3c3c3c;
+        padding: 0.2em 2em 0.2em 0.5em;
+        border-radius: 2px;
         -webkit-appearance: none;
-        border-radius: 0;
+        background: url("../../assets/img/sort-down-solid-green.svg") no-repeat;
+        background-size: 15px 15px;
+        background-position: 95% 50%;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          color: white;
+          background: url("../../assets/img/sort-down-solid-white.svg") no-repeat #5EBFBB;
+          background-size: 15px 15px;
+          background-position: 95% 50%;
+        }
+        &:before {
+          font-family: "Font Awesome 5 Free";
+          content: "\f054";
+          display: inline-block;
+          font-weight: 900;
+          color: #3c3c3c;
+        }
       }
     }
     #Laatste-nieuws {

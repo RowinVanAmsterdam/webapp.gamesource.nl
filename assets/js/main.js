@@ -1,4 +1,5 @@
 window.onload = function() {
+    cookieStatus();
     homeFunctionCall();
     currentSelection();
     colorCodeCategories();
@@ -7,6 +8,8 @@ window.onload = function() {
     window.addEventListener('scroll', headerScroll);
     //eventlistener for form submit
     document.querySelector("#form-submit").addEventListener("change", clickToSubmit);
+    //eventlistener for cookie submit
+    document.querySelector("#cookie-accept").addEventListener("click", setCookie);
 };
 
 userStatus();
@@ -23,7 +26,7 @@ function homeFunctionCall() {
         document.querySelector("#circle2").addEventListener("click", indicatorNav2);
         document.querySelector("#circle3").addEventListener("click", indicatorNav3);
         //eventlistener for hamburger menu
-        document.querySelector("#checkbox").addEventListener("click", hamburgerColorChange);
+        // document.querySelector("#checkbox").addEventListener("click", hamburgerColorChange);
     }
 }
 
@@ -82,7 +85,7 @@ function hideSelectOptions() {
     let select = document.querySelector("#cat-filter") !== null;
     if (select) {
         document.querySelector("#Highlight").style.display = "none";
-        document.querySelector("#Uncategorized").style.display = "none";
+        // document.querySelector("#Uncategorized").style.display = "none";
     }
 }
 
@@ -108,42 +111,93 @@ function currentSelection() {
 }
 
 function colorCodeCategories() {
+    let currentLocation = window.location.href;
+    const urlPar = window.location.search;
+    if (currentLocation === homeUrl) {
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Alle"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Xbox"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Playstation"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Switch"){
+        limeCategories();
+    }
+    else if (urlPar === "?cat-filter=Pc"){
+        limeCategories();
+    }
+    else {
+        colorCategories();
+    }
+}
+
+function limeCategories() {
     let allCategories = document.querySelectorAll(".post-categories li a");
     let i;
     for (i = 0; i < allCategories.length; i++) {
         if (allCategories[i].innerHTML === "Highlight") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Playstation") {
-            allCategories[i].classList.add("playstation-button");
-        }
-        else if (allCategories[i].innerHTML === "Xbox") {
-            allCategories[i].classList.add("xbox-button");
-        }
-        else if (allCategories[i].innerHTML === "Switch") {
-            allCategories[i].classList.add("switch-button");
-        }
-        else if (allCategories[i].innerHTML === "Pc") {
-            allCategories[i].classList.add("pc-button");
-        }
-        else if (allCategories[i].innerHTML === "Alle") {
+        } else if (allCategories[i].innerHTML === "Playstation") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Uncategorized") {
+        } else if (allCategories[i].innerHTML === "Xbox") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Nieuws") {
+        } else if (allCategories[i].innerHTML === "Switch") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
-        }
-        else if (allCategories[i].innerHTML === "Reviews") {
+        } else if (allCategories[i].innerHTML === "Pc") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Alle") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Uncategorized") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Nieuws") {
+            allCategories[i].classList.add("category-tag", "category-tag--lime");
+        } else if (allCategories[i].innerHTML === "Reviews") {
+            allCategories[i].classList.add("category-tag", "category-tag--lime");
+        } else if (allCategories[i].innerHTML === "Previews") {
+            allCategories[i].classList.add("category-tag", "category-tag--lime");
         }
-        else if (allCategories[i].innerHTML === "Previews") {
+    }
+}
+function colorCategories() {
+    let allCategories = document.querySelectorAll(".post-categories li a");
+    let i;
+    for (i = 0; i < allCategories.length; i++) {
+        if (allCategories[i].innerHTML === "Highlight") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Playstation") {
+            allCategories[i].classList.add("category-tag", "category-tag--blue");
+        } else if (allCategories[i].innerHTML === "Xbox") {
+            allCategories[i].classList.add("category-tag", "category-tag--green");
+        } else if (allCategories[i].innerHTML === "Switch") {
+            allCategories[i].classList.add("category-tag", "category-tag--red");
+        } else if (allCategories[i].innerHTML === "Pc") {
+            allCategories[i].classList.add("category-tag", "category-tag--black");
+        } else if (allCategories[i].innerHTML === "Alle") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Uncategorized") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Nieuws") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Reviews") {
+            allCategories[i].closest("li").style.display = "none";
+            allCategories[i].style.display = "none";
+        } else if (allCategories[i].innerHTML === "Previews") {
             allCategories[i].closest("li").style.display = "none";
             allCategories[i].style.display = "none";
         }
@@ -194,6 +248,7 @@ function hamburgerColorChange() {
         document.querySelector("#span1").classList.toggle("span-dark");
         document.querySelector("#span2").classList.toggle("span-dark");
         document.querySelector("#span3").classList.toggle("span-dark");
+
 }
 
 function userStatus() {
@@ -201,9 +256,26 @@ function userStatus() {
     if (userLoginStatus == 1) {
         document.querySelector("#Inloggen").classList.add("hidden");
         document.querySelector("#Profiel").classList.remove("hidden");
+        document.querySelector("#Inloggen-mobile").classList.add("hidden");
+        document.querySelector("#Profiel-mobile").classList.remove("hidden");
     }
     else {
         document.querySelector("#Inloggen").classList.remove("hidden");
         document.querySelector("#Profiel").classList.add("hidden");
+        document.querySelector("#Inloggen-mobile").classList.remove("hidden");
+        document.querySelector("#Profiel-mobile").classList.add("hidden");
+    }
+}
+
+function setCookie() {
+    document.cookie = "GameSource_Cookie"+ "=" +"Accepted"+ ";" + "expires="+ new Date(new Date().getTime()+60*60*1000*24*30).toGMTString()+";path=/";
+}
+
+function cookieStatus() {
+    let cookie = document.cookie;
+    // let cookieSplit = cookie.split(";");
+    let cookieSearch = document.cookie.indexOf('GameSource_Cookie=');
+    if (cookieSearch !== -1) {
+        document.querySelector(".cookie__message").classList.toggle("hidden");
     }
 }

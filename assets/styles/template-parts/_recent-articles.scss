@@ -30,10 +30,11 @@
           transition: all 0.2s ease;
           color: #3c3c3c;
           margin-bottom: 0.5rem;
-          min-height: 2.7em;
+          min-height: 3.7em;
+          font-size: 1.3em;
         }
         h2:hover{
-          color: #003791;
+          color: #5EBFBB;
         }
         span {
             p {
@@ -60,8 +61,8 @@
 
 .post-categories {
   list-style-type: none;
-  margin-bottom: 1em;
-  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  //margin-top: 0.2em;
   display: flex;
   flex-direction: row;
 }
@@ -77,7 +78,7 @@
     border: 2px solid transparent;
     transition: all 0.2s ease;
     &:hover {
-      border: 2px solid #3c3c3c;
+      border: 2px solid #5EBFBB;
     }
   }
   .next {
@@ -104,7 +105,7 @@
   }
   .current {
     padding: 0.3em 0.6em 0.3em 0.6em;
-    background: #3c3c3c;
+    background: #5EBFBB;
     color: white;
     margin: 0.5em;
   }

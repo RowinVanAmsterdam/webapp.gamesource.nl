@@ -7,11 +7,11 @@
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--default.svg">
         </a>
         <nav id="main-nav">
-            <a id="Nieuws" href="<?php echo home_url(); ?>/nieuws">Nieuws</a>
-            <a id="Reviews" href="<?php echo home_url(); ?>/reviews">Reviews</a>
-            <a id="Previews" href="<?php echo home_url(); ?>/previews">Previews</a>
-            <a id="Inloggen" href="<?php echo wp_login_url(); ?>">Inloggen</a>
-            <a id="Profiel" class="hidden" href="<?php echo home_url(); ?>/user-profile">Mijn Profiel</a>
+            <a id="Nieuws" class="nav-item" href="<?php echo home_url(); ?>/nieuws">Nieuws</a>
+            <a id="Reviews" class="nav-item" href="<?php echo home_url(); ?>/reviews">Reviews</a>
+            <a id="Previews" class="nav-item" href="<?php echo home_url(); ?>/previews">Previews</a>
+            <a id="Inloggen" class="nav-item" href="<?php echo wp_login_url(); ?>">Inloggen</a>
+            <a id="Profiel" class="nav-item" class="hidden" href="<?php echo home_url(); ?>/user-profile">Mijn Profiel</a>
         </nav>
         <div class="hamburger">
         <!--    Made by Erik Terwan    -->
@@ -30,6 +30,8 @@
                         <a href="<?php echo home_url(); ?>/nieuws"><li>Nieuws</li></a>
                         <a href="<?php echo home_url(); ?>/reviews"><li>Reviews</li></a>
                         <a href="<?php echo home_url(); ?>/previews"><li>Previews</li></a>
+                        <a id="Inloggen-mobile" class="nav-item" href="<?php echo wp_login_url(); ?>"><li>Inloggen</li></a>
+                        <a id="Profiel-mobile" class="nav-item" class="hidden" href="<?php echo home_url(); ?>/user-profile"><li>Mijn Profiel</li></a>
                     <div class="hamburger__socials">
                         <a href="twitter.com"><i class="fab fa-twitter"></i></a>
                         <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
@@ -53,3 +55,5 @@
 
     gtag('config', 'UA-172341440-1');
 </script>
+
+<script data-ad-client="ca-pub-7226537335135722" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

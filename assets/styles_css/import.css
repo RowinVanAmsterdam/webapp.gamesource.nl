@@ -111,17 +111,22 @@
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 2rem;
+}
+@media only screen and (min-width: 1920px) {
+  .highlight-card ul {
+    padding-left: 4rem;
+  }
 }
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
-  margin-left: 1rem;
 }
 .highlight-card ul li a {
   align-items: flex-start;
   height: 1.4em;
   margin-top: -4em;
-  margin-right: -0.5rem;
+  margin-right: 0.5rem;
   text-decoration: none;
 }
 .highlight-card a {
@@ -134,12 +139,12 @@
   margin-right: auto;
 }
 .highlight-card a h2 {
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-decoration: none;
   color: white;
 }
 .highlight-card a p {
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-decoration: none;
   color: white;
 }
@@ -160,18 +165,39 @@
   margin-right: 25%;
 }
 .content .content-top-row form label {
-  font-family: Futura;
+  font-family: Futura-Book;
   font-weight: lighter;
   color: #3c3c3c;
 }
 .content .content-top-row form select {
   border: none;
-  font-family: Futura;
-  background-color: #3c3c3c;
-  color: white;
-  padding: 0.2em;
+  font-family: Futura-Book;
+  transition: all 0.2s ease;
+  border: 2px solid #5ebfbb;
+  color: #3c3c3c;
+  padding: 0.2em 2em 0.2em 0.5em;
+  border-radius: 2px;
   -webkit-appearance: none;
-  border-radius: 0;
+  background: url("../../assets/img/sort-down-solid-green.svg") no-repeat;
+  background-size: 15px 15px;
+  background-position: 95% 50%;
+  cursor: pointer;
+}
+.content .content-top-row form select:focus {
+  outline: none;
+}
+.content .content-top-row form select:hover {
+  color: white;
+  background: url("../../assets/img/sort-down-solid-white.svg") no-repeat #5ebfbb;
+  background-size: 15px 15px;
+  background-position: 95% 50%;
+}
+.content .content-top-row form select:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  display: inline-block;
+  font-weight: 900;
+  color: #3c3c3c;
 }
 .content .content-top-row #Laatste-nieuws {
   margin-left: 1rem;
@@ -422,12 +448,41 @@
   background: #5ebfbb;
   color: white;
 }
+body {
+  background-color: white;
+}
+#login {
+  padding: 12% 0 0;
+}
 .login-form h1 {
   color: #3c3c3c;
 }
 .login-form form {
   border: none;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: none;
+}
+@media only screen and (min-width: 320px) and (max-width: 769px) {
+  .login-form #logo img {
+    display: none;
+  }
+}
+.login-form p input[type=text] {
+  outline: none;
+  transition: all 0.2s ease;
+}
+.login-form p input[type=text]:focus {
+  border-color: #5ebfbb;
+  box-shadow: none;
+  outline: none;
+}
+.login-form .wp-pwd input[type=password] {
+  outline: none;
+  transition: all 0.2s ease;
+}
+.login-form .wp-pwd input[type=password]:focus {
+  border-color: #5ebfbb;
+  box-shadow: none;
+  outline: none;
 }
 .wp-core-ui .button-primary {
   background-color: #3c3c3c;
@@ -437,8 +492,11 @@
 }
 .wp-core-ui .button-primary:hover {
   background-color: transparent;
-  border: 2px solid #3c3c3c;
-  color: #3c3c3c;
+  border: 2px solid #5ebfbb;
+  color: #5ebfbb;
+}
+.dashicons::before {
+  color: #5ebfbb;
 }
 .footer {
   background-color: #000;
@@ -564,19 +622,23 @@
 }
 .header-container__content img {
   height: 2.5rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .header-container__content #main-nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-right: 1rem;
+}
+.header-container__content #main-nav .nav-item:hover {
+  color: #5ebfbb !important;
 }
 .header-container__content #main-nav a {
   margin-right: 1em;
   text-decoration: none;
   font-family: "Futura-Heavy";
   color: #3c3c3c;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
 .header-container__content .hamburger {
   display: none;
@@ -620,10 +682,11 @@
   transition: all 0.2s ease;
   color: #3c3c3c;
   margin-bottom: 0.5rem;
-  min-height: 2.7em;
+  min-height: 3.7em;
+  font-size: 1.3em;
 }
 .article-card .article-card-text a h2:hover {
-  color: #003791;
+  color: #5ebfbb;
 }
 .article-card .article-card-text a span p {
   color: #3c3c3c;
@@ -644,8 +707,7 @@
 }
 .post-categories {
   list-style-type: none;
-  margin-bottom: 1em;
-  margin-top: 0.2em;
+  margin-bottom: 0.5em;
   display: flex;
   flex-direction: row;
 }
@@ -662,7 +724,7 @@
   transition: all 0.2s ease;
 }
 .pagination a:hover {
-  border: 2px solid #3c3c3c;
+  border: 2px solid #5ebfbb;
 }
 .pagination .next {
   border: none;
@@ -688,7 +750,7 @@
 }
 .pagination .current {
   padding: 0.3em 0.6em 0.3em 0.6em;
-  background: #3c3c3c;
+  background: #5ebfbb;
   color: white;
   margin: 0.5em;
 }
@@ -813,16 +875,19 @@ body {
  */
 #menu {
   position: absolute;
-  width: 105vw;
-  height: 120vh;
-  margin: -100px 0 0 -90vw;
+  width: 100vw;
+  height: 100vh;
+  margin: -5em 0 0 -100vw;
+  padding-left: 3em;
+  padding-right: 3em;
+  -webkit-backdrop-filter: brightness(0.5);
   overflow: auto;
-  background: white;
+  background: #3c3c3c;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
   transform-origin: 0% 0%;
-  transform: translate(115vw, 0);
+  transform: translate(0, -200vh);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 .menu-wrapper {
@@ -837,7 +902,7 @@ body {
   font-size: 22px;
   font-family: Futura-Bold;
   text-align: center;
-  color: #3c3c3c;
+  color: white;
   margin-top: 1em;
 }
 #s {
@@ -856,6 +921,17 @@ body {
 #menuToggle input:checked ~ ul {
   transform: none;
 }
+.animation {
+  animation: opacityanim 1s ease;
+}
+@keyframes opacityanim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .span-dark {
   background: #3c3c3c !important;
 }
@@ -870,10 +946,11 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 .hamburger__socials i {
   font-size: 1.5em;
+  color: white;
 }
 .searchform__fields label {
   display: none;
@@ -902,6 +979,208 @@ body {
   margin-left: -2em;
   color: gray;
   position: relative;
+}
+.category-tag {
+  transition: all 0.2s ease;
+  margin-right: 0.5em;
+  height: 1.4em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  color: white;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "futura-book";
+  border-radius: 2px;
+}
+.category-tag:hover {
+  background-color: transparent;
+}
+.category-tag--blue {
+  background-color: #003791;
+  border: 2px solid #003791;
+}
+.category-tag--blue:hover {
+  color: #003791;
+}
+.category-tag--green {
+  background-color: #107c10;
+  border: 2px solid #107c10;
+}
+.category-tag--green:hover {
+  color: #107c10;
+}
+.category-tag--red {
+  background-color: #e60012;
+  border: 2px solid #e60012;
+}
+.category-tag--red:hover {
+  color: #e60012;
+}
+.category-tag--black {
+  background-color: #000;
+  border: 2px solid #000;
+}
+.category-tag--black:hover {
+  color: #000;
+}
+.category-tag--lime {
+  background-color: #5ebfbb;
+  border: 2px solid #5ebfbb;
+}
+.category-tag--lime:hover {
+  color: #5ebfbb;
+}
+#comments {
+  display: none;
+}
+.commentlist {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+.commentlist .comment {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #5ebfbb;
+  padding-top: 1rem;
+}
+.commentlist .comment .children {
+  margin-left: 2.5rem;
+}
+.commentlist .comment .comment-body {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.commentlist .comment .comment-body .comment-author .says {
+  display: none;
+}
+.commentlist .comment .comment-body .comment-author .fn {
+  font-family: Futura-Book;
+  font-style: normal;
+  position: absolute;
+  margin-left: 1rem;
+}
+.commentlist .comment .comment-body .comment-author .fn a {
+  font-family: Futura-Book;
+  font-style: normal;
+}
+.commentlist .comment .comment-body .comment-meta {
+  position: absolute;
+  margin-left: 3rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.commentlist .comment .comment-body .comment-meta a {
+  font-family: Futura-Book;
+  color: gray;
+  font-size: 0.75em;
+}
+.commentlist .comment .comment-body .reply {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.commentlist .comment .comment-body .reply a {
+  padding: 0 0.25em 0 0.25em;
+  border: 2px solid #5ebfbb;
+  border-radius: 2px;
+  color: #5ebfbb;
+  font-family: Futura-Book;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+.commentlist .comment .comment-body .reply a:hover {
+  background-color: #5ebfbb;
+  color: white;
+}
+.commentlist .comment .comment-body p {
+  margin-top: 1rem;
+}
+.comment-respond .comment-form {
+  display: flex;
+  flex-direction: column;
+}
+.comment-respond .comment-form p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.comment-respond .comment-form .form-submit input[type=submit] {
+  appearance: none;
+  padding: 0.25em 0.25em 0.25em 0.25em;
+  border: 2px solid #5ebfbb;
+  border-radius: 2px;
+  color: #5ebfbb;
+  background-color: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.comment-respond .comment-form .form-submit input[type=submit]:hover {
+  background-color: #5ebfbb;
+  color: white;
+}
+.comment-respond .comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+.comment-respond .comment-form-comment textarea {
+  font-family: Futura-Book;
+  border: 2px solid #5ebfbb;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+}
+.comment-respond .comment-form-comment textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(94, 191, 187, 1);
+}
+.comment-respond .comment-form-url {
+  display: none;
+}
+.cookie__message {
+  background-color: white;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  max-width: 100%;
+  padding: 1em 20vw 1em 20vw;
+  justify-content: space-between;
+  border-top: 2px solid #5ebfbb;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .cookie__message {
+    padding: 1em 5vw 1em 5vw;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.cookie__message--text {
+  padding: 0.25em;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .cookie__message--text {
+    margin-bottom: 1rem;
+  }
+}
+.cookie__message--button {
+  font-family: Futura-Book;
+  border: 2px solid #5ebfbb;
+  border-radius: 2px;
+  padding: 0.25em;
+  color: #5ebfbb;
+  transition: all 0.2s ease;
+  display: inline-block;
+  width: 7em;
+  text-align: center;
+}
+.cookie__message--button:nth-of-type(1) {
+  margin-right: 1rem;
+  color: white;
+  background-color: #5ebfbb;
+}
+.cookie__message--button:hover {
+  color: #5ebfbb;
+  background-color: white;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -943,62 +1222,6 @@ a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
   text-decoration: none;
-}
-.playstation-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #003791;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #003791;
-}
-.playstation-button:hover {
-  background-color: transparent;
-  color: #003791;
-}
-.xbox-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #107c10;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #107c10;
-}
-.xbox-button:hover {
-  background-color: transparent;
-  color: #107c10;
-}
-.switch-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #e60012;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #e60012;
-}
-.switch-button:hover {
-  background-color: transparent;
-  color: #e60012;
-}
-.pc-button {
-  transition: all 0.2s ease;
-  margin-right: 0.5em;
-  height: 1.4em;
-  text-decoration: none;
-  background-color: #ff5733;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  color: white;
-  border: 2px solid #ff5733;
-}
-.pc-button:hover {
-  background-color: transparent;
-  color: #ff5733;
 }
 @font-face {
   font-family: "Futura-Book";

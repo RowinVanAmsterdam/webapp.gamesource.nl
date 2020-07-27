@@ -1,0 +1,115 @@
+#comments {
+  display: none;
+}
+
+.commentlist {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  .comment {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #5EBFBB;
+    padding-top: 1rem;
+    .children {
+      margin-left: 2.5rem;
+    }
+    .comment-body {
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      .comment-author {
+        .says {
+          display: none;
+        }
+        .fn {
+          font-family: Futura-Book;
+          font-style: normal;
+          position: absolute;
+          margin-left: 1rem;
+          a {
+            font-family: Futura-Book;
+            font-style: normal;
+          }
+        }
+      }
+      .comment-meta {
+        position: absolute;
+        margin-left: 3rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+        a {
+          font-family: Futura-Book;
+          color: gray;
+          font-size: 0.75em;
+        }
+      }
+      .reply {
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+        a {
+          padding: 0 0.25em 0 0.25em;
+          border: 2px solid #5EBFBB;
+          border-radius: 2px;
+          color: #5EBFBB;
+          font-family: Futura-Book;
+          font-size: 0.9em;
+          transition: all 0.2s ease;
+          &:hover {
+            background-color: #5EBFBB;
+            color: white;
+          }
+        }
+      }
+      p {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.comment-respond {
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .form-submit {
+      input[type=submit] {
+        appearance: none;
+        padding: 0.25em 0.25em 0.25em 0.25em;
+        border: 2px solid #5EBFBB;
+        border-radius: 2px;
+        color: #5EBFBB;
+        background-color: white;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        &:hover {
+          background-color: #5EBFBB;
+          color: white;
+        }
+    }
+    }
+    &-comment {
+      display: flex;
+      flex-direction: column;
+      textarea {
+        font-family: Futura-Book;
+        border: 2px solid #5EBFBB;
+        border-radius: 2px;
+        margin-top: 0.5rem;
+        transition: all 0.2s ease;
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 5px 0px rgba(94,191,187,1);
+        }
+      }
+    }
+    &-url {
+      display: none;
+    }
+  }
+}
