@@ -34,6 +34,9 @@
                     <?php the_content(); ?>
                 </div>
             </div>
+            <?php
+            setPostViews(get_the_ID());
+            ?>
             <?php endwhile;
             endif;
             ?>

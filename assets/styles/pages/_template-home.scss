@@ -106,9 +106,11 @@
     justify-content: space-between;
     h2 {
       color: #3c3c3c;
+      border-left: 4px solid $green;
+      padding-left: 0.5rem;
     }
     form {
-      margin-right: 25%;
+      margin-right: 30%;
       label {
         font-family: Futura-Book;
         font-weight: lighter;
@@ -154,10 +156,10 @@
     flex-direction: row;
     .content-left {
       width: 70%;
-      margin-right: 10%;
+      margin-right: 5%;
     }
     .content-right {
-      width: 20%;
+      width: 25%;
     }
   }
 }
