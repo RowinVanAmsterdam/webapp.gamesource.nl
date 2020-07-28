@@ -35,6 +35,7 @@
                 <p class="post__author"><i class="fas fa-clock"></i><?php the_author(); ?></p>
                 <p class="post__date"><i class="fas fa-comments"></i><?php the_date(); ?></p>
                 <p class="post__time">, <?php the_time(); ?> uur</p>
+                <p class="post__comments"><i class="fas fa-comments"></i><?php comments_number('0', '1', '%'); ?> Comments</p>
             </div>
             <div class="post__content">
                 <?php the_content(); ?>
