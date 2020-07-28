@@ -12,7 +12,7 @@
     let userLoginStatus = "<?php echo $userLoginStatus ?>";
     </script>
     <?php wp_head(); ?>
-        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.11/css/all.css">
 
 </head>
 
@@ -32,10 +32,15 @@
             <?php the_category();?>
             <h2 class="post__title"><?php the_title(); ?></h2>
             <div class="post__metadata">
-                <p class="post__author"><i class="fas fa-clock"></i><?php the_author(); ?></p>
-                <p class="post__date"><i class="fas fa-comments"></i><?php the_date(); ?></p>
-                <p class="post__time">, <?php the_time(); ?> uur</p>
-                <p class="post__comments"><i class="fas fa-comments"></i><?php comments_number('0', '1', '%'); ?> Comments</p>
+                <p class="post__author-date"><i class="fas fa-user-clock"></i><?php the_author(); ?>,
+                    <?php the_date(); ?> -
+                    <?php the_time(); ?> uur</p>
+                <p class="post__comments">
+                    <i class="fas fa-comments"></i>
+                    <a href="#comment-section">
+                        <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?>
+                    </a>
+                </p>
             </div>
             <div class="post__content">
                 <?php the_content(); ?>
@@ -46,7 +51,9 @@
             endif;
             ?>
 
-        <?php comments_template(); ?>
+        <div id="comment-section">
+            <?php comments_template(); ?>
+        </div>
     </div>
 
     <div class="sideContainer">

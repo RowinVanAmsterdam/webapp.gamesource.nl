@@ -35,6 +35,7 @@
 
       &__metadata {
         display: flex;
+        flex-direction: column;
         margin-bottom: 2rem;
         font-size: 0.8em;
         color: gray;
@@ -45,15 +46,11 @@
         }
       }
 
-      &__author,
-      &__date,
-      &__time {
+      &__author-date,
+      &__comments,
+      &__comments a {
         color: gray;
         font-family: "Futura-Book";
-      }
-
-      &__date {
-        margin-left: 10px;
       }
 
       &__content {

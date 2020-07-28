@@ -269,6 +269,7 @@
 }
 .grid-container .postContainer .post__metadata {
   display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
   font-size: 0.8em;
   color: gray;
@@ -277,12 +278,9 @@
 .grid-container .postContainer .post__metadata i {
   margin-right: 0.3em;
 }
-.grid-container .postContainer .post__author, .grid-container .postContainer .post__date, .grid-container .postContainer .post__time {
+.grid-container .postContainer .post__author-date, .grid-container .postContainer .post__comments, .grid-container .postContainer .post__comments a {
   color: gray;
   font-family: "Futura-Book";
-}
-.grid-container .postContainer .post__date {
-  margin-left: 10px;
 }
 .grid-container .postContainer .post__content {
   margin-bottom: 4vh;
@@ -1202,6 +1200,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   display: flex;
