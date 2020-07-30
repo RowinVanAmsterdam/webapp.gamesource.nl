@@ -12,7 +12,6 @@
 @import "/pages/userprofile";
 @import "/pages/login";
 
-
 //template parts
 @import "/template-parts/footer";
 @import "/template-parts/header";
@@ -24,15 +23,11 @@
 @import "/template-parts/cookie";
 @import "/template-parts/sidebar";
 
-
-
 //main
 @import "/main";
 
 
-
 //fonts
-
 @font-face {
   font-family: "Futura-Book";
   src: url("../fonts/futura-book-font-webfont.woff") format("woff");

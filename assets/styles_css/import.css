@@ -1,6 +1,6 @@
 /* utilities */
+/* border: 1px solid red; */
 .inform-content {
-  /* border: 1px solid red; */
   padding-top: 84px;
   font-family: Futura-book;
 }
@@ -277,26 +277,54 @@
   flex-direction: column;
   width: 65%;
 }
-.grid-container .postContainer__metadata {
+.grid-container .postContainer .post {
   display: flex;
   flex-direction: column;
 }
-.grid-container .postContainer__metadata .metadata__title {
-  font-size: 2em;
+.grid-container .postContainer .post__title {
+  font-size: 1.3em;
   color: #3c3c3c;
+  margin-bottom: 5px;
 }
-.grid-container .postContainer__metadata .metadata__author-time {
-  color: gray;
+.grid-container .postContainer .post__metadata {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  font-size: 0.8em;
+  color: gray;
+  font-family: "Futura-Book";
 }
-.grid-container .postContainer__content {
+.grid-container .postContainer .post__metadata i {
+  margin-right: 0.3em;
+}
+.grid-container .postContainer .post__author-date, .grid-container .postContainer .post__comments, .grid-container .postContainer .post__comments a {
+  color: gray;
+  font-family: "Futura-Book";
+}
+.grid-container .postContainer .post__comments a {
+  color: #5ebfbb;
+}
+.grid-container .postContainer .post__comments a:hover {
+  color: #348380;
+  transition: 0.2s ease;
+}
+.grid-container .postContainer .post__content {
   margin-bottom: 4vh;
 }
-.grid-container .postContainer__content h3 {
+.grid-container .postContainer .post__content h3 {
   color: #3c3c3c;
   margin: 2vh 0 1vh 0;
+}
+.grid-container .postContainer .post__content p {
+  margin: 1rem 0;
+}
+.grid-container .postContainer .post__content a {
+  color: #5ebfbb;
+  font-family: "Futura-Book";
+}
+.grid-container .postContainer .post__content a:hover {
+  color: #348380;
+  transition: 0.2s ease;
 }
 .grid-container .sideContainer {
   width: 30%;
@@ -1266,6 +1294,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   display: flex;
   min-height: 100vh;
@@ -1301,6 +1332,23 @@ a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
   text-decoration: none;
+}
+.wp-block-image {
+  margin: 1em 0;
+}
+.wp-block-embed-youtube {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 56.25%;
+}
+.wp-block-embed-youtube iframe, .wp-block-embed-youtube object, .wp-block-embed-youtube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @font-face {
   font-family: "Futura-Book";
