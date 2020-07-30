@@ -58,12 +58,15 @@
     margin-right:auto;
     padding-left: 2rem;
     @include respond-to($ultrawide) {
-      padding-left: 4rem;
+      padding-left: 1rem;
     }
     li {
       display: flex;
       flex-direction: row;
       //margin-left: 2rem;
+      @include respond-to($mobile) {
+        margin-left: -1rem;
+      }
        a {
          align-items: flex-start;
          height: 1.4em;
@@ -87,11 +90,17 @@
       margin-left: 2rem;
       text-decoration: none;
       color: white;
+      @include respond-to($mobile) {
+        margin-left: 1rem;
+      }
     }
     p {
       margin-left: 2rem;
       text-decoration: none;
       color: white;
+      @include respond-to($mobile) {
+        margin-left: 1rem;
+      }
     }
   }
 }
@@ -179,11 +188,13 @@
     .content-grid {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       .content-left {
         width: 100%;
       }
       .content-right {
-        display: none;
+        width: 100%;
+        padding: 1rem;
       }
     }
   }
