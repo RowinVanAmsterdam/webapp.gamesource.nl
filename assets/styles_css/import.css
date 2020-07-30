@@ -282,16 +282,30 @@
   color: gray;
   font-family: "Futura-Book";
 }
+.grid-container .postContainer .post__comments a {
+  color: #5ebfbb;
+}
+.grid-container .postContainer .post__comments a:hover {
+  color: #348380;
+  transition: 0.2s ease;
+}
 .grid-container .postContainer .post__content {
   margin-bottom: 4vh;
+}
+.grid-container .postContainer .post__content h3 {
+  color: #3c3c3c;
+  margin: 2vh 0 1vh 0;
+}
+.grid-container .postContainer .post__content p {
+  margin: 1rem 0;
 }
 .grid-container .postContainer .post__content a {
   color: #5ebfbb;
   font-family: "Futura-Book";
 }
-.grid-container .postContainer .post__content h3 {
-  color: #3c3c3c;
-  margin: 2vh 0 1vh 0;
+.grid-container .postContainer .post__content a:hover {
+  color: #348380;
+  transition: 0.2s ease;
 }
 .grid-container .sideContainer {
   width: 30%;
@@ -1242,6 +1256,20 @@ a {
 }
 .wp-block-image {
   margin: 1em 0;
+}
+.wp-block-embed-youtube {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 56.25%;
+}
+.wp-block-embed-youtube iframe, .wp-block-embed-youtube object, .wp-block-embed-youtube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @font-face {
   font-family: "Futura-Book";

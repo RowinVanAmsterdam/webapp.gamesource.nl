@@ -53,18 +53,37 @@
         font-family: "Futura-Book";
       }
 
+      &__comments a {
+        color: $green;
+
+        &:hover {
+          color: $green--hover;
+          transition: .2s ease;
+        }
+      }
+
       &__content {
         margin-bottom: 4vh;
-
-        a {
-          color: $green;
-          font-family: "Futura-Book";
-        }
 
         h3 {
           color: #3c3c3c;
           margin: 2vh 0 1vh 0;
         }
+
+        p {
+          margin: 1rem 0;
+        }
+        
+        a {
+          color: $green;
+          font-family: "Futura-Book";
+
+          &:hover {
+            color: $green--hover;
+            transition: .2s ease;
+          }
+        }
+
       }
     }
   }
