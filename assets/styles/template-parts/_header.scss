@@ -33,6 +33,9 @@
     img {
       height: 2.5rem;
       margin-left: 2rem;
+      @include respond-to($mobile) {
+        margin-left: 1rem;
+      }
     }
     #main-nav {
       display: flex;

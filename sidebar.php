@@ -10,7 +10,7 @@
             'meta_key' => 'post_views_count',
             'orderby' => 'meta_value_num',
             'order' => 'ASC',
-            'posts_per_page' => 5
+            'posts_per_page' => 3
         );
         $the_query = new WP_Query( $args );
 
