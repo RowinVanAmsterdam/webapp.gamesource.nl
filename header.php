@@ -55,3 +55,5 @@
 
     gtag('config', 'UA-172341440-1');
 </script>
+
+<script data-ad-client="ca-pub-7226537335135722" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

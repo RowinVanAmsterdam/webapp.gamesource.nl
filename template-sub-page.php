@@ -37,10 +37,11 @@ Template Name: Sub-Page
                 <?php get_template_part( 'template-parts/specific-articles'); ?>
             </div>
             <div class="content-right">
-
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>
+    <?php get_template_part( 'template-parts/cookie-message'); ?>
 </div>
 </div>
 

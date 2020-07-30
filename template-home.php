@@ -43,7 +43,8 @@ Template Name: Home
         if ( $the_highlight_query->have_posts() ) :
             while ( $the_highlight_query->have_posts() ) : $the_highlight_query->the_post();?>
                 <div class="highlight-card"
-                     style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);">
+                     style="background-image: linear-gradient(to left bottom, rgba(94, 191, 187, 0) 50%, rgba(94, 191, 187, 0.73)),
+                             url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);">
                     <a href="<?php echo the_permalink(); ?>" class="highlight-card-content">
                         <h2><?php the_title(); ?></h2>
                         <p><?php the_date(); ?></p>
@@ -77,7 +78,7 @@ Template Name: Home
                 <?php get_template_part( 'template-parts/recent-articles'); ?>
             </div>
             <div class="content-right">
-
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>
@@ -86,3 +87,5 @@ Template Name: Home
 </div>
 <?php get_footer();?>
 </body>
+
+<!--linear-gradient(to left bottom, rgba(94, 191, 187, 0) 60%, rgba(94, 191, 187, 0.73)),-->

@@ -147,5 +147,6 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
 <?php endif; ?>
     </div>
 </div>
+<?php get_template_part( 'template-parts/cookie-message'); ?>
 <?php get_footer();?>
 </body>

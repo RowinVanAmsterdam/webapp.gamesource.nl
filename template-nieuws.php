@@ -37,10 +37,11 @@ Template Name: Nieuws
                 <?php get_template_part( 'template-parts/recent-articles'); ?>
             </div>
             <div class="content-right">
-
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>
+    <?php get_template_part( 'template-parts/cookie-message'); ?>
 </div>
 </div>
 
