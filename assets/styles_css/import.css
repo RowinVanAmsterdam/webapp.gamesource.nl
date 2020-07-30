@@ -1,6 +1,6 @@
 /* utilities */
+/* border: 1px solid red; */
 .inform-content {
-  /* border: 1px solid red; */
   padding-top: 84px;
   font-family: Futura-book;
 }
@@ -115,12 +115,17 @@
 }
 @media only screen and (min-width: 1920px) {
   .highlight-card ul {
-    padding-left: 4rem;
+    padding-left: 1rem;
   }
 }
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
+}
+@media only screen and (min-width: 320px) {
+  .highlight-card ul li {
+    margin-left: -1rem;
+  }
 }
 .highlight-card ul li a {
   align-items: flex-start;
@@ -143,10 +148,20 @@
   text-decoration: none;
   color: white;
 }
+@media only screen and (min-width: 320px) {
+  .highlight-card a h2 {
+    margin-left: 1rem;
+  }
+}
 .highlight-card a p {
   margin-left: 2rem;
   text-decoration: none;
   color: white;
+}
+@media only screen and (min-width: 320px) {
+  .highlight-card a p {
+    margin-left: 1rem;
+  }
 }
 .content {
   max-width: 1170px;
@@ -160,9 +175,11 @@
 }
 .content .content-top-row h2 {
   color: #3c3c3c;
+  border-left: 4px solid #5ebfbb;
+  padding-left: 0.5rem;
 }
 .content .content-top-row form {
-  margin-right: 25%;
+  margin-right: 30%;
 }
 .content .content-top-row form label {
   font-family: Futura-Book;
@@ -208,10 +225,10 @@
 }
 .content .content-grid .content-left {
   width: 70%;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 .content .content-grid .content-right {
-  width: 20%;
+  width: 25%;
 }
 @media screen and (min-device-width: 300px) and (max-device-width: 812px) {
   .content .content-top-row {
@@ -227,12 +244,14 @@
   .content .content-grid {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .content .content-grid .content-left {
     width: 100%;
   }
   .content .content-grid .content-right {
-    display: none;
+    width: 100%;
+    padding: 1rem;
   }
 }
 .featured-image {
@@ -258,26 +277,54 @@
   flex-direction: column;
   width: 65%;
 }
-.grid-container .postContainer__metadata {
+.grid-container .postContainer .post {
   display: flex;
   flex-direction: column;
 }
-.grid-container .postContainer__metadata .metadata__title {
-  font-size: 2em;
+.grid-container .postContainer .post__title {
+  font-size: 1.3em;
   color: #3c3c3c;
+  margin-bottom: 5px;
 }
-.grid-container .postContainer__metadata .metadata__author-time {
-  color: gray;
+.grid-container .postContainer .post__metadata {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  font-size: 0.8em;
+  color: gray;
+  font-family: "Futura-Book";
 }
-.grid-container .postContainer__content {
+.grid-container .postContainer .post__metadata i {
+  margin-right: 0.3em;
+}
+.grid-container .postContainer .post__author-date, .grid-container .postContainer .post__comments, .grid-container .postContainer .post__comments a {
+  color: gray;
+  font-family: "Futura-Book";
+}
+.grid-container .postContainer .post__comments a {
+  color: #5ebfbb;
+}
+.grid-container .postContainer .post__comments a:hover {
+  color: #348380;
+  transition: 0.2s ease;
+}
+.grid-container .postContainer .post__content {
   margin-bottom: 4vh;
 }
-.grid-container .postContainer__content h3 {
+.grid-container .postContainer .post__content h3 {
   color: #3c3c3c;
   margin: 2vh 0 1vh 0;
+}
+.grid-container .postContainer .post__content p {
+  margin: 1rem 0;
+}
+.grid-container .postContainer .post__content a {
+  color: #5ebfbb;
+  font-family: "Futura-Book";
+}
+.grid-container .postContainer .post__content a:hover {
+  color: #348380;
+  transition: 0.2s ease;
 }
 .grid-container .sideContainer {
   width: 30%;
@@ -623,6 +670,11 @@ body {
 .header-container__content img {
   height: 2.5rem;
   margin-left: 2rem;
+}
+@media only screen and (min-width: 320px) {
+  .header-container__content img {
+    margin-left: 1rem;
+  }
 }
 .header-container__content #main-nav {
   display: flex;
@@ -1182,10 +1234,68 @@ body {
   color: #5ebfbb;
   background-color: white;
 }
+.sidebar__container-title {
+  border-radius: 2px;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.sidebar__container-title h2 {
+  color: #3c3c3c;
+  border-left: 4px solid #5ebfbb;
+  padding-left: 0.5rem;
+}
+.sidebar__container .popular__card {
+  display: flex;
+  transition: all 0.2s ease;
+  flex-direction: column;
+  margin-bottom: 1em;
+  background-size: cover;
+  border-radius: 4px;
+  min-height: 5em;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.sidebar__container .popular__card:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.sidebar__container .popular__card:hover .sidebar-title {
+  color: white;
+  background: #5ebfbb;
+}
+.sidebar__container .popular__card a {
+  overflow: hidden;
+}
+.sidebar__container .popular__card a img {
+  width: 100%;
+  height: 4em;
+  object-fit: cover;
+  margin-bottom: -4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  transition: all 0.4s ease;
+}
+.sidebar__container .popular__card--link p {
+  transition: all 0.2s ease;
+  font-size: 1em;
+  font-family: Futura-Heavy;
+  font-size: 1em;
+  padding: 0.5em;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.sidebar__container .popular__card--link p:hover {
+  color: white;
+  background: #5ebfbb;
+}
+.sidebar__container .iframe iframe {
+  width: 100%;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   display: flex;
@@ -1222,6 +1332,23 @@ a {
   font-family: "Futura-Bold";
   color: #3c3c3c;
   text-decoration: none;
+}
+.wp-block-image {
+  margin: 1em 0;
+}
+.wp-block-embed-youtube {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 56.25%;
+}
+.wp-block-embed-youtube iframe, .wp-block-embed-youtube object, .wp-block-embed-youtube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @font-face {
   font-family: "Futura-Book";

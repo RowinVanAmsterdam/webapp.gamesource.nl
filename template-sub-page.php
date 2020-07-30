@@ -37,7 +37,7 @@ Template Name: Sub-Page
                 <?php get_template_part( 'template-parts/specific-articles'); ?>
             </div>
             <div class="content-right">
-
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>

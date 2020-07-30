@@ -1,6 +1,7 @@
 .featured-image {
   display: flex;
   justify-content: center;
+
   img {
     margin-top: 7vh;
     margin-bottom: 4vh;
@@ -17,33 +18,72 @@
   max-width: 1070px;
   margin-left: auto;
   margin-right: auto;
+
   .postContainer {
     flex-direction: column;
     width: 65%;
-    &__metadata {
+
+    .post {
       display: flex;
       flex-direction: column;
 
-      .metadata {
+      &__title {
+        font-size: 1.3em;
+        color: #3c3c3c;
+        margin-bottom: 5px;
+      }
 
-        &__title {
-          font-size: 2em;
-          color: #3c3c3c;
-        }
-        &__author-time {
-          color: gray;
-          display: flex;
-          flex-direction: row;
-          margin-bottom: 1rem;
+      &__metadata {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        font-size: 0.8em;
+        color: gray;
+        font-family: "Futura-Book";
+
+        i {
+          margin-right: 0.3em;
         }
       }
-    }
-    &__content {
-      margin-bottom: 4vh;
 
-      h3 {
-        color: #3c3c3c;
-        margin: 2vh 0 1vh 0;
+      &__author-date,
+      &__comments,
+      &__comments a {
+        color: gray;
+        font-family: "Futura-Book";
+      }
+
+      &__comments a {
+        color: $green;
+
+        &:hover {
+          color: $green--hover;
+          transition: .2s ease;
+        }
+      }
+
+      &__content {
+        margin-bottom: 4vh;
+
+        h3 {
+          color: #3c3c3c;
+          margin: 2vh 0 1vh 0;
+        }
+
+        p {
+          margin: 1rem 0;
+        }
+        
+        a {
+          color: $green;
+          font-family: "Futura-Book";
+
+          &:hover {
+            color: $green--hover;
+            transition: .2s ease;
+          }
+        }
+
       }
     }
   }
@@ -63,7 +103,6 @@
     }
   }
   .grid-container {
-
     .postContainer {
       flex-direction: column;
       width: 100%;
