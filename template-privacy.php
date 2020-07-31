@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Categories
+Template Name: Privacy
 */
 ?>
 
@@ -29,27 +29,14 @@ Template Name: Categories
 <div class="container">
     <div class="content">
         <div class="content-top-row">
-            <h2 id="Laatste-nieuws">Categorie: <?php echo single_cat_title( '', false ); ?></h1></h2>
+            <h2 id="Laatste-nieuws">Privacy beleid</h1></h2>
         </div>
         <div class="content-grid">
             <div class="content-left">
                 <?php
                 if ( have_posts() ) :
-                    while ( have_posts() ) : the_post();?>
-                        <div class="article-card">
-                            <a href="<?php echo the_permalink(); ?>">
-                                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
-                            </a>
-                            <div class="article-card-text">
-                                <?php the_category();?>
-                            <a href="<?php echo the_permalink(); ?>" class="article-card-content">
-                                <h2><?php the_title(); ?></h2>
-                                <p class="metadata"><i class="fas fa-clock"></i><?php echo get_the_date(); ?> door <?php the_author(); ?></p>
-                                <p class="metadata"><i class="fas fa-comments"></i><?php comments_number('0', '1', '%'); ?> Comments</p>
-                            </a>
-                        </div>
-                    </div>
-                <?php
+                    while ( have_posts() ) : the_post();
+                        the_content();
                     endwhile;
                 endif;
                 ?>
@@ -67,4 +54,5 @@ Template Name: Categories
 
 </body>
 <?php get_footer();?>
+
 
