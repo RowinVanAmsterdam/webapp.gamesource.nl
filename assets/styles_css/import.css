@@ -1234,6 +1234,10 @@ body {
   color: #5ebfbb;
   background-color: white;
 }
+#cookie-message {
+  position: sticky;
+  bottom: 0;
+}
 .sidebar__container-title {
   border-radius: 2px;
   margin-top: 2em;

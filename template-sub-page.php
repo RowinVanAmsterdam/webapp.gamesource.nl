@@ -41,7 +41,9 @@ Template Name: Sub-Page
             </div>
         </div>
     </div>
-    <?php get_template_part( 'template-parts/cookie-message'); ?>
+    <div id="cookie-message">
+        <!--        --><?php //get_template_part( 'template-parts/cookie-message'); ?>
+    </div>
 </div>
 </div>
 
