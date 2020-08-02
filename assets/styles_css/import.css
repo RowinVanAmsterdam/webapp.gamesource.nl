@@ -103,7 +103,6 @@
   width: 100vw;
 }
 .highlight-card ul {
-  margin-top: -2em;
   list-style-type: none;
   text-decoration: none;
   display: flex;
@@ -113,31 +112,26 @@
   margin-right: auto;
   padding-left: 2rem;
 }
-@media only screen and (min-width: 1920px) {
-  .highlight-card ul {
-    padding-left: 1rem;
-  }
-}
 .highlight-card ul li {
   display: flex;
   flex-direction: row;
+  margin-left: -1rem;
 }
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 1920px) {
   .highlight-card ul li {
-    margin-left: -1rem;
+    margin-left: 0rem;
   }
 }
 .highlight-card ul li a {
   align-items: flex-start;
   height: 1.4em;
-  margin-top: -4em;
+  margin-top: -3em;
   margin-right: 0.5rem;
   text-decoration: none;
 }
 .highlight-card a {
   display: flex;
   flex-direction: column;
-  margin-top: 60vh;
   text-decoration: none;
   max-width: 1920px;
   margin-left: auto;
@@ -161,6 +155,14 @@
 @media only screen and (min-width: 320px) {
   .highlight-card a p {
     margin-left: 1rem;
+  }
+}
+.highlight-card .highlight-card-content {
+  margin-top: 60vh;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .highlight-card .highlight-card-content {
+    margin-top: 55vh;
   }
 }
 .content {
@@ -927,14 +929,13 @@ body {
  */
 #menu {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 101vw;
+  height: 110vh;
   margin: -5em 0 0 -100vw;
   padding-left: 3em;
   padding-right: 3em;
-  -webkit-backdrop-filter: brightness(0.5);
   overflow: auto;
-  background: #3c3c3c;
+  background: #5ebfbb;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -1017,9 +1018,10 @@ body {
   border-style: solid;
   background: none;
   -webkit-appearance: none;
+  color: white;
 }
 .searchform__fields input[type="text"]::placeholder {
-  color: gray;
+  color: white;
 }
 .searchform__fields input[type="text"]:focus {
   outline: none;
@@ -1029,7 +1031,7 @@ body {
 .searchform__fields #filtersubmit {
   padding: 1.75em 0;
   margin-left: -2em;
-  color: gray;
+  color: white;
   position: relative;
 }
 .category-tag {
