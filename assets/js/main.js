@@ -8,8 +8,6 @@ window.onload = function() {
     window.addEventListener('scroll', headerScroll);
     //eventlistener for form submit
     document.querySelector("#form-submit").addEventListener("change", clickToSubmit);
-    //eventlistener for cookie submit
-    document.querySelector("#cookie-accept").addEventListener("click", setCookie);
 };
 
 userStatus();
@@ -276,6 +274,19 @@ function cookieStatus() {
     // let cookieSplit = cookie.split(";");
     let cookieSearch = document.cookie.indexOf('GameSource_Cookie=');
     if (cookieSearch !== -1) {
-        document.querySelector(".cookie__message").classList.toggle("hidden");
+        // document.querySelector(".cookie__message").classList.toggle("hidden");
+        document.querySelector("#cookie-message").innerHTML = "";
+    }
+    else {
+        document.querySelector("#cookie-message").innerHTML = "" +
+            "<div class=\"cookie__message\">\n" +
+            "    <p class=\"cookie__message--text\">Wij gebruiken cookies om onze website en uw ervaring te verbeteren</p>\n" +
+            "    <div>\n" +
+            "        <a class=\"cookie__message--button\" id=\"cookie-accept\" href=\"\">Accepteer</a>\n" +
+            "        <a class=\"cookie__message--button\" href=\"<?php echo home_url(); ?>/cookie-informatie\">Meer informatie</a>\n" +
+            "    </div>\n" +
+            "</div>";
+        //eventlistener for cookie submit
+        document.querySelector("#cookie-accept").addEventListener("click", setCookie);
     }
 }

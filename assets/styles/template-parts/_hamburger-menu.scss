@@ -135,18 +135,20 @@ body
 {
   position: absolute;
   //width: 105vw;
-  width: 100vw;
-  height: 100vh;
+  width: 101vw;
+  height: 110vh;
   margin: -5em 0 0 -100vw;
   padding-left: 3em;
   padding-right: 3em;
-  -webkit-backdrop-filter: brightness(0.5);
+  //-webkit-backdrop-filter: blur(15px) brightness(0.5);
+  //backdrop-filter: blur(8px) brightness(0.75);
   //margin: -100px 0 0 -90vw;
   //padding: 8rem 5vw 0rem 5vw;
   //padding-top: 8rem;
   overflow: auto;
 
-  background: #3c3c3c;
+  background: $green;
+  //background: #3c3c3c;
   //background: #f0f0f0;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;

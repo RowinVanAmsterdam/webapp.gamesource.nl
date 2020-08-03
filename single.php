@@ -61,8 +61,10 @@
     <div class="sideContainer">
         <?php get_sidebar(); ?>
     </div>
-    <?php get_template_part( 'template-parts/cookie-message'); ?>
 
+    </div>
+    <div id="cookie-message">
+        <!--        --><?php //get_template_part( 'template-parts/cookie-message'); ?>
     </div>
 
 <?php get_footer(); ?>

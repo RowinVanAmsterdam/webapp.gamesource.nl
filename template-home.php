@@ -45,11 +45,14 @@ Template Name: Home
                 <div class="highlight-card"
                      style="background-image: linear-gradient(to left bottom, rgba(94, 191, 187, 0) 50%, rgba(94, 191, 187, 0.73)),
                              url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);">
-                    <a href="<?php echo the_permalink(); ?>" class="highlight-card-content">
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_date(); ?></p>
-                    </a>
-                    <?php the_category();?>
+                    <div class="highlight-card-content">
+                        <?php the_category();?>
+                        <a href="<?php echo the_permalink(); ?>">
+                            <h2><?php the_title(); ?></h2>
+                            <p><?php the_date(); ?></p>
+                        </a>
+                    </div>
+<!--                    --><?php //the_category();?>
                 </div>
             <?php  endwhile;
         endif;
@@ -83,7 +86,9 @@ Template Name: Home
         </div>
     </div>
     </div>
-    <?php get_template_part( 'template-parts/cookie-message'); ?>
+    <div id="cookie-message">
+<!--        --><?php //get_template_part( 'template-parts/cookie-message'); ?>
+    </div>
 </div>
 <?php get_footer();?>
 </body>
