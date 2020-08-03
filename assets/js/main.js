@@ -4,6 +4,7 @@ window.onload = function() {
     currentSelection();
     colorCodeCategories();
     hideSelectOptions();
+    cookieSetting();
 
     window.addEventListener('scroll', headerScroll);
     //eventlistener for form submit
@@ -288,5 +289,34 @@ function cookieStatus() {
             "</div>";
         //eventlistener for cookie submit
         document.querySelector("#cookie-accept").addEventListener("click", setCookie);
+    }
+}
+
+function cookieSetting() {
+    let currentLocation = window.location.href;
+    let arrayLocation = currentLocation.split('/');
+    let privacy = arrayLocation.includes('privacy-policy');
+    if (privacy === true) {
+        document.querySelector("#privacy-off").addEventListener("click", privacyOff);
+        document.querySelector("#privacy-on").addEventListener("click", privacyOn);
+        function privacyOff() {
+            document.querySelector("#privacy-off").classList.toggle("privacy-policy__setting--on");
+            document.querySelector("#privacy-on").classList.toggle("privacy-policy__setting--on");
+            document.querySelector("#analytics").remove();
+        }
+        function privacyOn() {
+            document.querySelector("#privacy-off").classList.toggle("privacy-policy__setting--on");
+            document.querySelector("#privacy-on").classList.toggle("privacy-policy__setting--on");
+            document.querySelector("#analytics-container").innerHTML = "<div id=\"analytics\">\n" +
+                "        <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-172341440-1\"></script>\n" +
+                "        <script>\n" +
+                "            window.dataLayer = window.dataLayer || [];\n" +
+                "            function gtag(){dataLayer.push(arguments);}\n" +
+                "            gtag('js', new Date());\n" +
+                "\n" +
+                "            gtag('config', 'UA-172341440-1');\n" +
+                "        </script>\n" +
+                "    </div>";
+        }
     }
 }
