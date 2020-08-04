@@ -17,7 +17,7 @@ Template Name: Home
         let homeUrl = '<?php echo home_url(); ?>';
         let userLoginStatus = "<?php echo $userLoginStatus ?>";
     </script>
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.11/css/all.css">
     <title>GameSource</title>
     <?php wp_head();?>
 </head>
@@ -63,7 +63,7 @@ Template Name: Home
         <div class="content-top-row">
         <h2 id="Laatste-nieuws">Laatste nieuws</h2>
         <form action="<?php global $test ?>" method="get" id="form-submit">
-            <label>Sorteer op:</label>
+            <label>Filter op:</label>
             <select name="cat-filter" id="cat-filter">
 <!--                <option id="geenSelectie" value="geenSelectie"></option>-->
             <?php
