@@ -11,8 +11,8 @@ Template Name: Privacy
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="GameSource, de bron voor al jouw gamenieuws">
+    <meta name="author" content="GameSource">
     <script type="text/javascript">
         let homeUrl = '<?php echo home_url(); ?>';
         let userLoginStatus = "<?php echo $userLoginStatus ?>";
@@ -33,6 +33,13 @@ Template Name: Privacy
         </div>
         <div class="content-grid">
             <div class="content-left">
+                <div class="privacy-policy">
+                    <h2>Cookie instellingen</h2>
+                    <p>Wij gebruiken cookies op onze website om gebruikers verkeer te analyseren waardoor we onze website kunnen verbeteren. hieronder kunt u de cookies uitschakelen.</p>
+                    <div class="privacy-policy__setting">
+                        <p class="privacy-policy__setting--on button" id="privacy-off">Zet cookies uit</p>
+                        <p class="button" id="privacy-on">Zet cookies aan</p>
+                    </div>
                 <?php
                 if ( have_posts() ) :
                     while ( have_posts() ) : the_post();
@@ -40,6 +47,7 @@ Template Name: Privacy
                     endwhile;
                 endif;
                 ?>
+                </div>
             </div>
             <div class="content-right">
                 <?php get_sidebar(); ?>
