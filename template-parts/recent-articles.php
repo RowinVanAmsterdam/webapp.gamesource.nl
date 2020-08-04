@@ -25,8 +25,8 @@ if ( $the_query->have_posts() ) :
                     <a href="<?php echo the_permalink(); ?>" class="article-card-content">
                     <h2><?php the_title(); ?></h2>
 <!--                        <span>--><?php //the_excerpt(); ?><!--</span>-->
-                        <p class="metadata"><i class="fas fa-clock"></i><?php echo get_the_date(); ?> door <?php the_author(); ?></p>
-                        <p class="metadata"><i class="fas fa-comments"></i><?php comments_number('0', '1', '%'); ?> Comments</p>
+                        <p class="metadata"><i class="fas fa-user-clock"></i><?php echo get_the_date(); ?> door <?php the_author(); ?></p>
+                        <p class="metadata"><i class="fas fa-comments"></i><?php comments_number('0 Comments', '1 Comment', '% Comments'); ?></p>
                     </a>
                 </div>
         </div>
