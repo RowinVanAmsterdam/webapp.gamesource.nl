@@ -117,7 +117,7 @@
   flex-direction: row;
   margin-left: -1rem;
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1930px) {
   .highlight-card ul li {
     margin-left: 0rem;
   }
@@ -546,6 +546,34 @@ body {
 }
 .dashicons::before {
   color: #5ebfbb;
+}
+.privacy-policy {
+  margin-left: 1rem;
+}
+.privacy-policy__setting {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.privacy-policy__setting--on {
+  color: white;
+  background: #5ebfbb;
+}
+.privacy-policy__setting .button {
+  padding: 0.25em;
+  border: 2px solid #5ebfbb;
+  border-radius: 4px;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.privacy-policy h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.privacy-policy h3 {
+  margin-top: 0.5rem;
 }
 .footer {
   background-color: #000;

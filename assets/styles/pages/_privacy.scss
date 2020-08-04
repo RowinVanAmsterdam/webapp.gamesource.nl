@@ -1,0 +1,32 @@
+.privacy-policy {
+  margin-left: 1rem;
+  &__setting {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    &--on {
+      color: white;
+      background: $green;
+    }
+    .button {
+      padding: 0.25em;
+      border: 2px solid $green;
+      border-radius: 4px;
+      margin-right: 1rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      //&:hover {
+      //  color: white;
+      //  background: $green;
+      //}
+    }
+  }
+  h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    margin-top: 0.5rem;
+  }
+}

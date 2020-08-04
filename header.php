@@ -47,13 +47,17 @@
 </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172341440-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<div id="analytics-container">
+    <div id="analytics">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172341440-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    gtag('config', 'UA-172341440-1');
-</script>
+            gtag('config', 'UA-172341440-1');
+        </script>
+    </div>
+</div>
 
 <script data-ad-client="ca-pub-7226537335135722" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
