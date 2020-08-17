@@ -14,38 +14,42 @@
       }
 
     &--blue {
-        background-color: #003791;
+        color: #003791;
         border: 2px solid #003791;
 
         &:hover {
-            color: #003791;
+            background-color: #003791;
+            color: white;
           }
     }
 
     &--green {
-        background-color: #107C10;
+        color: #107C10;
         border: 2px solid #107C10;
 
         &:hover {
-            color: #107C10;
+            background-color: #107C10;
+            color: white;
           }
     }
 
     &--red {
-        background-color: #e60012;
+        color: #e60012;
         border: 2px solid #e60012;
 
         &:hover {
-            color: #e60012;
+            background-color: #e60012;
+            color: white;
           }
     }
 
     &--black {
-        background-color: #000;
+        color: #000;
         border: 2px solid #000;
 
         &:hover {
-            color: #000;
+            background-color: #000;
+            color: white;
           }
     }
     &--lime {
