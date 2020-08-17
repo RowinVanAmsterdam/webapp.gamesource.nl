@@ -61,6 +61,10 @@ $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $path = explode("/", $actual_link);
 //$item = array_search("reviews",$path,true);
 //$item = array_keys($path[0], "previews");
+if(in_array("nieuws", $path))
+{
+    $item = "Nieuws";
+}
 if(in_array("previews", $path))
 {
     $item = "Previews";
