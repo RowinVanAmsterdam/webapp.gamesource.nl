@@ -16,6 +16,7 @@
   }
   .popular__card {
     display: flex;
+    justify-content: space-between;
     transition: all 0.2s ease;
     flex-direction: column;
     margin-bottom: 1em;
@@ -26,43 +27,66 @@
     &:hover {
       box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
       .sidebar-title {
-        color: white;
-        background: $green;
+        //color: white;
+        //background: $green;
       }
     }
     a {
       overflow: hidden;
-      img {
-        width: 100%;
-        height: 4em;
-        object-fit: cover;
-        margin-bottom: -4px;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        transition: all 0.4s ease;
-      }
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      //img {
+      //  height: 100%;
+      //  width: 3em;
+      //  object-fit: cover;
+      //  margin-bottom: -4px;
+      //  border-top-left-radius: 4px;
+      //  border-top-right-radius: 4px;
+      //  transition: all 0.4s ease;
+      //  background-color: $green;
+      //  //&:hover {
+      //  //  opacity: 0.5;
+      //  //}
+      //}
     }
     &--link {
-      p {
-        transition: all 0.2s ease;
-        font-size: 1em;
-        font-family: Futura-Heavy;
-        font-size: 1em;
-        //color: white;
-        padding: 0.5em;
-        //margin-top: -4em;
-        //backdrop-filter: blur(2px) brightness(50%);
-        //min-height: 5em;
-        //border-left: 2px solid $green;
-        //border-right: 2px solid $green;
-        //border-bottom: 2px solid $green;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        &:hover {
-          color: white;
-          background: $green;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+        img {
+          min-height: 5em;
+          width: 5em;
+          object-fit: cover;
+          border-bottom-right-radius: 4px;
+          border-top-right-radius: 4px;
+          transition: all 0.4s ease;
         }
-      }
+
+        p {
+          transition: all 0.2s ease;
+          font-family: Futura-Heavy;
+          font-size: 1em;
+          //color: white;
+          padding: 0.5em;
+          //margin-top: -4em;
+          //backdrop-filter: blur(2px) brightness(50%);
+          //min-height: 5em;
+          //border-left: 2px solid $green;
+          //border-right: 2px solid $green;
+          //border-bottom: 2px solid $green;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px;
+
+          &:hover {
+            //color: white;
+            //background: $green;
+          }
+        }
+
+        &--img {
+          background-color: $green;
+        }
     }
   }
   .iframe {

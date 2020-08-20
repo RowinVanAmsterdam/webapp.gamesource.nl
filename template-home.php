@@ -11,14 +11,15 @@ Template Name: Home
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="GameSource, de bron voor al jouw gamenieuws">
+    <meta name="description" content="Altijd het laatste gamenieuws voor ieder platform. Nieuws, reviews, previews en meer!">
     <meta name="author" content="GameSource">
     <script type="text/javascript">
         let homeUrl = '<?php echo home_url(); ?>';
         let userLoginStatus = "<?php echo $userLoginStatus ?>";
     </script>
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.11/css/all.css">
-    <title>GameSource</title>
+    <script data-ad-client="ca-pub-7226537335135722" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <title>GameSource | De bron voor al jouw gamenieuws</title>
     <?php wp_head();?>
 </head>
 

@@ -17,8 +17,8 @@ Template Name: Nieuws
         let homeUrl = '<?php echo home_url(); ?>';
         let userLoginStatus = "<?php echo $userLoginStatus ?>";
     </script>
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <title>GameSource</title>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.11/css/all.css">
+    <title>GameSource | <?php the_title(); ?></title>
     <?php wp_head();?>
 </head>
 
@@ -30,13 +30,14 @@ Template Name: Nieuws
     <div class="content">
         <div class="content-top-row">
             <h2 id="Laatste-nieuws">Laatste nieuws</h2>
+<!--            <img src="--><?php //bloginfo('template_directory'); ?><!--/assets/img/1082264.png">-->
         </div>
         <div class="content-grid">
             <div class="content-left">
                 <?php set_query_var('selectedCat', $test); ?>
-                <?php get_template_part( 'template-parts/recent-articles'); ?>
+                <?php get_template_part( 'template-parts/specific-articles'); ?>
             </div>
-            <div class="content-right">
+            <div class="content-right--subpage">
                 <?php get_sidebar(); ?>
             </div>
         </div>
