@@ -1,6 +1,6 @@
 /* utilities */
+/* border: 1px solid red; */
 .inform-content {
-  /* border: 1px solid red; */
   padding-top: 84px;
   font-family: Futura-book;
 }
@@ -596,6 +596,63 @@ body {
 }
 .privacy-policy h3 {
   margin-top: 0.5rem;
+}
+.contact-container {
+  display: flex;
+  max-width: 1170px;
+  margin: 5em auto 0;
+  padding: 0 15px;
+}
+.contact-container__contact-info {
+  width: 50%;
+  border: 1px solid red;
+  padding: 20px 50px;
+}
+.contact-container__form {
+  width: 50%;
+  border: 1px solid blue;
+  padding: 20px 50px;
+}
+.contact-container__form .contact-form {
+  border: 1px solid green;
+}
+.contact-container__form .contact-form__title {
+  color: #5ebfbb;
+  margin-bottom: 10px;
+}
+.contact-container__form .contact-form__context {
+  margin-bottom: 20px;
+}
+.contact-container__form .contact-form__input-field {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.contact-container__form .contact-form__input-field input, .contact-container__form .contact-form__input-field textarea {
+  border: 0;
+  border-bottom: 1px solid #bdbdbd;
+  margin-top: 2px;
+  min-height: 20px;
+  outline: none;
+}
+.contact-container__form .contact-form__input-field input:focus, .contact-container__form .contact-form__input-field textarea:focus {
+  border: 0;
+  border-bottom: 1px solid #5ebfbb;
+  transition: all 0.4s ease;
+}
+.contact-container__form .contact-form button {
+  font-family: Futura;
+  background-color: #5ebfbb;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.contact-container__form .contact-form button:hover {
+  background-color: #348380;
+  transition: all 0.2s ease;
 }
 .footer {
   background-color: #000;
