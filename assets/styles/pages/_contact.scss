@@ -8,6 +8,19 @@
     width: 50%;
     border: 1px solid red;
     padding: 20px 50px;
+    
+
+
+    .contact-info {
+        &__logo {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto 25px;
+        }
+
+        &__mail {
+        }
+    }
   }
 
   &__form {

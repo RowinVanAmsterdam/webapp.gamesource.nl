@@ -28,10 +28,10 @@ Template Name: Contact
     <div class="container">
         <div class="contact-container">
             <div class="contact-container__contact-info">
-                <img class="mainfooter__image"
+                <img class="contact-info__logo"
                     src="<?php bloginfo('template_directory'); ?>/assets/img/gamesource--default.svg"
                     alt="GameSource logo">
-                <a class="" href="mailto:info@gamesource.nl" target="_blank"><i
+                <a class="contact-info__mail" href="mailto:info@gamesource.nl" target="_blank"><i
                         class="far fa-envelope"></i>info@gamesource.nl</a>
                 <h2>Volg ons via:</h2>
                 <a class="" href="https://www.facebook.com/flutcadeau" target="_blank"><i class="fab fa-facebook"

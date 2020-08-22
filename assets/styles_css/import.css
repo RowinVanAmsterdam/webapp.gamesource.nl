@@ -608,6 +608,11 @@ body {
   border: 1px solid red;
   padding: 20px 50px;
 }
+.contact-container__contact-info .contact-info__logo {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 25px;
+}
 .contact-container__form {
   width: 50%;
   border: 1px solid blue;
