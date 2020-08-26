@@ -1,6 +1,10 @@
 .contact-container {
   margin-left: 1rem;
 
+  @include respond-to($mobile, $tablet) {
+    margin-left: 0;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;

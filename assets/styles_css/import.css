@@ -604,10 +604,21 @@ body {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
 }
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
 .contact-content__contact-info {
   width: 50%;
   padding: 20px 50px;
   margin: auto 0;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-content__contact-info {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 .contact-content__contact-info .contact-info__logo {
   display: block;
@@ -643,6 +654,12 @@ body {
   width: 50%;
   background-color: #5ebfbb;
   padding: 20px 50px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-content__form {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 .contact-content__form .contact-form {
   border: 1px solid green;
@@ -1604,6 +1621,11 @@ body {
 }
 .contact-container {
   margin-left: 1rem;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-container {
+    margin-left: 0;
+  }
 }
 .contact-container__form {
   display: flex;
