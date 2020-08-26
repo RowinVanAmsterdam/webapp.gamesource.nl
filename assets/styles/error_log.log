@@ -3,3 +3,4 @@
 07/14/20 2:34:56: import.scss - Undefined variable $tablet: /Users/stephan/Documents/GameSource/server/wp-content/themes/webapp.gamesource.nl/assets/styles//template-parts/_footer.scss on line 52, at column 7
 07/20/20 7:15:54: import.scss - parse error: failed at `box-shadow: ;` /Users/stephan/Documents/GameSource/server/wp-content/themes/webapp.gamesource.nl/assets/styles//template-parts/_comments.scss on line 88, at column 11
 08/17/20 7:22:17: import.scss - unexpected }: failed at `` /Users/stephan/Documents/GameSource/server/wp-content/themes/webapp.gamesource.nl/assets/styles//template-parts/_sidebar.scss on line 98, at column 0
+08/22/20 12:41:03: import.scss - Undefined variable $gamesource: line: 23

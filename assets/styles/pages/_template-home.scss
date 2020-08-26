@@ -178,6 +178,9 @@
     .content-right {
       width: 25%;
       margin-right: 1rem;
+      @include respond-to($mobile, $tablet) {
+        margin-right: 0;
+      }
     }
     .content-right--subpage {
       width: 25%;
