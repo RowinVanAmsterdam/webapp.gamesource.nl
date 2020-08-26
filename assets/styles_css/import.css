@@ -1337,10 +1337,11 @@ body {
   display: flex;
   flex-direction: row;
   height: 100%;
+  overflow: hidden;
 }
 .sidebar__container .popular__card--link img {
   min-height: 5em;
-  max-height: 10em;
+  max-height: 8em;
   width: 25%;
   object-fit: cover;
   border-bottom-right-radius: 4px;
