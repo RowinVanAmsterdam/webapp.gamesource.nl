@@ -1,31 +1,66 @@
-.contact-container {
+.contact-content {
   display: flex;
   max-width: 1170px;
-  margin: 5em auto 0;
-  padding: 0 15px;
+  margin: 9rem auto 0;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  border-radius: 3px;
 
   &__contact-info {
     width: 50%;
-    border: 1px solid red;
+    // border: 1px solid red;
     padding: 20px 50px;
-    
+    margin: auto 0;
 
 
     .contact-info {
         &__logo {
             display: block;
             max-width: 300px;
-            margin: 0 auto 25px;
+            margin: 25px 0 50px;
         }
 
         &__mail {
+          &:hover {
+            color: $green--hover;
+            transition: color .3s ease;
+          }
+
+          &-icon {
+            margin-right: 5px;
+          }
+
         }
+
+        &__social {
+          margin: 20px 0 5px;
+
+          &-icon {
+            display: inline-block;
+            padding: 10px 13px;
+            background: rgba(180, 180, 180, 0.3);
+            color: #fff;
+            border-radius: 3px;
+            transform: skew(-20deg);
+
+            i {
+              transform: skew(20deg);
+              
+            }
+
+            &:hover {
+              color: $green--hover;
+              transition: color .3s ease;
+            }
+          }
+        }
+
     }
   }
 
   &__form {
     width: 50%;
-    border: 1px solid blue;
+    // border: 1px solid blue;
+    background-color: $green;
     padding: 20px 50px;
 
     .contact-form {
