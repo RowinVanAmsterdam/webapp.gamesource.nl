@@ -239,6 +239,11 @@
   width: 25%;
   margin-right: 1rem;
 }
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .content .content-grid .content-right {
+    margin-right: 0;
+  }
+}
 .content .content-grid .content-right--subpage {
   width: 25%;
   margin-top: -4em;
@@ -1316,6 +1321,8 @@ body {
   border-radius: 4px;
   min-height: 5em;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  max-height: 10em;
 }
 .sidebar__container .popular__card:hover {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
@@ -1330,10 +1337,12 @@ body {
   display: flex;
   flex-direction: row;
   height: 100%;
+  overflow: hidden;
 }
 .sidebar__container .popular__card--link img {
   min-height: 5em;
-  width: 5em;
+  max-height: 8em;
+  width: 25%;
   object-fit: cover;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
@@ -1346,6 +1355,7 @@ body {
   padding: 0.5em;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  overflow: hidden;
 }
 .sidebar__container .popular__card--link--img {
   background-color: #5ebfbb;
@@ -1514,6 +1524,98 @@ body {
     font-size: 0.9em;
   }
 }
+.contact-container {
+  margin-left: 1rem;
+}
+.contact-container__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-container__form label {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+.contact-container__form input[type=text] {
+  text-decoration: none;
+  border: 0;
+  padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+  width: 50%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-container__form input[type=text] {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+.contact-container__form input[type=text]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.contact-container__form input[type=email] {
+  text-decoration: none;
+  border: 0;
+  padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+  width: 50%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-container__form input[type=email] {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+.contact-container__form input[type=email]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.contact-container__form textarea {
+  text-decoration: none;
+  border: 0;
+  padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-appearance: none;
+  margin-bottom: 1rem;
+  height: 20em;
+  font-family: Futura-Book;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+  width: 100%;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-container__form textarea {
+    font-size: 1em;
+  }
+}
+.contact-container__form textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.contact-container__form input[type=submit] {
+  width: 10rem;
+  background-color: white;
+  border-radius: 3px;
+  border: 2px solid #5ebfbb;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  transition: all 0.2s ease;
+  color: #5ebfbb;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.contact-container__form input[type=submit]:hover {
+  background-color: #5ebfbb;
+  color: white;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -1574,6 +1676,32 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+}
+@keyframes message {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.error {
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+  color: #e75454;
+  animation: message 0.2s ease;
+  transform-origin: center;
+}
+.confirm {
+  color: white;
+  padding: 1em 0.5em 1em 0.5em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  border: 2px solid #5ebfbb;
+  animation: message 0.2s ease;
+  transform-origin: center;
+  background: rgba(94, 191, 187, 0.75);
 }
 @font-face {
   font-family: "Futura-Book";
