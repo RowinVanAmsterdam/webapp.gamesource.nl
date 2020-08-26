@@ -7,16 +7,16 @@
         <div class="mainfooter__column-container">
             <div class="mainfooter__column">
                 <h3 class="mainfooter__title">Sitemap</h3>
-                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/test1">Nieuws</a>
-                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/test2">Reviews</a>
-                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/test3">Previews</a>
+                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/nieuws">Nieuws</a>
+                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/reviews">Reviews</a>
+                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/previews">Previews</a>
             </div>
 
             <div class="mainfooter__column">
                 <h3 class="mainfooter__title">Terms</h3>
-                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/test1">Algemene voorwaarden</a>
-                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/test2">Privacyverklaring</a>
-                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/test3">Cookies</a>
+                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/privacy-policy">Algemene voorwaarden</a>
+                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/privacy-policy">Privacyverklaring</a>
+                <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/privacy-policy">Cookies</a>
             </div>
 
             <div class="mainfooter__column">
@@ -31,10 +31,10 @@
             <div class="mainfooter__column mainfooter__column--center">
                 <h3 class="mainfooter__title">Social Media</h3>
                 <div>
-                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.facebook.com/flutcadeau" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.instagram.com/flutcadeau" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.twitter.com/flutcadeau" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.pinterest.com/flutcadeau" target="_blank"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
+                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.facebook.com/gamesource" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.instagram.com/gamesource" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.twitter.com/gamesource" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a class="mainfooter__link mainfooter__social-icon" href="https://www.pinterest.com/gamesource" target="_blank"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
