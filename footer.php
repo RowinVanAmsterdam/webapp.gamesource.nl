@@ -24,8 +24,8 @@
                 <a class="mainfooter__link" href="<?php echo get_bloginfo("url")?>/contact">Contact</a>
                 <h4 class="mainfooter__subtitle mainfooter__subtitle--margin-top">E-mail:</h4>
                 <a class="mainfooter__link" href="mailto:info@gamesource.nl">info@gamesource.nl</a>
-                <h4 class="mainfooter__subtitle mainfooter__subtitle--margin-top">Deel nieuws met ons:</h4>
-                <a href="/inform" class="mainfooter__link">Nieuws doorgeven</a>
+                <!-- <h4 class="mainfooter__subtitle mainfooter__subtitle--margin-top">Deel nieuws met ons:</h4>
+                <a href="/inform" class="mainfooter__link">Nieuws doorgeven</a> -->
             </div>
 
             <div class="mainfooter__column mainfooter__column--center">

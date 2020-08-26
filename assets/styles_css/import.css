@@ -1,6 +1,6 @@
 /* utilities */
+/* border: 1px solid red; */
 .inform-content {
-  /* border: 1px solid red; */
   padding-top: 84px;
   font-family: Futura-book;
 }
@@ -601,6 +601,111 @@ body {
 }
 .privacy-policy h3 {
   margin-top: 0.5rem;
+}
+.contact-content {
+  display: flex;
+  max-width: 1170px;
+  margin: 9rem auto 0;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
+.contact-content__contact-info {
+  width: 50%;
+  padding: 20px 50px;
+  margin: auto 0;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-content__contact-info {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.contact-content__contact-info .contact-info__logo {
+  display: block;
+  max-width: 300px;
+  margin: 25px 0 50px;
+}
+.contact-content__contact-info .contact-info__mail:hover {
+  color: #348380;
+  transition: color 0.3s ease;
+}
+.contact-content__contact-info .contact-info__mail-icon {
+  margin-right: 5px;
+}
+.contact-content__contact-info .contact-info__social {
+  margin: 20px 0 5px;
+}
+.contact-content__contact-info .contact-info__social-icon {
+  display: inline-block;
+  padding: 10px 13px;
+  background: rgba(180, 180, 180, 0.3);
+  color: #fff;
+  border-radius: 3px;
+  transform: skew(-20deg);
+}
+.contact-content__contact-info .contact-info__social-icon i {
+  transform: skew(20deg);
+}
+.contact-content__contact-info .contact-info__social-icon:hover {
+  color: #348380;
+  transition: color 0.3s ease;
+}
+.contact-content__form {
+  width: 50%;
+  background-color: #5ebfbb;
+  padding: 20px 50px;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-content__form {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.contact-content__form .contact-form {
+  border: 1px solid green;
+}
+.contact-content__form .contact-form__title {
+  color: #5ebfbb;
+  margin-bottom: 10px;
+}
+.contact-content__form .contact-form__context {
+  margin-bottom: 20px;
+}
+.contact-content__form .contact-form__input-field {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.contact-content__form .contact-form__input-field input, .contact-content__form .contact-form__input-field textarea {
+  border: 0;
+  border-bottom: 1px solid #bdbdbd;
+  margin-top: 2px;
+  min-height: 20px;
+  outline: none;
+}
+.contact-content__form .contact-form__input-field input:focus, .contact-content__form .contact-form__input-field textarea:focus {
+  border: 0;
+  border-bottom: 1px solid #5ebfbb;
+  transition: all 0.4s ease;
+}
+.contact-content__form .contact-form button {
+  font-family: Futura;
+  background-color: #5ebfbb;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.contact-content__form .contact-form button:hover {
+  background-color: #348380;
+  transition: all 0.2s ease;
 }
 .footer {
   background-color: #000;
@@ -1527,6 +1632,12 @@ body {
 .contact-container {
   margin-left: 1rem;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .contact-container {
+    margin-left: 0;
+  }
+}
 .contact-container__form {
   display: flex;
   flex-direction: column;
@@ -1535,62 +1646,49 @@ body {
 .contact-container__form label {
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+  color: #fff;
 }
-.contact-container__form input[type=text] {
+.contact-container__form input[type="text"], .contact-container__form input[type="email"] {
   text-decoration: none;
   border: 0;
-  padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+  padding: 0.25rem 0.25rem 0.25rem 0;
   width: 50%;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid #fff;
   -webkit-appearance: none;
   transition: all 0.2s ease;
-  border-radius: 3px;
+  background-color: transparent;
+  color: #fff;
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .contact-container__form input[type=text] {
+  .contact-container__form input[type="text"], .contact-container__form input[type="email"] {
     width: 100%;
     font-size: 1em;
   }
 }
-.contact-container__form input[type=text]:focus {
+
+.contact-container__form input[type="text"]:focus, .contact-container__form input[type="email"]:focus {
   outline: none;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #5ebfbb;
 }
-.contact-container__form input[type=email] {
-  text-decoration: none;
-  border: 0;
-  padding: 0.25rem 0.25rem 0.25rem 0.25rem;
-  width: 50%;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-  -webkit-appearance: none;
-  transition: all 0.2s ease;
-  border-radius: 3px;
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .contact-container__form input[type=email] {
-    width: 100%;
-    font-size: 1em;
-  }
-}
-.contact-container__form input[type=email]:focus {
-  outline: none;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+.contact-container__form input[type="text"]::placeholder, .contact-container__form input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 .contact-container__form textarea {
   text-decoration: none;
   border: 0;
   padding: 0.25rem 0.25rem 0.25rem 0.25rem;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+
   -webkit-appearance: none;
   margin-bottom: 1rem;
-  height: 20em;
+  height: 10em;
   font-family: Futura-Book;
   transition: all 0.2s ease;
   border-radius: 3px;
   width: 100%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .contact-container__form textarea {
@@ -1599,9 +1697,12 @@ body {
 }
 .contact-container__form textarea:focus {
   outline: none;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
 }
-.contact-container__form input[type=submit] {
+.contact-container__form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact-container__form input[type="submit"] {
   width: 10rem;
   background-color: white;
   border-radius: 3px;
@@ -1612,10 +1713,15 @@ body {
   cursor: pointer;
   -webkit-appearance: none;
 }
-.contact-container__form input[type=submit]:hover {
-  background-color: #5ebfbb;
+
+.contact-container__form input[type="submit"]:hover {
+  background-color: #348380;
   color: white;
 }
+.contact-container__form input[type="submit"]:focus {
+  outline: none;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -1688,20 +1794,21 @@ a {
 .error {
   margin-bottom: 0.5rem;
   border-radius: 3px;
-  color: #e75454;
+  color: #348380;
   animation: message 0.2s ease;
   transform-origin: center;
 }
 .confirm {
-  color: white;
+
+  color: #5ebfbb;
   padding: 1em 0.5em 1em 0.5em;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border-radius: 3px;
-  border: 2px solid #5ebfbb;
   animation: message 0.2s ease;
   transform-origin: center;
-  background: rgba(94, 191, 187, 0.75);
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
 }
 @font-face {
   font-family: "Futura-Book";
